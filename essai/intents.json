@@ -1,0 +1,20 @@
+{"intents":
+[
+  {"tag": "greeting",
+  "patterns": ["Hey","Hello","What's up?","How is it going?","Hi","Good day"],
+    "responses": ["Hello sir!","Hello, what can I do for you"]
+  },
+      {"tag": "Times",
+         "patterns": ["What hours are you open??", "What are your hours?", "When are you open?" ],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+    {"tag": "OpenToday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+   {"tag": "exit",
+  "patterns": ["Bye","Stop","Quit","I want to quit","Goodbye","I want to exit","I have to go"],
+    "responses": ["See you later, Thank you for your visit","Bye sir!","Have a nice day, come back"]
+  }
+]}
+
