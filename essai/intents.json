@@ -5,7 +5,7 @@
     "responses": ["Hello sir!","Hello, what can I do for you"]
   },
       {"tag": "Times",
-         "patterns": ["What hours are you open??", "What are your hours?", "When are you open?" ],
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
          "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
         },
     {"tag": "OpenToday",
@@ -51,7 +51,7 @@
         },
   {"tag": "إلى اللقاء",
          "patterns": ["وداعا" , "أراك لاحقا" , "وداعا"],
-         "responses": ["أراك لاحقا , شكرا لزيارتك" , "أتمنى لك يومًا سعيدا" , "وداعًا! تعال."]
+         "responses": ["أراك لاحقا , شكرا لزيارتك" , "أتمنى لك يومًا سعيدا" , "وداعًا! تعال مرة اخرى."]
          },
         {"tag": "شكرا لك",
         "patterns": ["شكرا لك شكرا ","جزيلا لك"],
