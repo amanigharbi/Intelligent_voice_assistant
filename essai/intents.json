@@ -28,7 +28,7 @@
      "context_set": ""
     },
    {"tag": "Heures",
-         "patterns": ["Quelles heures etes vous ouvert?", "Quelles sont vos heures?", "Quand etes vous ouvert?" ],
+         "patterns": ["Quelles heures etes vous ouvert?", "Quelles sont vos heures?", "Quand  vous etes ouvert?" ],
          "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 21h tous les jours"]
         },
 

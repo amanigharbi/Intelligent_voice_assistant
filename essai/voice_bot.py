@@ -17,140 +17,7 @@ with open('intents.json', encoding="utf8") as json_data:
     intents = json.load(json_data)
 
 
-# Greeting the user
-def hello():
-    for intent in intents['intents']:
-        while intent['tag'] == "greeting":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-2].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
 
-
-def salutation():
-
-    for intent in intents['intents']:
-        while intent['tag'] == "salutation":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-3].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def التحية():
-    for intent in intents['intents']:
-        while intent['tag'] == "التحية":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-
-            speaker.setProperty("voice", voices[-1].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-
-def time():
-    for intent in intents['intents']:
-        while intent['tag'] == "Times":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-2].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def heure():
-    for intent in intents['intents']:
-        while intent['tag'] == "Heures":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-3].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def العمل():
-    for intent in intents['intents']:
-        while intent['tag'] == "اوقات العمل":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-1].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def OpenToday():
-    for intent in intents['intents']:
-        while intent['tag'] == "OpenToday":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-2].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def OuvertAujourdhui():
-    for intent in intents['intents']:
-        while intent['tag'] == "OuvertAujourdhui":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-3].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def thank():
-    for intent in intents['intents']:
-        while intent['tag'] == "Thank":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-2].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def Merci():
-    for intent in intents['intents']:
-        while intent['tag'] == "Merci":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-3].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-def الشكر():
-    for intent in intents['intents']:
-        while intent['tag'] == "شكرا لك":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-1].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            break
-# Exiting from your assistant
-def close():
-    for intent in intents['intents']:
-        while intent['tag'] == "exit":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-2].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            sys.exit(0)
-def exit():
-    for intent in intents['intents']:
-        while intent['tag'] == "Exit":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-3].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            sys.exit(0)
-
-def المغادرة():
-    for intent in intents['intents']:
-        while intent['tag'] == "إلى اللقاء":
-            reponse = random.choice(intent['responses'])
-            print(reponse)
-            speaker.setProperty("voice", voices[-1].id)
-            speaker.say(reponse)
-            speaker.runAndWait()
-            sys.exit(0)
 def choiseLang():
     recognizer = sr.Recognizer()
     while True:
@@ -162,7 +29,7 @@ def choiseLang():
             with sr.Microphone() as mic:
                 recognizer.adjust_for_ambient_noise(mic, duration=0.2)
                 audio = recognizer.listen(mic)
-                lang = recognizer.recognize_google(audio,language="ar-SA,fr-FR,en-US")
+                lang = recognizer.recognize_google(audio,language="fr-FR,ar-SA,en-US")
                 lang = lang.lower()
                 print(lang)
                 if lang == "english" or lang == "anglais":
@@ -179,10 +46,11 @@ def choiseLang():
             speaker.say("I'm sorry, try again!")
             speaker.runAndWait()
 
-def execute(recognizer,mappings,lang,msg):
+def execute(recognizer,pos,lang,msg):
     # Training a model to recognize the intents
-    assistant = TrainingModel('intents.json', intent_methods=mappings)
+    assistant = TrainingModel('intents.json')
     assistant.train_model()
+
     while True:
         try:
             with sr.Microphone() as mic:
@@ -191,9 +59,14 @@ def execute(recognizer,mappings,lang,msg):
                 message = recognizer.recognize_google(audio,language=lang)
                 message = message.lower()
                 print(message)
-            assistant.request(message)
+                reponse=assistant.request(message)
+                print(reponse)
+                speaker.setProperty("voice", voices[pos].id)
+                speaker.say(reponse)
+                speaker.runAndWait()
         except sr.UnknownValueError:
             recognizer = sr.Recognizer()
+            speaker.setProperty("voice", voices[pos].id)
             speaker.say(msg)
             speaker.runAndWait()
 
@@ -201,33 +74,8 @@ def execute(recognizer,mappings,lang,msg):
 language = choiseLang()
 print(language)
 if language=="anglais":
-    mappings = {
-        "greeting": hello,
-        "Times": time,
-        "OpenToday": OpenToday,
-        "Thank" : thank,
-        "exit": close,
-
-    }
-    execute(recognizer,mappings,"en-US","I'm sorry, can you repeat it again!")
-
+    execute(recognizer,-2,"en-US","I'm sorry, can you repeat it again!")
 if language=="francais":
-    mappings = {
-        "salutation": salutation,
-        "Heures": heure,
-        "OuvertAujourdhui": OuvertAujourdhui,
-        "Merci" : Merci,
-        "Exit": exit,
-
-    }
-    execute(recognizer, mappings, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
+    execute(recognizer,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
 if language=="arabe":
-    mappings = {
-        "التحية": التحية,
-        "اوقات العمل": العمل,
-         "شكرا لك" : الشكر,
-        "إلى اللقاء" : المغادرة
-
-    }
-
-    execute(recognizer,mappings,"ar-SA","لم افهم حاول مرة أخرى")
+    execute(recognizer,-1,"ar-SA","لم افهم حاول مرة أخرى")
