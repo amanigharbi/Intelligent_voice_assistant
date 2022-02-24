@@ -17,6 +17,125 @@ with open('intents.json', encoding="utf8") as json_data:
     intents = json.load(json_data)
 
 
+# Greeting the user
+def hello():
+    for intent in intents['intents']:
+        while intent['tag'] == "greeting":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+
+
+def salutation():
+
+    for intent in intents['intents']:
+        while intent['tag'] == "salutation":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def التحية():
+    for intent in intents['intents']:
+        while intent['tag'] == "التحية":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+
+def time():
+    for intent in intents['intents']:
+        while intent['tag'] == "Times":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def heure():
+    for intent in intents['intents']:
+        while intent['tag'] == "Heures":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def العمل():
+    for intent in intents['intents']:
+        while intent['tag'] == "اوقات العمل":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def OpenToday():
+    for intent in intents['intents']:
+        while intent['tag'] == "OpenToday":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def OuvertAujourdhui():
+    for intent in intents['intents']:
+        while intent['tag'] == "OuvertAujourdhui":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def thank():
+    for intent in intents['intents']:
+        while intent['tag'] == "Thank":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def Merci():
+    for intent in intents['intents']:
+        while intent['tag'] == "Merci":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+def الشكر():
+    for intent in intents['intents']:
+        while intent['tag'] == "شكرا لك":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            break
+# Exiting from your assistant
+def close():
+    for intent in intents['intents']:
+        while intent['tag'] == "exit":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            sys.exit(0)
+def exit():
+    for intent in intents['intents']:
+        while intent['tag'] == "Exit":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            sys.exit(0)
+
+def المغادرة():
+    for intent in intents['intents']:
+        while intent['tag'] == "إلى اللقاء":
+            reponse = random.choice(intent['responses'])
+            print(reponse)
+            speaker.say(reponse)
+            speaker.runAndWait()
+            sys.exit(0)
 
 def choiseLang():
     recognizer = sr.Recognizer()
@@ -46,9 +165,9 @@ def choiseLang():
             speaker.say("I'm sorry, try again!")
             speaker.runAndWait()
 
-def execute(recognizer,pos,lang,msg):
+def execute(recognizer,mappings,pos,lang,msg):
     # Training a model to recognize the intents
-    assistant = TrainingModel('intents.json')
+    assistant = TrainingModel('intents.json',intent_methods=mappings)
     assistant.train_model()
 
     while True:
@@ -74,8 +193,31 @@ def execute(recognizer,pos,lang,msg):
 language = choiseLang()
 print(language)
 if language=="anglais":
-    execute(recognizer,-2,"en-US","I'm sorry, can you repeat it again!")
+    mappings = {
+        "greeting": hello,
+        "Times": time,
+        "OpenToday": OpenToday,
+        "Thank" : thank,
+        "exit": close,
+
+    }
+    execute(recognizer,mappings,-2,"en-US","I'm sorry, can you repeat it again!")
 if language=="francais":
-    execute(recognizer,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
+    mappings = {
+        "salutation": salutation,
+        "Heures": heure,
+        "OuvertAujourdhui": OuvertAujourdhui,
+        "Merci" : Merci,
+        "Exit": exit,
+
+    }
+    execute(recognizer,mappings,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
 if language=="arabe":
-    execute(recognizer,-1,"ar-SA","لم افهم حاول مرة أخرى")
+    mappings = {
+        "التحية": التحية,
+        "اوقات العمل": العمل,
+        "شكرا لك": الشكر,
+        "إلى اللقاء": المغادرة
+
+    }
+    execute(recognizer,mappings,-1,"ar-SA","لم افهم حاول مرة أخرى")
