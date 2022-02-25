@@ -1,13 +1,15 @@
-
+from flask import Flask, render_template, request, redirect
 import speech_recognition as sr
 import pyttsx3 as tts
 #from neuralintents import GenericAssistant
+from gtts import gTTS
+
+
 from TrainingModel import TrainingModel
 import sys
 import random
 import json
-import gtts
-from playsound import playsound
+import playsound
 
 recognizer = sr.Recognizer()
 speaker = tts.init()
@@ -15,7 +17,6 @@ speaker.setProperty('rate', 150)  # rate is property, 150 is the value
 voices = speaker.getProperty('voices')
 with open('intents.json', encoding="utf8") as json_data:
     intents = json.load(json_data)
-
 
 # Greeting the user
 def hello():
@@ -139,85 +140,116 @@ def المغادرة():
 
 def choiseLang():
     recognizer = sr.Recognizer()
-    while True:
-        print('choose a language...')
-        speaker.setProperty("voice", voices[-2].id)
-        speaker.say("choose a language")
-        speaker.runAndWait()
-        try:
-            with sr.Microphone() as mic:
-                recognizer.adjust_for_ambient_noise(mic, duration=0.2)
-                audio = recognizer.listen(mic)
-                lang = recognizer.recognize_google(audio,language="fr-FR,ar-SA,en-US")
-                lang = lang.lower()
-                print(lang)
-                if lang == "english" or lang == "anglais":
-                    lang = "anglais"
-                elif lang == "french" or lang == "français":
-                    lang = "francais"
-                elif lang == "arabic" or lang == "arabe":
-                    lang = "arabe"
-                else:
-                    speaker.say("I'm sorry, can you repeat it again!")
-                    speaker.runAndWait()
-            return lang
-        except sr.UnknownValueError:
-            speaker.say("I'm sorry, try again!")
+    print('choose a language...')
+    speaker.setProperty("voice", voices[-2].id)
+    speaker.say("choose a language")
+    speaker.runAndWait()
+    with sr.Microphone() as mic:
+        recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+        audio = recognizer.listen(mic)
+        lang = recognizer.recognize_google(audio,language="fr-FR,ar-SA,en-US")
+        lang = lang.lower()
+        print(lang)
+        if lang == "english" or lang == "anglais":
+            lang = "anglais"
+        elif lang == "french" or lang == "français":
+            lang = "francais"
+        elif lang == "arabic" or lang == "arabe":
+            lang = "arabe"
+        else:
+            speaker.say("I'm sorry, can you repeat it again!")
             speaker.runAndWait()
+    return lang
 
-def execute(recognizer,mappings,pos,lang,msg):
+#assistant = TrainingModel('intents.json')
+#assistant.train_model()
+#print("train")
+#assistant.save_model("VoiceBot")
+#print("ok")
+def prepare(recognizer,mappings,pos,lang,msg):
     # Training a model to recognize the intents
-    assistant = TrainingModel('intents.json',intent_methods=mappings)
-    assistant.train_model()
+    assistant = TrainingModel('intents.json', intent_methods=mappings)
+    print("load")
+    assistant.load_model("VoiceBot")
 
-    while True:
-        try:
-            with sr.Microphone() as mic:
-                recognizer.adjust_for_ambient_noise(mic, duration=0.2)
-                audio = recognizer.listen(mic)
-                message = recognizer.recognize_google(audio,language=lang)
-                message = message.lower()
-                print(message)
-                reponse=assistant.request(message)
-                print(reponse)
-                speaker.setProperty("voice", voices[pos].id)
-                speaker.say(reponse)
-                speaker.runAndWait()
-        except sr.UnknownValueError:
-            recognizer = sr.Recognizer()
+    try:
+        with sr.Microphone() as mic:
+            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+            audio = recognizer.listen(mic)
+            message = recognizer.recognize_google(audio,language=lang)
+            message = message.lower()
+            print(message)
+            reponse=assistant.request(message)
+            print(reponse)
             speaker.setProperty("voice", voices[pos].id)
-            speaker.say(msg)
+            speaker.say(reponse)
             speaker.runAndWait()
+    except sr.UnknownValueError:
+        recognizer = sr.Recognizer()
+        speaker.setProperty("voice", voices[pos].id)
+        speaker.say(msg)
+        speaker.runAndWait()
+
+def execute():
+    language = choiseLang()
+    print(language)
+    if language=="anglais":
+        mappings = {
+            "greeting": hello,
+            "Times": time,
+            "OpenToday": OpenToday,
+            "Thank" : thank,
+            "exit": close,
+
+        }
+        prepare(recognizer,mappings,-2,"en-US","I'm sorry, can you repeat it again!")
+    if language=="francais":
+        mappings = {
+            "salutation": salutation,
+            "Heures": heure,
+            "OuvertAujourdhui": OuvertAujourdhui,
+            "Merci" : Merci,
+            "Exit": exit,
+
+        }
+        prepare(recognizer,mappings,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
+    if language=="arabe":
+        mappings = {
+            "التحية": التحية,
+            "اوقات العمل": العمل,
+             "شكرا لك" : الشكر,
+            "إلى اللقاء" : المغادرة
 
 
-language = choiseLang()
-print(language)
-if language=="anglais":
-    mappings = {
-        "greeting": hello,
-        "Times": time,
-        "OpenToday": OpenToday,
-        "Thank" : thank,
-        "exit": close,
+        }
 
-    }
-    execute(recognizer,mappings,-2,"en-US","I'm sorry, can you repeat it again!")
-if language=="francais":
-    mappings = {
-        "salutation": salutation,
-        "Heures": heure,
-        "OuvertAujourdhui": OuvertAujourdhui,
-        "Merci" : Merci,
-        "Exit": exit,
+        prepare(recognizer,mappings,-1,"ar-SA","لم افهم حاول مرة أخرى")
+app = Flask(__name__)
+@app.route("/", methods=["GET", "POST"])
+def index():
 
-    }
-    execute(recognizer,mappings,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
-if language=="arabe":
-    mappings = {
-        "التحية": التحية,
-        "اوقات العمل": العمل,
-        "شكرا لك": الشكر,
-        "إلى اللقاء": المغادرة
+    if request.method == "POST":
+        print("FORM DATA RECEIVED")
+        recognizer = sr.Recognizer()
 
-    }
-    execute(recognizer,mappings,-1,"ar-SA","لم افهم حاول مرة أخرى")
+        with sr.Microphone() as mic:
+            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+            audio = recognizer.listen(mic)
+            lang = recognizer.recognize_google(audio, language="fr-FR")
+            lang = lang.lower()
+            print(lang)
+            assistant = TrainingModel('intents.json')
+            print("load")
+            assistant.load_model("VoiceBot")
+            voice=assistant.request(lang)
+            Gtts = gTTS(voice)
+            Gtts.save('reponse.mp3')
+            playsound.playsound("reponse.mp3")
+        return voice
+
+    return render_template('index.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+

@@ -86,6 +86,7 @@ class TrainingModel():
 
         self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
+
     def save_model(self, model_name=None):
         if model_name is None:
             self.model.save(f"{self.model_name}.h5", self.hist)
