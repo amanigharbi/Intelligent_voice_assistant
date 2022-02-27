@@ -144,22 +144,23 @@ def choiseLang():
     speaker.setProperty("voice", voices[-2].id)
     speaker.say("choose a language")
     speaker.runAndWait()
-    with sr.Microphone() as mic:
-        recognizer.adjust_for_ambient_noise(mic, duration=0.2)
-        audio = recognizer.listen(mic)
-        lang = recognizer.recognize_google(audio,language="fr-FR,ar-SA,en-US")
-        lang = lang.lower()
-        print(lang)
-        if lang == "english" or lang == "anglais":
-            lang = "anglais"
-        elif lang == "french" or lang == "français":
-            lang = "francais"
-        elif lang == "arabic" or lang == "arabe":
-            lang = "arabe"
-        else:
-            speaker.say("I'm sorry, can you repeat it again!")
-            speaker.runAndWait()
-    return lang
+    while True:
+        with sr.Microphone() as mic:
+            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+            audio = recognizer.listen(mic)
+            lang = recognizer.recognize_google(audio,language="fr-FR,ar-SA,en-US")
+            lang = lang.lower()
+            print(lang)
+            if lang == "english" or lang == "anglais":
+                lang = "anglais"
+            elif lang == "french" or lang == "français":
+                lang = "francais"
+            elif lang == "arabic" or lang == "arabe":
+                lang = "arabe"
+            else:
+                speaker.say("I'm sorry, can you repeat it again!")
+                speaker.runAndWait()
+        return lang
 
 #assistant = TrainingModel('intents.json')
 #assistant.train_model()
@@ -171,24 +172,24 @@ def prepare(recognizer,mappings,pos,lang,msg):
     assistant = TrainingModel('intents.json', intent_methods=mappings)
     print("load")
     assistant.load_model("VoiceBot")
-
-    try:
-        with sr.Microphone() as mic:
-            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
-            audio = recognizer.listen(mic)
-            message = recognizer.recognize_google(audio,language=lang)
-            message = message.lower()
-            print(message)
-            reponse=assistant.request(message)
-            print(reponse)
+    while True:
+        try:
+            with sr.Microphone() as mic:
+                recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+                audio = recognizer.listen(mic)
+                message = recognizer.recognize_google(audio,language=lang)
+                message = message.lower()
+                print(message)
+                reponse=assistant.request(message)
+                print(reponse)
+                speaker.setProperty("voice", voices[pos].id)
+                speaker.say(reponse)
+                speaker.runAndWait()
+        except sr.UnknownValueError:
+            recognizer = sr.Recognizer()
             speaker.setProperty("voice", voices[pos].id)
-            speaker.say(reponse)
+            speaker.say(msg)
             speaker.runAndWait()
-    except sr.UnknownValueError:
-        recognizer = sr.Recognizer()
-        speaker.setProperty("voice", voices[pos].id)
-        speaker.say(msg)
-        speaker.runAndWait()
 
 def execute():
     language = choiseLang()
@@ -230,22 +231,7 @@ def index():
 
     if request.method == "POST":
         print("FORM DATA RECEIVED")
-        recognizer = sr.Recognizer()
-
-        with sr.Microphone() as mic:
-            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
-            audio = recognizer.listen(mic)
-            lang = recognizer.recognize_google(audio, language="fr-FR")
-            lang = lang.lower()
-            print(lang)
-            assistant = TrainingModel('intents.json')
-            print("load")
-            assistant.load_model("VoiceBot")
-            voice=assistant.request(lang)
-            Gtts = gTTS(voice)
-            Gtts.save('reponse.mp3')
-            playsound.playsound("reponse.mp3")
-        return voice
+        execute()
 
     return render_template('index.html')
 

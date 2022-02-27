@@ -1,0 +1,65 @@
+{"intents":
+[
+  {"tag": "greeting",
+  "patterns": ["Hey","Hello","What's up?","How is it going?","Hi","Good day"],
+    "responses": ["Hello sir!","Hello, what can I do for you"]
+  },
+      {"tag": "Times",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+    {"tag": "OpenToday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+       {"tag": "Thank",
+         "patterns": ["Thank you"],
+         "responses": ["Happy to help!", "You are welcome!", "with pleasure"]
+        },
+   {"tag": "exit",
+  "patterns": ["Bye","Stop","Quit","I want to quit","Goodbye","I want to exit","I have to go"],
+    "responses": ["See you later, Thank you for your visit","Bye sir!","Have a nice day, come back"]
+  },
+
+
+  {"tag": "salutation",
+     "patterns": ["Bonjour", "Comment vas tu", "Il y a quelqu'un?", "Salut", "Bonne journée"],
+     "responses": ["Bonjour merci pour la visite", "C'est bon de te revoir", "Salut, comment puis je vous aider?"],
+     "context_set": ""
+    },
+   {"tag": "Heures",
+         "patterns": ["Quelles heures etes vous ouvert?", "Quelles sont vos heures?", "Quand  vous etes ouvert?" ],
+         "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 21h tous les jours"]
+        },
+
+  {"tag": "OuvertAujourdhui",
+   "patterns": ["Etes vous ouvert aujourd'hui?", "Quand ouvres tu aujourd'hui?", "Quelles sont vos heures aujourd'hui?"],
+   "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 17h tous les jours"]
+  },
+       {"tag": "Merci",
+         "patterns": ["Merci", "Merci beaucoup"],
+         "responses": ["Heureux de pouvoir vous aider!", "A toute heure!", "Avec plaisir"]
+        },
+         {"tag": "Exit",
+         "patterns": ["Au revoir", "A plus tard", "bye"],
+         "responses": ["A plus tard, Merci de votre visite", "Bonne journée", "Au revoir! reviens."]
+        },
+
+  {"tag": "التحية",
+         "patterns": ["مرحبا"],
+         "responses": ["مرحبا شكرا على الزيارة"," كيف يمكنني مساعدتك؟"]
+        },
+  {"tag": "إلى اللقاء",
+         "patterns": ["وداعا" , "أراك لاحقا" , "وداعا"],
+         "responses": ["أراك لاحقا , شكرا لزيارتك" , "أتمنى لك يومًا سعيدا" , "وداعًا! تعال مرة اخرى."]
+         },
+        {"tag": "شكرا لك",
+        "patterns": ["شكرا لك شكرا ","جزيلا لك"],
+         "responses": ["يسعدني أن أكون قادرًا على مساعدتك!" , "في أي وقت!" , "من دواعي سروري"]
+         },
+   {"tag": "اوقات العمل",
+        "patterns": ["ما هي ساعات العمل؟ "," متى تفتحون؟"],
+         "responses": ["نحن مفتوحون يوميًا من الساعة 9 صباحًا حتى الساعة 5 مساءً." , "ساعات العمل لدينا من 9 صباحًا حتى 5 مساءً يوميًا." ]
+         }
+]}
+
