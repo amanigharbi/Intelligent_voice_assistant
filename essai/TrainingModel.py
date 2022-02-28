@@ -87,7 +87,7 @@ class TrainingModel():
         self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
 
-    def save_model(self, model_name=None):
+    def save_model(self, model_name):
         if model_name is None:
             self.model.save(f"{self.model_name}.h5", self.hist)
             pickle.dump(self.words, open(f'{self.model_name}_words.pkl', 'wb'))
@@ -97,7 +97,7 @@ class TrainingModel():
             pickle.dump(self.words, open(f'{model_name}_words.pkl', 'wb'))
             pickle.dump(self.classes, open(f'{model_name}_classes.pkl', 'wb'))
 
-    def load_model(self, model_name=None):
+    def load_model(self, model_name):
         if model_name is None:
             self.words = pickle.load(open(f'{self.model_name}_words.pkl', 'rb'))
             self.classes = pickle.load(open(f'{self.model_name}_classes.pkl', 'rb'))
@@ -154,7 +154,7 @@ class TrainingModel():
     def request_method(self, message):
         pass
 
-    def request(self, message):
+    def request1(self, message):
         ints = self._predict_class(message)
 
         if ints[0]['intent'] in self.intent_methods.keys():

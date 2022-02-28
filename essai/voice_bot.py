@@ -170,7 +170,6 @@ def choiseLang():
 def prepare(recognizer,mappings,pos,lang,msg):
     # Training a model to recognize the intents
     assistant = TrainingModel('intents.json', intent_methods=mappings)
-    print("load")
     assistant.load_model("VoiceBot")
     while True:
         try:
@@ -180,7 +179,7 @@ def prepare(recognizer,mappings,pos,lang,msg):
                 message = recognizer.recognize_google(audio,language=lang)
                 message = message.lower()
                 print(message)
-                reponse=assistant.request(message)
+                reponse=assistant.request1(message)
                 print(reponse)
                 speaker.setProperty("voice", voices[pos].id)
                 speaker.say(reponse)
@@ -191,51 +190,39 @@ def prepare(recognizer,mappings,pos,lang,msg):
             speaker.say(msg)
             speaker.runAndWait()
 
-def execute():
-    language = choiseLang()
-    print(language)
-    if language=="anglais":
-        mappings = {
-            "greeting": hello,
-            "Times": time,
-            "OpenToday": OpenToday,
-            "Thank" : thank,
-            "exit": close,
 
-        }
-        prepare(recognizer,mappings,-2,"en-US","I'm sorry, can you repeat it again!")
-    if language=="francais":
-        mappings = {
-            "salutation": salutation,
-            "Heures": heure,
-            "OuvertAujourdhui": OuvertAujourdhui,
-            "Merci" : Merci,
-            "Exit": exit,
+language = choiseLang()
+print(language)
+if language=="anglais":
+    mappings = {
+        "greeting": hello,
+        "Times": time,
+        "OpenToday": OpenToday,
+        "Thank" : thank,
+        "exit": close,
 
-        }
-        prepare(recognizer,mappings,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
-    if language=="arabe":
-        mappings = {
-            "التحية": التحية,
-            "اوقات العمل": العمل,
-             "شكرا لك" : الشكر,
-            "إلى اللقاء" : المغادرة
+    }
+    prepare(recognizer,mappings,-2,"en-US","I'm sorry, can you repeat it again!")
+if language=="francais":
+    mappings = {
+        "salutation": salutation,
+        "Heures": heure,
+        "OuvertAujourdhui": OuvertAujourdhui,
+        "Merci" : Merci,
+        "Exit": exit,
 
-
-        }
-
-        prepare(recognizer,mappings,-1,"ar-SA","لم افهم حاول مرة أخرى")
-app = Flask(__name__)
-@app.route("/", methods=["GET", "POST"])
-def index():
-
-    if request.method == "POST":
-        print("FORM DATA RECEIVED")
-        execute()
-
-    return render_template('index.html')
+    }
+    prepare(recognizer,mappings,-3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
+if language=="arabe":
+    mappings = {
+        "التحية": التحية,
+        "اوقات العمل": العمل,
+         "شكرا لك" : الشكر,
+        "إلى اللقاء" : المغادرة
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+    }
+
+    prepare(recognizer,mappings,-1,"ar-SA","لم افهم حاول مرة أخرى")
+
 

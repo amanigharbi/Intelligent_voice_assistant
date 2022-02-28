@@ -1000,3 +1000,65 @@ def index():
 if __name__ == "__main__":
     app.run(debug=True)
 
+
+
+
+
+
+
+
+
+
+app = Flask(__name__)
+@app.route("/", methods=["GET", "POST"])
+def index():
+    '''assistant= TrainingModel('intents.json')
+    assistant.load_model("VoiceBot")'''
+    if request.method == "POST":
+        while True:
+            with sr.Microphone() as mic:
+                recognizer.adjust_for_ambient_noise(mic, duration=0.2)
+                audio = recognizer.listen(mic)
+                lang = recognizer.recognize_google(audio, language="fr-FR,ar-SA,en-US")
+                lang = lang.lower()
+                print(lang)
+                if lang == "english" or lang == "anglais":
+                    mappings = {
+                        "greeting": hello,
+                        "Times": time,
+                        "OpenToday": OpenToday,
+                        "Thank": thank,
+                        "exit": close,
+
+                    }
+                    prepare(recognizer, mappings, -2, "en-US", "I'm sorry, can you repeat it again!")
+                elif lang == "french" or lang == "français":
+                    mappings = {
+                        "salutation": salutation,
+                        "Heures": heure,
+                        "OuvertAujourdhui": OuvertAujourdhui,
+                        "Merci": Merci,
+                        "Exit": exit,
+
+                    }
+                    prepare(recognizer, mappings, -3, "fr-FR", "Je ne comprend pas répéte s'il vous plait!")
+                elif lang == "arabic" or lang == "arabe":
+                    mappings = {
+                        "التحية": التحية,
+                        "اوقات العمل": العمل,
+                        "شكرا لك": الشكر,
+                        "إلى اللقاء": المغادرة
+
+                    }
+
+                    prepare(recognizer, mappings, -1, "ar-SA", "لم افهم حاول مرة أخرى")
+                else:
+                    speaker.say("I'm sorry, can you repeat it again!")
+                    speaker.runAndWait()
+
+    return render_template('index.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True,host='0.0.0.0',port=5050)
+
