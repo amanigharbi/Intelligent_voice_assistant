@@ -1,11 +1,8 @@
-from abc import ABCMeta, abstractmethod
 
 import random
 import json
 import pickle
 import numpy as np
-import os
-
 
 import nltk
 from nltk.stem import WordNetLemmatizer
@@ -32,6 +29,7 @@ class TrainingModel():
     #to load json file
     def load_json_intents(self, intents):
         self.intents = json.loads(open(intents,encoding="utf8").read())
+    #to train a model using keras tensorflow
     def train_model(self):
 
         self.words = []
@@ -86,8 +84,8 @@ class TrainingModel():
 
         self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
-
-    def save_model(self, model_name):
+    #after training a model we must save it
+    def save_model(self, model_name=None):
         if model_name is None:
             self.model.save(f"{self.model_name}.h5", self.hist)
             pickle.dump(self.words, open(f'{self.model_name}_words.pkl', 'wb'))
@@ -97,7 +95,8 @@ class TrainingModel():
             pickle.dump(self.words, open(f'{model_name}_words.pkl', 'wb'))
             pickle.dump(self.classes, open(f'{model_name}_classes.pkl', 'wb'))
 
-    def load_model(self, model_name):
+    #for loading a model after saving
+    def load_model(self, model_name=None):
         if model_name is None:
             self.words = pickle.load(open(f'{self.model_name}_words.pkl', 'rb'))
             self.classes = pickle.load(open(f'{self.model_name}_classes.pkl', 'rb'))
@@ -120,8 +119,8 @@ class TrainingModel():
                 if word == s:
                     bag[i] = 1
         return np.array(bag)
-
-    def _predict_class(self, sentence):
+    #function for predict a sentence
+    def predict(self, sentence):
         p = self._bag_of_words(sentence, self.words)
         res = self.model.predict(np.array([p]))[0]
         ERROR_THRESHOLD = 0.1
@@ -133,7 +132,8 @@ class TrainingModel():
             return_list.append({'intent': self.classes[r[0]], 'probability': str(r[1])})
         return return_list
 
-    def _get_response(self, ints, intents_json):
+    def get_response(self, ints, intents_json):
+        global result
         try:
             tag = ints[0]['intent']
             list_of_intents = intents_json['intents']
@@ -145,19 +145,10 @@ class TrainingModel():
             result = "I don't understand!"
         return result
 
-    def request_tag(self, message):
-        pass
-
-    def get_tag_by_id(self, id):
-        pass
-
-    def request_method(self, message):
-        pass
-
-    def request1(self, message):
-        ints = self._predict_class(message)
+    def response(self, message):
+        ints = self.predict(message)
 
         if ints[0]['intent'] in self.intent_methods.keys():
             self.intent_methods[ints[0]['intent']]()
         else:
-            return self._get_response(ints, self.intents)
+            return self.get_response(ints, self.intents)

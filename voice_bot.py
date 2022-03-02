@@ -1,9 +1,6 @@
-from flask import Flask, render_template, request, redirect
+
 import speech_recognition as sr
 import pyttsx3 as tts
-#from neuralintents import GenericAssistant
-from gtts import gTTS
-
 
 from TrainingModel import TrainingModel
 import sys
@@ -179,7 +176,7 @@ def prepare(recognizer,mappings,pos,lang,msg):
                 message = recognizer.recognize_google(audio,language=lang)
                 message = message.lower()
                 print(message)
-                reponse=assistant.request1(message)
+                reponse=assistant.response(message)
                 print(reponse)
                 speaker.setProperty("voice", voices[pos].id)
                 speaker.say(reponse)
