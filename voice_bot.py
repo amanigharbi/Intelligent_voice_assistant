@@ -7,7 +7,8 @@ import sys
 import random
 import json
 import playsound
-
+from gtts import gTTS
+import os
 recognizer = sr.Recognizer()
 speaker = tts.init()
 speaker.setProperty('rate', 150)  # rate is property, 150 is the value
@@ -176,8 +177,14 @@ def prepare(recognizer,mappings,pos,lang,msg):
                 message = recognizer.recognize_google(audio,language=lang)
                 message = message.lower()
                 print(message)
+                # myobj = gTTS(text=message, lang=lang, slow=False)
+                # myobj.save("message.mp3")
+                # os.system("start message.mp3")
                 reponse=assistant.response(message)
                 print(reponse)
+                # myobj2= gTTS(text=reponse, lang=lang, slow=False)
+                # myobj2.save("reponse.mp3")
+                # os.system("start reponse.mp3")
                 speaker.setProperty("voice", voices[pos].id)
                 speaker.say(reponse)
                 speaker.runAndWait()

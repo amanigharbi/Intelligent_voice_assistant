@@ -2,11 +2,13 @@
 var SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 var language = "";
-audioChunks = [];
+var charDuration=null;
+var idIndex=1;
 var button = document.getElementById("button");
 button.addEventListener("click", (start) => {
     recognition.start();
 });
+
 
 args = {
     openButton: document.querySelector(".chatbox__button"),
@@ -34,7 +36,7 @@ function modifyLanguage(lang) {
             readOutLoud(mess0);
             break;
         case "français":
-            mess1 = "Salut. je m'appelle Sam. comment puis-je vous aider?";
+            mess1 = "Salut. je suis Sam. comment puis-je vous aider?";
             let msg02 = { name: "welcome_Sam", message: mess1 };
             messages.push(msg02);
             updateChatText(chatBox);
@@ -70,6 +72,7 @@ function toggleState(chatbox) {
         }
     }
 }
+
 function onSendButton(chatbox) {
   
     switch (language) {
@@ -87,15 +90,17 @@ function onSendButton(chatbox) {
     }
     console.log("aaaa " + recognition.lang);
     recognition.onresult = function (e) {
+
         let textField = e.results[0][0].transcript;
         if (textField === "") {
             return;
         }
+
         let msg1 = { name: "User", message: textField };
         messages.push(msg1);
         updateChatText(chatbox);
 
-        fetch("http://127.0.0.1:5050/predict", {
+        fetch("http://127.0.0.1:5000/predict", {
             method: "POST",
             body: JSON.stringify({ message: textField }),
             mode: "cors",
@@ -114,9 +119,10 @@ function onSendButton(chatbox) {
             .catch(console.error);
     };
 }
-function readOutLoud(message) {
-    var speech = new SpeechSynthesisUtterance();
 
+function readOutLoud(message,id) {
+    var speech = new SpeechSynthesisUtterance();
+    
     // Set the text and voice attributes.
     speech.text = message;
     speech.volume = 1;
@@ -135,34 +141,37 @@ function readOutLoud(message) {
         default:
             speech.lang = "fr-FR";
     }
-    // audioEnd = false;
-    // progress = 10;
-    // const progressbar = document.querySelector(".progress");
-    // const changeProgress = (progress) => {
-    //   progressbar.style.width = `${progress}%`;
-    // };
 
+    // if(charDuration&&id){
+    //     progress = 0;
+    //     const progressbar = document.getElementById(id);
+    //     const changeProgress = (progress) => {
+    //       progressbar.style.width = `${progress}%`;
+    //     };
+        
+    //     step=120/speech.text.length;
+    //     console.log(step,charDuration)
+    //     speech.onstart = function (event) {
+    //            interval= setInterval(function(){
+    //               progress+=step;
+    //             changeProgress(progress);
+    //           }, charDuration);
+    //     };
 
-    // speech.onstart = function (event) {
-    //     console.log("Utterance has finished being spoken after " + event.elapsedTime + " seconds.");
-    //     while (!audioEnd && progress < 80) {
-    //       progress=progress+0.001;
-    //       setTimeout(() => changeProgress(progress), 500);
-          
-    //   }
-    // };
+    //     speech.onend = function (event) {
+    //         changeProgress(0);
+    //         clearInterval(interval);
+    //         console.log(event.elapsedTime);
+    //     };
+    // }
 
-    // speech.onend = function (event) {
-    //     console.log("Utterance has finished being spoken after " + event.elapsedTime + " seconds.");
-    //     audioEnd = true;
-    //     changeProgress(100);
-    // };
+    // if(charDuration==null){
+    //     speech.onend = function (event) {
+    //         charDuration=event.elapsedTime/speech.text.length;
+    //     };
+    // }
 
     window.speechSynthesis.speak(speech);
-    
-  
-
-    
 }
 
 
@@ -172,46 +181,77 @@ function updateChatText(chatbox) {
         .slice()
         .reverse()
         .forEach(function (item, index) {
-            if (item.name === "langue") {
-                html +=
-              
-                    `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('anglais')">` +
-                    "anglais" +
-                    `</div>` +
-                    `<div class="messages__item messages__item--visitor"  onClick="modifyLanguage('français')">` +
-                    "français" +
-                    `</div>` +
-                    `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('arabe')">` +
-                    "arabe" +
-                    `</div>`+
-                    `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
-                    //  +
-                    // `<div class="messages__item messages__item--visitor">
-                    //  <div class="progress-container" >
-                    // <div class="progress fa fa-play"  onClick="readOutLoud('` + item.message + `')"></div> 
-                    // </div> </div>`
-            }
-            if (item.name === "welcome_Sam") {
-                html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
-                // html += `<div class="messages__item messages__item--visitor">
-                // <div class="progress-container" >
-                // <div class="progress fa fa-play"  onClick="readOutLoud('` + item.message + `')"></div> 
-                //       </div> </div>`;
+            // if (item.name === "langue") {
+            //     html +=
+            //         `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('anglais')">` +
+            //         "anglais" +
+            //         `</div>` +
+            //         `<div class="messages__item messages__item--visitor"  onClick="modifyLanguage('français')">` +
+            //         "français" +
+            //         `</div>` +
+            //         `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('arabe')">` +
+            //         "arabe" +
+            //         `</div>`+
+            //         // `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+            //         //  +
+            //         `<div class="messages__item messages__item--visitor">
+            //          <div class="progress-container" >
+            //         <div class="progress fa fa-play" id="prog-`+idIndex+`" onClick="readOutLoud('` + item.message + `','prog-`+idIndex+`')"></div> 
+            //         </div> </div>`;
+            //         idIndex++;
+            // }
+            // if (item.name === "welcome_Sam") {
+            //     // html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+            //    html+=`<div class="messages__item messages__item--visitor">
+            //          <div class="progress-container" >
+            //         <div class="progress fa fa-play" id="prog-`+idIndex+`" onClick="readOutLoud('` + item.message + `','prog-`+idIndex+`')"></div> 
+            //         </div> </div>`;
+            //         idIndex++;
 
-              }
-            if (item.name === "Sam") {
-                html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
-                // html += `<div class="messages__item messages__item--visitor">
-                // <div class="progress-container" >
-                // <div class="progress fa fa-play"  onClick="readOutLoud('` + item.message + `')"></div> 
-                //       </div> </div>`;
-              }
-            if (item.name === "User") {
-                 html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
-                // html += `<div class="messages__item messages__item--operator">
-                // <div class="progress-container" >
-                // <div class="progress fa fa-play"  onClick="readOutLoud('` + item.message + `')"></div> 
-                //       </div> </div>`;
+            //   }
+            // if (item.name === "Sam") {
+            //     // html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+            //     html += `<div class="messages__item messages__item--visitor">
+            //     <div class="progress-container" >
+            //     <div class="progress fa fa-play"  id="prog-`+idIndex+`" onClick="readOutLoud('` + item.message + `','prog-`+idIndex+`')"></div> 
+            //           </div> </div>`;
+            //           idIndex++;
+            //   }
+            // if (item.name === "User") {
+            //     //  html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+            //     html += `<div class="messages__item messages__item--operator">
+            //     <div class="progress-container" >
+            //     <div class="progress fa fa-play" id="prog-`+idIndex+`" onClick="readOutLoud('` + item.message + `','prog-`+idIndex+`')"></div> 
+            //           </div> </div>`;
+            //           idIndex++;
+            //   }
+              switch (item.name) {
+                  case "langue":
+                      html += `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('anglais')">` +
+                      "anglais" +
+                      `</div>` +
+                      `<div class="messages__item messages__item--visitor"  onClick="modifyLanguage('français')">` +
+                      "français" +
+                      `</div>` +
+                      `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('arabe')">` +
+                      "arabe" +
+                      `</div>`+
+                      `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+                      break;
+                    case "welcome_Sam":
+                        html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+                    break;
+
+                    case "Sam":
+                        html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+                    break;
+                    case "User":
+                        html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `')">` + item.message + `</div>`;
+                    break;
+
+                  default:
+                      
+                      break;
               }
         });
 

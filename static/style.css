@@ -214,10 +214,10 @@ body {
 }
 
 
-/* 
+
   .progress-container {
     height: 0.9rem;
-    width: 10rem;
+    width: 9rem;
     border-radius: 0.4rem;
     background: white;
   }
@@ -230,7 +230,7 @@ body {
     background: #a08c8d;
   
     transition: width 0.4s ease;
-  } */
+  } 
 
 
  
