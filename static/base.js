@@ -100,7 +100,7 @@ function onSendButton(chatbox) {
         messages.push(msg1);
         updateChatText(chatbox);
 
-        fetch("http://127.0.0.1:5000/predict", {
+        fetch("http://127.0.0.1:5050/predict", {
             method: "POST",
             body: JSON.stringify({ message: textField }),
             mode: "cors",

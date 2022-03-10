@@ -153,7 +153,12 @@ body {
     padding: 8px 12px;
     max-width: 70%;
 }
-
+.audio{
+    padding: auto;
+    background: var(--primary);
+    color: white;
+    max-width: 100%;
+}
 .messages__item--visitor,
 .messages__item--typing {
     border-top-left-radius: 20px;
@@ -167,6 +172,7 @@ body {
     border-bottom-left-radius: 20px;
     background: var(--primary);
     color: white;
+
 }
 
 /* FOOTER */
@@ -234,3 +240,60 @@ body {
 
 
  
+  a {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #6400a4, #5e07b5, #5411c6, #411bd8, #1225eb);
+    border: 2px dotted white;
+    color: aliceblue;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+a::after {
+    position: absolute;
+    content: '';
+    bottom: -7px;
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0px;
+    opacity: 1;
+    transform-origin: center;
+    animation: anim 800ms linear infinite;
+}
+
+a::before {
+    position: absolute;
+    content: '';
+    bottom: -7px;
+    top: -7px;
+    left: -7px;
+    right: -7px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0px;
+    opacity: 0.8;
+    transform-origin: center;
+    animation: anim 1500ms linear 1000ms infinite;
+}
+
+@keyframes anim {
+    from {
+        margin: 0px;
+        opacity: 1;
+    }
+
+    to {
+        margin: -15px;
+        opacity: 0;
+    }
+}
+
+span {
+    margin-left: 20px;
+}

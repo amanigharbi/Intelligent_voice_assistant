@@ -1,18 +1,22 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS, cross_origin
 # from gtts import gTTS
+from tensorflow.python.distribute.combinations import env
+
 from TrainingModel import TrainingModel
 app = Flask(__name__)
-
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'application/json'
 assistant = TrainingModel('intents.json')
-# assistant.train_model()
+#assistant.train_model()
 # print("train")
-# assistant.save_model("VoiceBot")
+#assistant.save_model("VoiceBot")
 @app.route("/")
 def index_get():
-
-
     return render_template('base.html')
+
 @app.post("/predict")
+@cross_origin(origin='127.0.0.1')
 def predict():
   
     assistant.load_model("VoiceBot")
@@ -28,5 +32,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=5050)
 

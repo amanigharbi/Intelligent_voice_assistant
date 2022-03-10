@@ -1,7 +1,7 @@
 {"intents":
 [
   {"tag": "greeting",
-  "patterns": ["Hey","Hello","What's up?","How is it going?","Hi","Good day"],
+  "patterns": ["Hey","Hello","What`s up?","How is it going?","Hi","Good day"],
     "responses": ["Hello sir!","Hello, what can I do for you"]
   },
       {"tag": "Times",
@@ -71,7 +71,7 @@
           },
           {"tag": "family notebook",
            "patterns": ["How to extract the family book for the first time"],
-           "responses": ["a photograph of the head of the family, a copy of the husband's national identity card, a marriage certificate, a birth certificate for each of the spouses, contents for the rest of the family: in the case of extracting the book after a period of marriage, the employee is known on the family book."]
+           "responses": ["a photograph of the head of the family, a copy of the husband`s national identity card, a marriage certificate, a birth certificate for each of the spouses, contents for the rest of the family: in the case of extracting the book after a period of marriage, the employee is known on the family book."]
           },
           {"tag": "identify the signature",
            "patterns": ["What documents are required to identify the signature"],
@@ -95,8 +95,8 @@
      },
 
   {"tag": "salutation",
-     "patterns": ["Bonjour", "Comment vas tu", "Il y a quelqu'un?", "Salut", "Bonne journée"],
-     "responses": ["Bonjour merci pour la visite", "C'est bon de te revoir", "Salut, comment puis je vous aider?"],
+     "patterns": ["Bonjour", "Comment vas tu", "Il y a quelqu`un?", "Salut", "Bonne journée"],
+     "responses": ["Bonjour merci pour la visite", "C`est bon de te revoir", "Salut, comment puis je vous aider?"],
      "context_set": ""
     },
    {"tag": "Heures",
@@ -105,7 +105,7 @@
         },
 
   {"tag": "OuvertAujourdhui",
-   "patterns": ["Etes vous ouvert aujourd'hui?", "Quand ouvres tu aujourd'hui?", "Quelles sont vos heures aujourd'hui?"],
+   "patterns": ["Etes vous ouvert aujourd`hui?", "Quand ouvres tu aujourd`hui?", "Quelles sont vos heures aujourd`hui?"],
    "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 17h tous les jours"]
   },
         {"tag": "Trafic de camions",
@@ -114,15 +114,15 @@
          },
          {"tag": "bâtiment en désordre",
                 "patterns": ["Comment signaler un immeuble en désordre ?"],
-                "responses": ["Contactez le commissariat de police municipal et l'intérêt du coordonnateur de l'arrangement dans l'administration municipale"]
+                "responses": ["Contactez le commissariat de police municipal et l`intérêt du coordonnateur de l`arrangement dans l`administration municipale"]
                },
                {"tag": "illumination publique",
-                "patterns": ["Comment puis-je signaler des problèmes d'illumination publique ?" ],
-                "responses": ["Le problème peut être consigné dans un cahier préparé à cet effet situé à l'accueil de l'administration centrale ou à l'entrepôt communal (atelier d'éveil du public).)."]
+                "patterns": ["Comment puis-je signaler des problèmes d`illumination publique ?" ],
+                "responses": ["Le problème peut être consigné dans un cahier préparé à cet effet situé à l`accueil de l`administration centrale ou à l`entrepôt communal (atelier d`éveil du public).)."]
                },
                {"tag": "relever les déchets ",
                 "patterns":["Puis-je demander à la municipalité de relever les déchets spéciaux"],
-                "responses": ["Oui, cela peut se faire en contactant la Direction de l'Hygiène et de l'Environnement pour déterminer la quantité et la qualité des déchets et le coût de leur ramassage."]
+                "responses": ["Oui, cela peut se faire en contactant la Direction de l`Hygiène et de l`Environnement pour déterminer la quantité et la qualité des déchets et le coût de leur ramassage."]
                },
                {"tag": "Séances du Conseil",
                 "patterns":["Quels sont les horaires des séances du Conseil Municipal ? "],
@@ -130,35 +130,35 @@
                },
                {"tag": "menace pour la santé",
                 "patterns":["Comment signaler une menace pour la santé ou le confort des citoyens ?"],
-                "responses": ["Contactez la police municipale et la police de l'environnement."]
+                "responses": ["Contactez la police municipale et la police de l`environnement."]
                },
                {"tag": "permis de construire",
                 "patterns":["Puis-je obtenir une copie du permis de construire ?"],
-                "responses": [" Le citoyen doit déposer à cet effet un dossier composé des pièces suivantes :  une demande de permis de construire  un exemple original d'arpentage  un titre original  une déclaration fiscale  6 exemples techniques du projet de construction  une attestation de sortie  une copie de la carte nationale d'identité  Et le numéro de 02 circonstances odieuses portant l'adresse du domicile :  مطلب في رخصة بناء  مثال مسحي أصلي  حجة ملكية أصلية  تصريح على الضريبة  6 أمثلة هندسية لمشروع البناء  شهادة إبراء  نسخة من بطاقة التعريف الوطنية  وعدد 02 ظروف متنبرة تحمل عنوان السكنى"]
+                "responses": [" Le citoyen doit déposer à cet effet un dossier composé des pièces suivantes :  une demande de permis de construire  un exemple original d`arpentage  un titre original  une déclaration fiscale  6 exemples techniques du projet de construction  une attestation de sortie  une copie de la carte nationale d`identité  Et le numéro de 02 circonstances odieuses portant l`adresse du domicile :  مطلب في رخصة بناء  مثال مسحي أصلي  حجة ملكية أصلية  تصريح على الضريبة  6 أمثلة هندسية لمشروع البناء  شهادة إبراء  نسخة من بطاقة التعريف الوطنية  وعدد 02 ظروف متنبرة تحمل عنوان السكنى"]
                },
                {"tag": "conditions de démarcation de naissance",
-                "patterns":["Qu'est-ce qu'un acte de naissance? "],
-                "responses":["La déclaration de naissance est faite par le père, le médecin, la sage-femme ou d'autres personnes qui ont assisté à la naissance», par autorisation délivrée par le président du tribunal de première instance du lieu où le nouveau-né est née », la notification de la naissance a lieu dans les dix (10) jours qui suivent l'accouchement - Si la notification de la naissance n'a pas eu lieu dans le délai légal, l'officier de l'état civil ne peut l'inscrire dans ses livres qu'en cas de nécessité."]
+                "patterns":["Qu`est-ce qu`un acte de naissance? "],
+                "responses":["La déclaration de naissance est faite par le père, le médecin, la sage-femme ou d`autres personnes qui ont assisté à la naissance», par autorisation délivrée par le président du tribunal de première instance du lieu où le nouveau-né est née », la notification de la naissance a lieu dans les dix (10) jours qui suivent l`accouchement - Si la notification de la naissance n`a pas eu lieu dans le délai légal, l`officier de l`état civil ne peut l`inscrire dans ses livres qu`en cas de nécessité."]
                },
-               {"tag": "documents d'acte de naissance",
+               {"tag": "documents d`acte de naissance",
                 "patterns":["Puis-je obtenir une copie du permis de construire ?"],
-                "responses": ["La carte nationale d'identité du père ou de la mère, le livret de famille ou l'acte de naissance d'un des enfants "]
+                "responses": ["La carte nationale d`identité du père ou de la mère, le livret de famille ou l`acte de naissance d`un des enfants "]
                },
                {"tag": "Conditions de naissance garantie",
                 "patterns":["Quelles sont les conditions pour obtenir un acte de naissance ?"],
-                "responses": ["Déposer une demande orale auprès de l'officier de l'état civil"]
+                "responses": ["Déposer une demande orale auprès de l`officier de l`état civil"]
                },
                {"tag": "acte de naissance",
                 "patterns":["Comment extraire le contenu de la naissance? "],
-                "responses": ["délivrer des instructions de naissance : date, numéro du tirage », donner un ancien acte de naissance, « autre acte d'état civil, en précisant s'il s'agit d'un dessin original, d'une déclaration ou d'un jugement"]
+                "responses": ["délivrer des instructions de naissance : date, numéro du tirage », donner un ancien acte de naissance, « autre acte d`état civil, en précisant s`il s`agit d`un dessin original, d`une déclaration ou d`un jugement"]
                },
                {"tag": "corriger le thème astral",
                 "patterns":["comment réparer un thème astral"],
-                "responses": ["Une demande définie par la signature de l'intéressé, dans laquelle son adresse complète est mentionnée, est adressée à l'officier de l'état civil qui dispose du droit de naissance de l'étudiant, du contenu de la naissance de l'intéressé, le contenu de la naissance ou du décès du père de l'élève, le contenu de la naissance d'un frère ou d'une sœur "]
+                "responses": ["Une demande définie par la signature de l`intéressé, dans laquelle son adresse complète est mentionnée, est adressée à l`officier de l`état civil qui dispose du droit de naissance de l`étudiant, du contenu de la naissance de l`intéressé, le contenu de la naissance ou du décès du père de l`élève, le contenu de la naissance d`un frère ou d`une sœur "]
                },
                {"tag": "contrat de mariage",
                 "patterns":["Comment conclure un contrat de mariage ?"],
-                "responses": ["Acte de naissance pour les deux époux, certificat médical de consommation du mariage, copie de la carte d'identité ou du passeport en cours de validité, autorisation du tribunal pour les mineurs."]
+                "responses": ["Acte de naissance pour les deux époux, certificat médical de consommation du mariage, copie de la carte d`identité ou du passeport en cours de validité, autorisation du tribunal pour les mineurs."]
                },
                {"tag": "garantie de mariage",
                 "patterns":["comment obtenir du contenu de mariage?"],
@@ -166,19 +166,19 @@
                },
                {"tag": "carnet de famille",
                 "patterns":["Comment extraire le livret de famille pour la première fois?"],
-                "responses": [" une photographie du chef de famille, une copie de la carte nationale d'identité du mari, un acte de mariage, un acte de naissance pour chacun des époux, contenu pour le reste de la famille : en cas d'extraction livret après une période de mariage, le salarié est connu sur le livret de famille."]
+                "responses": [" une photographie du chef de famille, une copie de la carte nationale d`identité du mari, un acte de mariage, un acte de naissance pour chacun des époux, contenu pour le reste de la famille : en cas d`extraction livret après une période de mariage, le salarié est connu sur le livret de famille."]
                },
                {"tag": "identifier la signature",
                 "patterns":[" Quels documents sont nécessaires pour identifier la signature ?"],
-                "responses": ["le document à identifier, le document officiel pour prouver l'identité (carte d'identité, passeport)"]
+                "responses": ["le document à identifier, le document officiel pour prouver l`identité (carte d`identité, passeport)"]
                },
-               {"tag": "les copies correspondent à l'original ",
-                "patterns":["Quels sont les documents requis pour certifier que les copies sont identiques à l'original ?"],
-                "responses": ["original du document, copies à certifier conformes à l'original, mémorisation de la carte d'identité du présentateur du document"]
+               {"tag": "les copies correspondent à l`original ",
+                "patterns":["Quels sont les documents requis pour certifier que les copies sont identiques à l`original ?"],
+                "responses": ["original du document, copies à certifier conformes à l`original, mémorisation de la carte d`identité du présentateur du document"]
                },
                {"tag": "Un permis pour démolir une propriété",
-                "patterns":["Quels sont les documents requis pour obtenir un permis de démolition d'une propriété?"],
-                "responses": ["Que le citoyen soit propriétaire d'un bien, que le bien à démolir ne soit pas occupé par l'habitation ou l'exploitation, que le bien soit vétuste par la chute et présente un danger, ou que la reconstruction soit à faire dans le cadre du développement."]
+                "patterns":["Quels sont les documents requis pour obtenir un permis de démolition d`une propriété?"],
+                "responses": ["Que le citoyen soit propriétaire d`un bien, que le bien à démolir ne soit pas occupé par l`habitation ou l`exploitation, que le bien soit vétuste par la chute et présente un danger, ou que la reconstruction soit à faire dans le cadre du développement."]
                },
        {"tag": "Merci",
          "patterns": ["Merci", "Merci beaucoup"],
