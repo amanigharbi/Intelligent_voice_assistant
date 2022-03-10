@@ -248,6 +248,8 @@ body {
     border-radius: 50%;
     padding: 10px;
     position: relative;
+   
+   
 }
 
 a::after {
@@ -296,4 +298,5 @@ a::before {
 
 span {
     margin-left: 20px;
+    
 }

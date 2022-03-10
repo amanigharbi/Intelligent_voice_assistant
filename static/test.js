@@ -8,7 +8,7 @@ button.addEventListener("click", (start) => {
 
 var id = 1;
 var chatRepId = 1;
-
+var test="";
 args = {
     openButton: document.querySelector(".chatbox__button"),
     chatBox: document.querySelector(".chatbox__support"),
@@ -129,16 +129,21 @@ function readOutLoud(message, id, actor) {
     switch (language) {
         case "anglais":
             speech.lang = "en-US";
+            test="play";
             break;
         case "français":
             speech.lang = "fr-FR";
+            test="Lire";
             break;
         case "arabe":
             speech.lang = "ar-AE";
+            test="استمع";
             break;
         default:
             speech.lang = "fr-FR";
+            test="Lire";
     }
+    console.log("test "+test);
 
     temp = div.innerHTML;
 
@@ -195,7 +200,7 @@ function readOutLoud(message, id, actor) {
     
     window.speechSynthesis.speak(speech);
     speech.onend = function (event) {
-        div.innerHTML = `<a href="#"><i class="fas fa-play"></i></a><span>Play</span>`;
+        div.innerHTML = `<a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span>`;
     };
 }
 
@@ -220,16 +225,16 @@ function updateChatText(chatbox) {
                         `</div>` +
                         `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` +
                         item.message +
-                        `','lang-chose','chat')" id="lang-chose"><a href="#"><i class="fas fa-play"></i></a><span>Play</span></div>`;
+                        `','lang-chose','chat')" id="lang-chose"><a href="#"><i class="fas fa-play"></i></a><span>Lire</span></div>`;
                     break;
                 case "welcome_Sam":
-                    html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-1','chat')" id="chat-1"><a href="#"><i class="fas fa-play"></i></a><span>Play</span></div>`;
+                    html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-1','chat')" id="chat-1"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
                     break;
                     case "Sam":
-                    html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-` + chatRepId + `','chat')" id="chat-` + chatRepId + `"><a href="#"><i class="fas fa-play"></i></a><span>Play</span></div>`;
+                    html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-` + chatRepId + `','chat')" id="chat-` + chatRepId + `"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
                     break;
                 case "User":
-                    html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `','speech-` + id + `','user')" id="speech-` + id + `"><a href="#"><i class="fas fa-play"></i></a><span>Play</span></div>`;
+                    html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `','speech-` + id + `','user')" id="speech-` + id + `"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
                     id++;
                     break;
             }
