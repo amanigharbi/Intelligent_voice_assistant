@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 from tensorflow.python.distribute.combinations import env
-#import chat
-from TrainingModel import TrainingModel
+from VoiceBot_model import response
+# from TrainingModel import TrainingModel
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
-assistant = TrainingModel('intents.json')
+#assistant = TrainingModel('intents.json')
 #assistant.train_model()
 # print("train")
 #assistant.save_model("VoiceBot")
@@ -18,11 +18,11 @@ def index_get():
 @cross_origin(origin='127.0.0.1')
 def predict():
   
-    assistant.load_model("VoiceBot")
+    #assistant.load_model("VoiceBot")
     text=request.get_json().get("message")
     #text="hello"
     print("text aaa", text)
-    reponse = assistant.response(text)
+    reponse = response(text)
     print(reponse)
     return jsonify(reponse)
 

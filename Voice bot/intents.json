@@ -1,0 +1,284 @@
+{"intents":
+[
+  {"tag": "greeting",
+  "patterns": ["Hey","Hello","What`s up?","How is it going?","Hi","Good day"],
+    "responses": ["Hello sir!","Hello, what can I do for you"]
+  },
+      {"tag": "Times",
+         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+    {"tag": "OpenToday",
+         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
+         "responses": ["We are open daily from 9 a.m. to 5 p.m.", "Our hours are 9 a.m. to 9 p.m. daily."]
+        },
+       
+  {"tag": "truck traffic",
+    "patterns": ["What are the times for scavenging trucks to pass through neighborhoods?" ],
+    "responses": ["Removal of excreta by compactor truck: all days of the week starting at ten o’clock at night", "removing excreta door-by-door system: all days of the week starting at seven o’clock in the evening"]
+   },
+   {"tag": "messy build",
+          "patterns": ["How do I report a messy build?" ],
+          "responses": ["Contact the Municipal Police Station and the Department of Arrangements Coordinator of the Municipal Administration"]
+    },
+    {"tag": "public enlightenment",
+           "patterns": ["How do I report problems with public enlightenment?" ],
+           "responses": ["The problem can be written in a notebook prepared for the purpose that is located at the reception desk in the central administration or in the municipal warehouse (public enlightenment workshop)."]
+          },
+          {"tag": "raised droppings",
+           "patterns": ["Can I ask the municipality to collect special waste?"],
+           "responses": ["Yes, this can be done by contacting the Department of Cleanliness and Environment to determine the quantity and quality of waste and the cost of removing it."]
+          },
+          {"tag": "council sessions",
+           "patterns": ["What are the dates for the Municipal Council sessions?"],
+           "responses": ["The Municipal Council holds four sessions annually, during the months: February - May - July - November, the dates of which are determined and notified by all available means."]
+          },
+          {"tag": "a threat to health",
+           "patterns": ["How do I report a threat to the health or comfort of citizens?"],
+           "responses": ["Contact the Municipal Police and the Environmental Police."]
+          },
+          {"tag": "a copy of the building permit",
+           "patterns": ["Can I get a copy of the building permit?"],
+           "responses": ["The citizen must submit a file for this purpose consisting of the following documents:  a demand for a building permit  an original survey example  an original title deed  a tax declaration  6 engineering examples of the construction project  a release certificate  a copy of the national identification card  And the number of 02 obnoxious circumstances bearing the address of residence."]
+          },
+          {"tag": "conditions for demarcation of birth",
+           "patterns": ["What is a birth certificate?"],
+           "responses": ["The notification of the birth is made by the father, the doctor, the midwife, or other persons who witnessed the birth,” with permission issued by the President of the Court of First Instance in the place where the newborn was born,” the notification of the birth takes place within the ten (10) days that Postpartum - If the notification of the birth did not take place within the legal deadline, the civil status officer cannot include it in his books except as required."]
+          },
+          {"tag": "birth certificate documents",
+           "patterns": ["Can I get a copy of the building permit?"],
+           "responses" :[]
+          },
+          {"tag": "conditions for content of birth",
+           "patterns": ["What are the conditions for obtaining a birth certificate"],
+           "responses": ["submission of an oral request to the civil status officer"]
+          },
+          {"tag": "delivery content documents",
+           "patterns": ["How to extract the content of the birth"],
+           "responses": ["delivering birth instructions: date, number of the drawing”, giving an old birth certificate, “other civil status document, specifying whether it is an original drawing, declaration or judgment"]
+          },
+          {"tag": "fix birth chart",
+           "patterns": ["how to fix a birth chart"],
+           "responses":["A request defined by the signature of the person concerned, in which his full address is mentioned, addressed to the civil status officer who has the student’s birth fee, the content of the birth of the person concerned, the content of the birth or death of the student’s father, the content of the birth of a sibling"]
+          },
+          {"tag": "conclusion of a marriage contract",
+           "patterns": ["How to conclude a marriage contract"],
+           "responses": ["Birth certificate for both spouses, medical certificate of consummation of marriage, copy of identification card or valid passport, permission from the court for those underage,"]
+          },
+          {"tag": "marriage guarantee",
+           "patterns": ["how to obtain marriage content"],
+    "responses":[]
+          },
+          {"tag": "family notebook",
+           "patterns": ["How to extract the family book for the first time"],
+           "responses": ["a photograph of the head of the family, a copy of the husband`s national identity card, a marriage certificate, a birth certificate for each of the spouses, contents for the rest of the family: in the case of extracting the book after a period of marriage, the employee is known on the family book."]
+          },
+          {"tag": "identify the signature",
+           "patterns": ["What documents are required to identify the signature"],
+           "responses": ["the document to be identified, the official document to prove identity (identification card, passport)"]
+          },
+          {"tag": "copies match to original",
+           "patterns": ["What are the documents required to certify that copies are identical to the original"],
+           "responses":["The original document, copies to certify that it is identical to the original, the identification card of the document presenter must be presented"]
+          },
+          {"tag": "a license to demolish a property",
+           "patterns": ["What are the documents required to obtain a permit to demolish a property"],
+           "responses": ["that the citizen is the owner of a property, that the property to be demolished is not occupied by housing or exploitation, that the property is dilapidated by the fall and poses a danger, or that reconstruction will take place within the framework of development"]
+          },
+          {"tag": "Thank",
+            "patterns": ["Thank you"],
+            "responses": ["Happy to help!", "You are welcome!", "with pleasure"]
+           },
+      {"tag": "exit",
+     "patterns": ["Bye","Stop","Quit","I want to quit","Goodbye","I want to exit","I have to go"],
+       "responses": ["See you later, Thank you for your visit","Bye sir!","Have a nice day, come back"]
+     },
+
+  {"tag": "salutation",
+     "patterns": ["Bonjour", "Comment vas tu", "Il y a quelqu`un?", "Salut", "Bonne journée"],
+     "responses": ["Bonjour merci pour la visite", "C`est bon de te revoir", "Salut, comment puis je vous aider?"],
+     "context_set": ""
+    },
+   {"tag": "Heures",
+         "patterns": ["Quelles heures etes vous ouvert?", "Quelles sont vos heures?", "Quand  vous etes ouvert?" ],
+         "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 21h tous les jours"]
+        },
+
+  {"tag": "OuvertAujourdhui",
+   "patterns": ["Etes vous ouvert aujourd`hui?", "Quand ouvres tu aujourd`hui?", "Quelles sont vos heures aujourd`hui?"],
+   "responses": ["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 17h tous les jours"]
+  },
+        {"tag": "Trafic de camions",
+          "patterns": ["Quels sont les horaires de passage des camions de poubelles dans les quartiers ?" ],
+          "responses": ["Relevage des déchets par camion compacteur : tous les jours de la semaine, à partir de dix heures du soir", "Levage des déchets, système porte par porte : tous les jours de la semaine, à partir de sept heures du soir"]
+         },
+         {"tag": "bâtiment en désordre",
+                "patterns": ["Comment signaler un immeuble en désordre ?"],
+                "responses": ["Contactez le commissariat de police municipal et l`intérêt du coordonnateur de l`arrangement dans l`administration municipale"]
+               },
+               {"tag": "illumination publique",
+                "patterns": ["Comment puis-je signaler des problèmes d`illumination publique ?" ],
+                "responses": ["Le problème peut être consigné dans un cahier préparé à cet effet situé à l`accueil de l`administration centrale ou à l`entrepôt communal (atelier d`éveil du public).)."]
+               },
+               {"tag": "relever les déchets ",
+                "patterns":["Puis-je demander à la municipalité de relever les déchets spéciaux"],
+                "responses": ["Oui, cela peut se faire en contactant la Direction de l`Hygiène et de l`Environnement pour déterminer la quantité et la qualité des déchets et le coût de leur ramassage."]
+               },
+               {"tag": "Séances du Conseil",
+                "patterns":["Quels sont les horaires des séances du Conseil Municipal ? "],
+                "responses": ["Le Conseil Municipal tient quatre sessions par an, pendant les mois : février - mai - juillet - novembre, et les dates sont fixées et notifiées par tous les moyens disponibles."]
+               },
+               {"tag": "menace pour la santé",
+                "patterns":["Comment signaler une menace pour la santé ou le confort des citoyens ?"],
+                "responses": ["Contactez la police municipale et la police de l`environnement."]
+               },
+               {"tag": "permis de construire",
+                "patterns":["Puis-je obtenir une copie du permis de construire ?"],
+                "responses": [" Le citoyen doit déposer à cet effet un dossier composé des pièces suivantes :  une demande de permis de construire  un exemple original d`arpentage  un titre original  une déclaration fiscale  6 exemples techniques du projet de construction  une attestation de sortie  une copie de la carte nationale d`identité  Et le numéro de 02 circonstances odieuses portant l`adresse du domicile :  مطلب في رخصة بناء  مثال مسحي أصلي  حجة ملكية أصلية  تصريح على الضريبة  6 أمثلة هندسية لمشروع البناء  شهادة إبراء  نسخة من بطاقة التعريف الوطنية  وعدد 02 ظروف متنبرة تحمل عنوان السكنى"]
+               },
+               {"tag": "conditions de démarcation de naissance",
+                "patterns":["Qu`est-ce qu`un acte de naissance? "],
+                "responses":["La déclaration de naissance est faite par le père, le médecin, la sage-femme ou d`autres personnes qui ont assisté à la naissance», par autorisation délivrée par le président du tribunal de première instance du lieu où le nouveau-né est née », la notification de la naissance a lieu dans les dix (10) jours qui suivent l`accouchement - Si la notification de la naissance n`a pas eu lieu dans le délai légal, l`officier de l`état civil ne peut l`inscrire dans ses livres qu`en cas de nécessité."]
+               },
+               {"tag": "documents d`acte de naissance",
+                "patterns":["Puis-je obtenir une copie du permis de construire ?"],
+                "responses": ["La carte nationale d`identité du père ou de la mère, le livret de famille ou l`acte de naissance d`un des enfants "]
+               },
+               {"tag": "Conditions de naissance garantie",
+                "patterns":["Quelles sont les conditions pour obtenir un acte de naissance ?"],
+                "responses": ["Déposer une demande orale auprès de l`officier de l`état civil"]
+               },
+               {"tag": "acte de naissance",
+                "patterns":["Comment extraire le contenu de la naissance? "],
+                "responses": ["délivrer des instructions de naissance : date, numéro du tirage », donner un ancien acte de naissance, « autre acte d`état civil, en précisant s`il s`agit d`un dessin original, d`une déclaration ou d`un jugement"]
+               },
+               {"tag": "corriger le thème astral",
+                "patterns":["comment réparer un thème astral"],
+                "responses": ["Une demande définie par la signature de l`intéressé, dans laquelle son adresse complète est mentionnée, est adressée à l`officier de l`état civil qui dispose du droit de naissance de l`étudiant, du contenu de la naissance de l`intéressé, le contenu de la naissance ou du décès du père de l`élève, le contenu de la naissance d`un frère ou d`une sœur "]
+               },
+               {"tag": "contrat de mariage",
+                "patterns":["Comment conclure un contrat de mariage ?"],
+                "responses": ["Acte de naissance pour les deux époux, certificat médical de consommation du mariage, copie de la carte d`identité ou du passeport en cours de validité, autorisation du tribunal pour les mineurs."]
+               },
+               {"tag": "garantie de mariage",
+                "patterns":["comment obtenir du contenu de mariage?"],
+                "responses": ["Donner des instructions de mariage : date, nombre de frais, déterminer si le mariage a été conclu à la municipalité ou chez un notaire public."]
+               },
+               {"tag": "carnet de famille",
+                "patterns":["Comment extraire le livret de famille pour la première fois?"],
+                "responses": [" une photographie du chef de famille, une copie de la carte nationale d`identité du mari, un acte de mariage, un acte de naissance pour chacun des époux, contenu pour le reste de la famille : en cas d`extraction livret après une période de mariage, le salarié est connu sur le livret de famille."]
+               },
+               {"tag": "identifier la signature",
+                "patterns":[" Quels documents sont nécessaires pour identifier la signature ?"],
+                "responses": ["le document à identifier, le document officiel pour prouver l`identité (carte d`identité, passeport)"]
+               },
+               {"tag": "les copies correspondent à l`original ",
+                "patterns":["Quels sont les documents requis pour certifier que les copies sont identiques à l`original ?"],
+                "responses": ["original du document, copies à certifier conformes à l`original, mémorisation de la carte d`identité du présentateur du document"]
+               },
+               {"tag": "Un permis pour démolir une propriété",
+                "patterns":["Quels sont les documents requis pour obtenir un permis de démolition d`une propriété?"],
+                "responses": ["Que le citoyen soit propriétaire d`un bien, que le bien à démolir ne soit pas occupé par l`habitation ou l`exploitation, que le bien soit vétuste par la chute et présente un danger, ou que la reconstruction soit à faire dans le cadre du développement."]
+               },
+       {"tag": "Merci",
+         "patterns": ["Merci", "Merci beaucoup"],
+         "responses": ["Heureux de pouvoir vous aider!", "A toute heure!", "Avec plaisir"]
+        },
+         {"tag": "Exit",
+         "patterns": ["Au revoir", "A plus tard", "bye"],
+         "responses": ["A plus tard, Merci de votre visite", "Bonne journée", "Au revoir! reviens."]
+        },
+
+  {"tag": "التحية",
+         "patterns": ["اهلا","مرحبا"],
+         "responses": ["مرحبا شكرا على الزيارة"," كيف يمكنني مساعدتك؟"]
+        },
+   {"tag": "اوقات العمل",
+        "patterns": ["ما هي ساعات العمل؟ "," متى تفتحون؟"],
+         "responses": ["نحن مفتوحون يوميًا من الساعة 9 صباحًا حتى الساعة 5 مساءً." , "ساعات العمل لدينا من 9 صباحًا حتى 5 مساءً يوميًا." ]
+         },
+
+         {"tag": "مرور شاحنات",
+          "patterns": ["ماهي أوقات مرور شاحنات رفع الفضلات بالاحياء ؟" ],
+          "responses": ["رفع الفضلات بالشاحنة الضاغطة : كامل أيام الأسبوع بداية من الساعة العاشرة ليلا ", "رفع الفضلات نظام باب باب : كامل أيام الأسبوع بداية من الساعة السابعة مساء"]
+         },
+         {"tag": "بناء فوضوي",
+                "patterns": ["كيف أبلغ عن بناء فوضوي ؟" ],
+                "responses": ["الاتصال بمركز الشرطة البلدية ومصلحة منسق التراتيب بالإدارة البلدية"]
+               },
+               {"tag": "التنوير العمومي",
+                "patterns": ["كيف أبلغ عن اشكال في التنوير العمومي ؟" ],
+                "responses": ["يمكن تدوين الإشكال بدفتر معد للغرض موجود بمكتب الاستقبال بالإدارة المركزية أو بالمستودع البلدي (ورشة التنوير العمومي)."]
+               },
+               {"tag": "رفع فضلات ",
+                "patterns":["هل يمكن أن أطلب من البلدية رفع فضلات خاصة ؟"],
+                "responses": ["نعم يمكن ذلك بالاتصال بإدارة النظافة والمحيط لتحديد كمية الفضلات و نوعيتها و كلفة رفعها."]
+               },
+               {"tag": "جلسات المجلس",
+                "patterns":["ماهي مواعيد جلسات المجلس البلدي ؟"],
+                "responses": ["يعقد المجلس البلدي أربعة دورات سنويا وذلك خلال الأشهر : فيفري – ماي – جويلية – نوفمبر ويتم تحديد تواريخها والإعلام بها بكل الوسائل المتاحة."]
+               },
+               {"tag": "خطر يهدد صحة",
+                "patterns":["كيف ابلغ عن خطر يهدد صحة او راحة المواطنين ؟"],
+                "responses": ["الاتصال بالشرطة البلدية و الشرطة البيئية."]
+               },
+               {"tag": "نسخة من رخصة البناء",
+                "patterns":["هل من الممكن ان أتحصل على نسخة من رخصة البناء ؟"],
+                "responses": ["يتعين على المواطن تقديم ملف في الغرض يتكون الوثائق التالية :  مطلب في رخصة بناء  مثال مسحي أصلي  حجة ملكية أصلية  تصريح على الضريبة  6 أمثلة هندسية لمشروع البناء  شهادة إبراء  نسخة من بطاقة التعريف الوطنية  وعدد 02 ظروف متنبرة تحمل عنوان السكنى"]
+               },
+               {"tag": "شروط ترسيم ولادة",
+                "patterns":["ماهي   ترسيم ولادة ؟ "],
+                "responses": ["يقع الإعلام بالولادة من طرف الأب أو الطبيب أو القابلة أو غيرهم من الأشخاص الذين شهدوا الوضع","إذن صادر عن رئيس المحكمة الابتدائية بالجهة التي ولد بها المولود","يقع الإعلام بالولادة خلال العشرة (10) أيام التي تلي الوضع - إذا لم يقع الإعلام بالولادة في الأجل القانوني فإنه لايمكن لضابط الحالة المدنية تضمينها بدفاتره إلا بمقتضي"]
+               },
+               {"tag": " وثائق  ترسيم ولادة",
+                "patterns":["هل من الممكن ان أتحصل على نسخة من رخصة البناء ؟"],
+                "responses": ["بطاقة التعريف الوطنية للأب أو للأم"," الدفتر العائلي أو مضمون ولادة أحد الأبناء "]
+               },
+               {"tag": "شروط مضمون ولادة",
+                "patterns":[" ماهي شروط الحصول على مضمون ولادة "],
+                "responses": ["تقديم طلب شفوي لدى ضابط الحالة المدني"]
+               },
+               {"tag": "وثائق مضمون ولادة ",
+                "patterns":["كيفية استخراج مضمون ولادة "],
+                "responses": ["الإدلاء بالإرشادات الخاصة بالولادة : التاريخ، عدد الرسم","الإدلاء بمضمون ولادة قديم"," وثيقة حالة مدنية أخرى مع تحديد ما إن كانت رسما أصليا أو تصريحا أو حكما"]
+               },
+               {"tag": "إصلاح رسم ولادة",
+                "patterns":["كيفية اصلاح رسم ولادة"],
+                "responses": ["مطلب معرف بإمضاء المعني بالأمر يذكر فيه عنوانه بالكامل موجه إلى السيد ضابط الحالة المدنية المحفوظ لديه رسم ولادة الطالب ,مضمون ولادة المعني بالأمر,مضمون ولادة أو وفاة لوالد الطالب,مضمون ولادة أحد الأشقاء"]
+               },
+               {"tag": "إبرام عقد زواج",
+                "patterns":["كيفية إبرام عقد زواج"],
+                "responses": ["مضمون ولادة لكل من الزوجين,شهادة طبية لإتمام الزواج,نسخة من بطاقة التعريف أو جواز سفر ساري المفعول,إذن من المحكمة لمن هم دون السن القانوني,"]
+               },
+               {"tag": "مضمون زواج",
+                "patterns":["كيفية الحصول على مضمون زواج"],
+                "responses": ["الإدلاء بالإرشادات الخاصة بالزواج: التاريخ، عدد الرسم,تحديد ما إذا أبرم الزواج بالبلدية أو لدى عدل إشهاد"]
+               },
+               {"tag": "الدفتر العائلي",
+                "patterns":["كيفية استخراج الدفتر العائلي لأول مرة"],
+                "responses": ["صورة شمسية لرئيس العائلة,نسخة من بطاقة التعريف الوطنية للزوج,مضمون زواج,مضمون ولادة لكل من الزوجين,مضامين لبقية أفراد العائلة : في حالة استخراج الدفتر بعد مدة من الزواج,المعلوم الموظف على الدفتر العائلي"]
+               },
+               {"tag": "التعريف بالإمضاء",
+                "patterns":["ماهي الوثائق المطلوبة للتعريف بالامضاء"],
+                "responses": ["الوثيقة المراد التعريف بها,الوثيقة الرسمية لإثبات الهوية (بطاقة التعريف، جواز سفر)"]
+               },
+               {"tag": "مطابقة النسخ للأصل ",
+                "patterns":["ماهي الوثائق المطلوبة للاشهاد بمطابقة النسخ للاصل"],
+                "responses": ["الوثيقة الأصلية,النسخ المراد الإشهاد بمطابقتها للأصل,الإستظهار ببطاقة تعريف مقدم الوثيقة"]
+               },
+               {"tag": "رخصة في هدم عقار",
+                "patterns":["ماهي الوثائق المطلوبة للحصول على رخصة في هدم عقار"],
+                "responses": ["أن يكون المواطن مالكا لعقار,أن يكون العقار المزمع هدمه غير مشغول بالسكنى أو بالاستغلال,أن يكون العقار متداعيا للسقوط ويشكل خطرا أو لأن تتم إعادة البناء في إطار التطوير"]
+               },
+               {"tag": "إلى اللقاء",
+                      "patterns": ["وداعا" , "أراك لاحقا" , "وداعا"],
+                      "responses": ["أراك لاحقا , شكرا لزيارتك" , "أتمنى لك يومًا سعيدا" , "وداعًا! تعال مرة اخرى."]
+                      },
+                     {"tag": "شكرا لك",
+                     "patterns": ["شكرا لك شكرا ","جزيلا لك"],
+                      "responses": ["يسعدني أن أكون قادرًا على مساعدتك!" , "في أي وقت!" , "من دواعي سروري"]
+                      }
+
+
+]}
+
