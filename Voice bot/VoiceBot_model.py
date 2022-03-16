@@ -75,7 +75,7 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 
-model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+model.fit(training, output, n_epoch=500, batch_size=8, show_metric=True)
 model.save("model.tflearn")
 
 def bag_of_words(s, words):
@@ -92,15 +92,15 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 
-def response():
+def response(message):
     model.load("model.tflearn")
     print("Start talking with the bot (type quit to stop)!")
     while True:
-        inp = input("You: ")
-        if inp.lower() == "quit":
-            break
+        # inp = input("You: ")
+        # if inp.lower() == "quit":
+        #     break
 
-        results = model.predict([bag_of_words(inp, words)])
+        results = model.predict([bag_of_words(message, words)])
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
@@ -111,4 +111,3 @@ def response():
         print(random.choice(responses))
         return random.choice(responses)
 
-response()

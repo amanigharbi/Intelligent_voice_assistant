@@ -9,7 +9,7 @@ from nltk.stem import WordNetLemmatizer
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
-from tensorflow.keras.optimizers import SGD
+#from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.models import load_model
 nltk.download('punkt', quiet=True)
 nltk.download('wordnet', quiet=True)
@@ -79,10 +79,10 @@ class TrainingModel():
         self.model.add(Dropout(0.5))
         self.model.add(Dense(len(train_y[0]), activation='softmax'))
 
-        sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-        self.model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+        #sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+        self.model.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
 
-        self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=1000, batch_size=5, verbose=1)
+        self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
 
     #after training a model we must save it
     def save_model(self, model_name=None):
@@ -152,3 +152,7 @@ class TrainingModel():
             self.intent_methods[ints[0]['intent']]()
         else:
             return self.get_response(ints, self.intents)
+# assistant = TrainingModel('intents.json')
+# assistant.train_model()
+# print("train")
+# assistant.save_model("VoiceBot")
