@@ -218,29 +218,8 @@ body {
 .chatbox__messages div {
     cursor: pointer;
 }
-
-
-
-  .progress-container {
-    height: 0.9rem;
-    width: 9rem;
-    border-radius: 0.4rem;
-    background: white;
-  }
-  
-  .progress-container .progress {
-    height: 100%;
-    width: 0;
-    border-radius: 0.4rem;
-  
-    background: #a08c8d;
-  
-    transition: width 0.4s ease;
-  } 
-
-
  
-  a {
+a {
     text-decoration: none;
     background-image: linear-gradient(to right, #6400a4, #5e07b5, #5411c6, #411bd8, #1225eb);
     border: 2px dotted white;

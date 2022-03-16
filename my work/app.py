@@ -1,11 +1,12 @@
+# importation des bibliotheques
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS, cross_origin
 from tensorflow.python.distribute.combinations import env
-#import chat
 from TrainingModel import TrainingModel
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
+#declarer l assistant et faire l entrainement et sauvegarder le model
 assistant = TrainingModel('intents.json')
 #assistant.train_model()
 # print("train")
@@ -20,7 +21,6 @@ def predict():
   
     assistant.load_model("VoiceBot")
     text=request.get_json().get("message")
-    #text="hello"
     print("text aaa", text)
     reponse = assistant.response(text)
     print(reponse)
