@@ -1,7 +1,3 @@
-/**
- * initialisation des variables necessaires
- * declaraction de speechRecognition
- */
 var SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 var recognition = new SpeechRecognition();
 var language = "";
@@ -9,9 +5,7 @@ var button = document.getElementById("button");
 button.addEventListener("click", (start) => {
     recognition.start();
 });
-var now = new Date();
-var heure   = now.getHours();
-var minute  = now.getMinutes();
+
 var id = 1;
 var chatRepId = 1;
 var test="";
@@ -24,16 +18,11 @@ messages = new Array();
 state = false;
 
 const { openButton, chatBox, sendButton } = args;
-//ajouter les evenements des boutons 
+
 openButton.addEventListener("click", () => toggleState(chatBox));
+
 sendButton.addEventListener("click", () => onSendButton(chatBox));
-/**
- * 
- * fonctin modifyLanguage nous permet de changer la langue on a 3 bouton francais / anglais/arabe
- * si on click sur arabe la langue devienne arabe et le robot parle en arabe
- * si on click sur francais la langue devienne francais et le robot parle en francais
- * si on click sur anglais la langue devienne anglais et le robot parle en anglais
- */
+
 function modifyLanguage(lang) {
     language = lang;
     console.log("language " + language);
@@ -63,12 +52,6 @@ function modifyLanguage(lang) {
             readOutLoud("choisir une langue", "lang-chose","chat");
     }
 }
-/**
- * 
- * la fonction toggleState c'est celui qu'on va mettre les actions selon statys de chatbox (ouvert/fermé)
- * Si ouvert on va questionner l'utilisateur de langue désiré
- * sinon on va vider tous
- */
 function toggleState(chatbox) {
     this.state = !this.state;
 
@@ -88,15 +71,7 @@ function toggleState(chatbox) {
         }
     }
 }
-/**
- * 
- * onSendButton(chatbox) nous permet d'envoyer les messages
- * la première chose c'est de définir la langue de recognition selon la langue séléctionné par user
- * aprés user parle et on récupère le message
- * envoyer ce message sous forme json au api flask pour récupérer la réponse retourner en json depuis python
- * (en utilisant fetch)
- * a chaque fois on enregistre le message dans le tableau messages qu'on va le récupère après  
- */
+
 function onSendButton(chatbox) {
     switch (language) {
         case "anglais":
@@ -121,7 +96,7 @@ function onSendButton(chatbox) {
         let msg1 = { name: "User", message: textField };
         messages.push(msg1);
         updateChatText(chatbox);
-        fetch("http://127.0.0.1:5050/predict", {
+        fetch("http://127.0.0.1:8888/chatbot", {
             method: "POST",
             body: JSON.stringify({ message: textField }),
             mode: "cors",
@@ -141,11 +116,7 @@ function onSendButton(chatbox) {
             .catch(console.error);
     };
 }
-/**
- * cette fonction permet le rebot de lire le message 
- * on prend a chaque fois la langue selon language sélectionné
- * selon l id et l'actor pour distinguer les messages de rebot et de user en plus chaque partie
- */
+
 function readOutLoud(message, id, actor) {
     var speech = new SpeechSynthesisUtterance();
     div = document.getElementById(id);
@@ -232,9 +203,7 @@ function readOutLoud(message, id, actor) {
         div.innerHTML = `<a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span>`;
     };
 }
-/**
- * cette fonction nous permet de modifier la partie de chatbot (design) 
- */
+
 function updateChatText(chatbox) {
     var html = "";
     messages
@@ -244,7 +213,6 @@ function updateChatText(chatbox) {
             console.log('im in');
             switch (item.name) {
                 case "langue":
-                   
                     html +=
                         `<div class="messages__item messages__item--visitor" onClick="modifyLanguage('anglais')">` +
                         "anglais" +
@@ -258,22 +226,16 @@ function updateChatText(chatbox) {
                         `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` +
                         item.message +
                         `','lang-chose','chat')" id="lang-chose"><a href="#"><i class="fas fa-play"></i></a><span>Lire</span></div>`;
-                        html += `  <p  id="a_visitor"> Bot ` +heure+`:`+minute+ `  </p>`
-                        break;
+                    break;
                 case "welcome_Sam":
-                  
                     html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-1','chat')" id="chat-1"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
-                    html += `  <p  id="a_visitor"> Bot ` +heure+`:`+minute+ `  </p>`
                     break;
                     case "Sam":
                     html += `<div class="messages__item messages__item--visitor" onClick="readOutLoud('` + item.message + `','chat-` + chatRepId + `','chat')" id="chat-` + chatRepId + `"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
-                    html += `  <p  id="a_visitor"> Bot ` +heure+`:`+minute+ `  </p>`
                     break;
                 case "User":
-                    html += `  <p  id="a_operator"> Moi ` +heure+`:`+minute+ `  </p>`
                     html += `<div class="messages__item messages__item--operator" onClick="readOutLoud('` + item.message + `','speech-` + id + `','user')" id="speech-` + id + `"><a href="#"><i class="fas fa-play"></i></a><span>`+test+`</span></div>`;
                     id++;
-                    
                     break;
             }
         });

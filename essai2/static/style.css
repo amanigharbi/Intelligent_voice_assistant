@@ -218,8 +218,29 @@ body {
 .chatbox__messages div {
     cursor: pointer;
 }
+
+
+
+  .progress-container {
+    height: 0.9rem;
+    width: 9rem;
+    border-radius: 0.4rem;
+    background: white;
+  }
+  
+  .progress-container .progress {
+    height: 100%;
+    width: 0;
+    border-radius: 0.4rem;
+  
+    background: #a08c8d;
+  
+    transition: width 0.4s ease;
+  } 
+
+
  
-a {
+  a {
     text-decoration: none;
     background-image: linear-gradient(to right, #6400a4, #5e07b5, #5411c6, #411bd8, #1225eb);
     border: 2px dotted white;
@@ -278,22 +299,4 @@ a::before {
 span {
     margin-left: 20px;
     
-}
-
-#a_operator{
-    margin-left: auto;
-    color: black;
-    font-size: x-small;
-    margin-top: 2%;
-    margin-right: 2%;
-
-}
-#a_visitor{
-    float: right;
-    margin-right: auto;
-   margin-top: 10%;
-   margin-left: 5%;
-    color: black;
-    font-size: x-small;
-
 }
