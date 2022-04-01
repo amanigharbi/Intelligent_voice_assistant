@@ -1,4 +1,3 @@
-
 import speech_recognition as sr
 import pyttsx3 as tts
 
@@ -160,11 +159,11 @@ def choiseLang():
                 speaker.runAndWait()
         return lang
 
-#assistant = TrainingModel('intents.json')
-#assistant.train_model()
-#print("train")
-#assistant.save_model("VoiceBot")
-#print("ok")
+assistant = TrainingModel('intents.json')
+assistant.train_model()
+print("train")
+assistant.save_model("VoiceBot")
+print("end train")
 def prepare(recognizer,mappings,pos,lang,msg):
     # Training a model to recognize the intents
     assistant = TrainingModel('intents.json', intent_methods=mappings)

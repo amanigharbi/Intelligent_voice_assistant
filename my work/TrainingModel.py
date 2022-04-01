@@ -35,7 +35,7 @@ class TrainingModel():
         self.words = []
         self.classes = []
         documents = []
-        ignore_letters = ['!', '?', ',', '.']
+        ignore_letters = ['!', '?', ',', '.','”']
 
         for intent in self.intents['intents']:
             for pattern in intent['patterns']:
@@ -152,7 +152,8 @@ class TrainingModel():
             self.intent_methods[ints[0]['intent']]()
         else:
             return self.get_response(ints, self.intents)
-# assistant = TrainingModel('intents.json')
-# assistant.train_model()
-# print("train")
-# assistant.save_model("VoiceBot")
+assistant = TrainingModel('intents.json')
+assistant.train_model()
+print("train")
+assistant.save_model("VoiceBot")
+print("end")

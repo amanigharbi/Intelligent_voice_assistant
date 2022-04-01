@@ -7,7 +7,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'application/json'
 #declarer l assistant et faire l entrainement et sauvegarder le model
-assistant = TrainingModel('intents.json')
+#assistant = TrainingModel('intents.json')
 #assistant.train_model()
 # print("train")
 #assistant.save_model("VoiceBot")
