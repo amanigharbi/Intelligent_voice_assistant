@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\ameni\\PycharmProjects\\Intelligent_voice_assistant\\tensorflow_tflearn_chatbot\\chatbot_model.tflearn"
+all_model_checkpoint_paths: "C:\\Users\\ameni\\PycharmProjects\\Intelligent_voice_assistant\\tensorflow_tflearn_chatbot\\chatbot_model.tflearn"

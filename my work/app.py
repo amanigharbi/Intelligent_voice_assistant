@@ -9,18 +9,16 @@ app.config['CORS_HEADERS'] = 'application/json'
 #declarer l assistant et faire l entrainement et sauvegarder le model
 assistant = TrainingModel('intents.json')
 #assistant.train_model()
-# print("train")
+#print("train")
 #assistant.save_model("VoiceBot")
 @app.route("/")
 def index_get():
     return render_template('base.html')
-
 @app.post("/predict")
 #@app.route("/predict", methods=['POST','GET'])
-# @cross_origin(origin='127.0.0.1')
-@cross_origin()
+@cross_origin(origin='127.0.0.1')
+#@cross_origin()
 def predict():
-  
     assistant.load_model("VoiceBot")
     text=request.get_json().get("message")
     print("text aaa", text)

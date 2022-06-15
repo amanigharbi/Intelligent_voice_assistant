@@ -1,603 +1,2029 @@
-{"intents":
-[
-  {"tag":"greeting",
-      "patterns":["Hey", "Hello", "What`s up?", "How is it going?", "Hi", "Good day"],
-         "responses":["Hello sir!", "Hello, what can I do for you"]
-      },
-      {"tag":"Times",
-         "patterns":["What hours are you open?","What are your hours?","When are you open?"],
-         "responses":["We are open daily from 9 a.m. to 5 p.m.","Our hours are 9 a.m. to 9 p.m. daily."]
-      },
-      {"tag":"OpenToday",
-         "patterns":["Are you open today?", "When do you open today?","What are your hours today?"],
-         "responses":["We are open daily from 9 a.m. to 5 p.m.","Our hours are 9 a.m. to 9 p.m. daily."]
-      },
-   {"tag":"truck traffic",
-         "patterns":["What are the times for scavenging trucks to pass through neighborhoods?"],
-         "responses":["Removal of excreta by compactor truck: all days of the week starting at ten o’clock at night","Removing excreta door-by-door system: all days of the week starting at seven o’clock in the evening"]
-      },
-   {"tag":"messy build",
-      "patterns":["How do I report a messy build?"],
-         "responses":["Contact the Municipal Police Station and the Department of Arrangements Coordinator of the Municipal Administration"]
-      },
-   {"tag":"public enlightenment",
-         "patterns":["How do I report problems with public enlightenment?"],
-         "responses":["The problem can be written in a notebook prepared for the purpose that is located at the reception desk in the central administration or in the municipal warehouse (public enlightenment workshop)."]
-      },
-   {"tag":"raised droppings",
-         "patterns":["Can I ask the municipality to collect special waste?"],
-         "responses":["Yes, this can be done by contacting the Department of Cleanliness and Environment to determine the quantity and quality of waste and the cost of removing it."]
-      },
-   {"tag":"council sessions",
-         "patterns":["What are the dates for the Municipal Council sessions?"],
-         "responses":["The Municipal Council holds four sessions annually, during the months: February - May - July - November, the dates of which are determined and notified by all available means."]
-      },
-   {"tag":"a threat to health",
-         "patterns":["How do I report a threat to the health or comfort of citizens?"],
-         "responses":["Contact the Municipal Police and the Environmental Police."]
-      },
-   {"tag":"a copy of the building permit",
-         "patterns":["Can I get a copy of the building permit?"],
-         "responses":["The citizen must submit a file for this purpose consisting of the following documents: First, a demand for a building permit  an original survey example , an original title deed , a tax declaration , 6 engineering examples of the construction project , a release certificate , a copy of the national identification card  And the number of 02 obnoxious circumstances bearing the address of residence."]
-      },
-   {"tag":"conditions for demarcation of birth",
-         "patterns":["What is a birth certificate?"],
-         "responses":["The notification of the birth is made by the father, the doctor, the midwife, or other persons who witnessed the birth,” with permission issued by the President of the Court of First Instance in the place where the newborn was born,” the notification of the birth takes place within the ten (10) days that Postpartum - If the notification of the birth did not take place within the legal deadline, the civil status officer cannot include it in his books except as required."]
-      },
-   {"tag":"birth certificate documents",
-         "patterns":["Can I get a copy of the building permit?"],
-         "responses":["National identification card of the father or mother", "the family book or the birth certificate of one of the children]"]
-      },
-   {"tag":"conditions for content of birth",
-         "patterns":["What are the conditions for obtaining a birth certificate?"],
-         "responses":["submission of an oral request to the civil status officer"]
-      },
-   {"tag":"delivery content documents",
-         "patterns":["How to extract the content of the birth?"],
-"responses":["delivering birth instructions: date, number of the drawing”, giving an old birth certificate, other civil status document, specifying whether it is an original drawing, declaration or judgment"]
-      },
-   {"tag":"fix birth chart",
-         "patterns":["how to fix a birth chart?"],
-"responses":["A request defined by the signature of the person concerned, in which his full address is mentioned, addressed to the civil status officer who has the student’s birth fee, the content of the birth of the person concerned, the content of the birth or death of the student’s father, the content of the birth of a sibling"]
-      },
-   {"tag":"conclusion of a marriage contract",
-         "patterns":["How to conclude a marriage contract?"],
-"responses":["Birth certificate for both spouses, medical certificate of consummation of marriage, copy of identification card or valid passport, permission from the court for those underage,"]
-      },
-   {"tag":"marriage guarantee",
-         "patterns":["how to obtain marriage content?"],
-"responses":["Giving instructions for marriage: date, number of fees, determining whether the marriage was concluded in the municipality or at a notary."]
-      },
-   {"tag":"family notebook",
-         "patterns":["How to extract the family book for the first time?"],
-"responses":["a photograph of the head of the family, a copy of the husband`s national identity card, a marriage certificate, a birth certificate for each of the spouses, contents for the rest of the family: in the case of extracting the book after a period of marriage, the employee is known on the family book."]
-      },
-   {"tag":"the equivalent of the family ledger",
-         "patterns":["How to extract the equivalent of the family book in the form of loss?"],
-"responses":["First, a certificate of loss, second, a photograph of the head of the family, third, a copy of the national identity card for the head of the family, fourth, marriage content, fifth, birth content for both spouses, sixth, contents for the rest of the family, seventh, the known employee on the family booklet."]
-      },
-   {"tag":"identify the signature",
-         "patterns":["What documents are required to identify the signature?"],
-"responses":["the document to be identified, the official document to prove identity (identification card, passport)"]
-      },
-   {"tag":"copies match to original",
-         "patterns":["What are the documents required to certify that copies are identical to the original?"],
-"responses":["The original document, copies to certify that it is identical to the original, the identification card of the document presenter must be presented"]
-      },
-   {"tag":"A license to demolish a property",
-         "patterns":["What are the documents required to obtain a permit to demolish a property?"],
-"responses":["that the citizen is the owner of a property, that the property to be demolished is not occupied by housing or exploitation, that the property is dilapidated by the fall and poses a danger, or that reconstruction will take place within the framework of development"]
-      },
-   {"tag":"Renting municipal equipment and supplies",
-         "patterns":["Can municipal equipment and supplies be rented?"],
-"responses":["Yes, as available"]
-      },
-   {"tag":"Conditions of the building permit decision for a single or twin dwelling",
-         "patterns":["What are the conditions for the decision to permit the construction of a single or twin residence?"],
-"responses":["Conditions for using the service: First, that the citizen be the owner of the property on which the building is to be built, second, that this plot comes from an approved division, and that its nature and the allocation contained in the example of preparing the area must be respected. Concerning antiquities, historical monuments, and natural and urban sites. Fourth, the citizen must submit a complete and obligatory file in accordance with the legislation in force."]
-      },
-   {"tag":"documents of the building permit decision for a single or twin dwelling",
-         "patterns":["What are the documents for a building permit decision for a single or twin residence?"],
-"responses":["First, a demand on plain paper signed by the license applicant or his representative. Secondly, an ownership certificate, eligibility judgment, or other document regarding the applicant’s ownership of the plot of land on which construction is to be built. Third, the receipt of the declaration of tax deposit on the income of natural persons or the corporate tax. Fourth, the payment of the duties employed on the property, the subject of the building permit requirement, Fifth, a building project in three (3) counterparts, conforming to the urban regulations of the area in which the construction will be located."]
-      },
-   {"tag":"the place where the building permit is deposited, a single or twin dwelling",
-         "patterns":["What is the place for depositing the building permit for a single or twin dwelling?"],
-"responses":["the municipality authority or the municipal department"]
-      },
-   {"tag":"Conditions for extending the building permit",
-         "patterns":["What are the conditions for extending a building permit?"],
-"responses":["Conditions for using the service: First, the student must have obtained a building permit subject of the extension request, Second, not to make any changes in the building subject of the permit, otherwise a new building permit must be obtained. Third, the extension request must reach the municipality one month before the expiry date.” The building permit subject of the extension request"]
-      },
-   {"tag":"Building Permit Extension Documents",
-         "patterns":["What are the documents for obtaining a building permit extension?"],
-"responses":["request documents in the name of the mayor on a regular paper signed by the concerned person"]
-      },
-   {"tag":"conditions for obtaining a certificate of conformity",
-         "patterns":["What are the conditions for obtaining a certificate of conformity?"],
-"responses":["Conditions of using the service: This certificate pertains only to the shops exploiting the activity of selling first-class beverages; a café, a tea room, a drink"]
-      },
-   {"tag":"place of deposit of a certificate of conformity",
-         "patterns":["What is the place of deposit?"],
-"responses":["the place where the file is deposited is the central control office"]
-      },
-   {"tag":"documentation of conformity certificate",
-         "patterns":["What are the documents for obtaining a certificate of conformity?"],
-"responses":["Required documents First, a demand in the name of the mayor, secondly, a copy of the national identification card, third, the lease contract for the shop (and the shop added when necessary) Fourth, an engineering example for the shop in the event of difficulties in determining the space (construction works are underway, the intention to expand due to the inadequacy of the original space of the shop. )"]
-      },
-   {"tag":"Family Party Permit Conditions",
-         "patterns":["What are the conditions for obtaining a permit to hold a family party?"],
-"responses":["First, holding a party using musical instruments or other things. Second, submitting the license request three days before the ceremony."]
-      },
-   {"tag":"family party license documents",
-         "patterns":["What are the documents for obtaining a permit to hold a family party?"],
-         "response":["A requirement on plain paper that states the date and full address of the venue in which the ceremony will be held"]
-      },
-   {"tag":"Public Domain Temporary Occupation License",
-         "patterns":["What are the documents for obtaining a temporary occupancy license of the public domain?"],
-"responses":["First, a demand on plain paper that includes the necessary data; the full address of the shop, the subject of the occupancy, its location and duration, and justification for the need for it. Fifthly, legal licenses (for shops set up as cafes or restaurants) "]
-      },
-   {"tag":"conditions of license to focus advertising signs (pillars, hangings, writing)",
-         "patterns":["What are the conditions for obtaining a license to focus advertising marks?"],
-"responses":["First, it requires a license for all equipment, drawings, or writing, whether it is an advertising hanging on a public road, an illuminated or non-illuminated sign, or writing on the front of a commercial or non-commercial store, regardless of whether its subject is commercial or not, and regardless of the way it is accomplished. Secondly, it is forbidden to focus advertising equipment if its content includes: an area marking with a directional arrow, a kilometer distance, or an imitation of a traffic sign or signal."]
-      },
-   {"tag":"Documents for a license to focus advertising marks (pillars, hangings, writing)",
-         "patterns":["What are the documents for obtaining a license to focus advertising marks?"],
-"responses":["The documents are: First, a request in the name of the mayor, signed by the student, including the necessary data; the required location, area, occupancy period, address, and a statement of need. The text and the space to be occupied by the interface for writing"]
-      },
-   {"tag":"Conditions of the certificate of demarcation of a property in the municipal collection schedule",
-         "patterns":["What are the conditions for a certificate of demarcation of a property in the municipal collection schedule?"],
-"responses":["First, that the person concerned is the owner of the property or that he has a power of attorney authorizing him to dispose of the property."]
-      },
-   {"tag":"permission to burial",
-         "patterns":["Documents required to obtain a burial permit?"],
-"responses":["First, a medical certificate stating that the death took place in natural circumstances, secondly, permission from the public prosecutor if the death occurred in natural or mysterious circumstances, and third, a report by the security services in the event of an unnatural death."]
-      },
-   {"tag":"documentation of the deceased`s main residence certificate",
-         "patterns":["What are the documents for obtaining the certificate of the main residence of the deceased?"],
-"responses":["First, a requirement that specifically stipulates the full address of the property in question, second, the affidavit of death for the deceased, third, indicating that the property subject of the request is not burdened with a debt for the benefit of the local community concerned, titled payment on the real estate, fourth, certificate of ownership of the property, fifth, the payment of the due known."]
-      },
-   {"tag":"conditions for the certificate of the deceased`s main residence",
-         "patterns":["What are the conditions for obtaining a certificate of the main residence of the deceased?"],
-"responses":["First, that the property subject of the application is the main residence of the deceased. Second, that the person(s) concerned with the matter be one of the heirs of the property owner. Third, the exemption is granted from the registration fee employed on the estates within an area of ​​1,000 square meters, including built-in and non-built accessories. What is more than that is subject to the registration information employed on the estate"]
-      },
-   {"tag":"corpse transport license",
-         "patterns":["Documents required to obtain a corpse transport license?"],
-"responses":["First, the content of the death fee, secondly, a medical certificate stating that the causes of death were not caused by an infectious disease."]
-      },
-   {"tag":"Public network connection license (water and electricity)",
-         "patterns":["How to obtain a license to connect to the public networks (water and electricity)?"],
-"responses":["To obtain a license to connect to the public networks, a request must be presented on plain paper signed by the applicant, with the address and references to the building permit as well as a certificate of ownership and finally a certificate of innocence in the collection of municipal fees."]
-      },
-   {"tag":"Request for exemption from rent tax",
-         "patterns":["How do we apply for exemption from rent tax?"],
-"responses":["First, submit a request on plain paper signed by the student, and it specifically states the full address of the property and information about the student, second, a copy of the ownership certificate, third, a copy of the social assistance receipt, and fourth, a copy of the payment receipt."]
-      },
-   {"tag":"change owner name",
-         "patterns":["How can I change the owner`s name?"],
-"responses":["A request in the name of the mayor that specifically provides for the full address of the property in question - a legal document stating ownership of the property (a copy of a sale or purchase contract or ownership certificate)"]
-      },
-   {"tag":"tasks of my advisor",
-         "patterns":["What are the duties of my advisor?"],
-"responses":["First he chairs one of the committees (only one) Secondly he is a member or reporter of several municipal committees Third is a member of the council of one of the municipal departments Fourth represents the municipality before the courts or concludes contracts if the interests of the mayor conflict with the interests of the municipality Fifth represents the municipality Sixthly, the board of directors of public enterprises in which the municipality contributes has the possibility of being elected temporarily as the head of the municipality when it is not possible to replace the president with one of the assistants, or permanently in the event of the president’s abandonment or an impediment that prevents the president from finally exercising his activity."]
-      },
-   {"tag":"make a request",
-         "patterns":["How do I apply for an application?"],
-"responses":["choose the service you want from the services directory and then click to apply for the service. All requirements must be met to continue the application"]
-      },
-   {"tag":"the purpose of the electronic registration in the municipality",
-         "patterns":["What is the purpose of electronic registration in the municipality?"],
-"responses":["After registration, the user can access all the electronic services provided by the municipality and apply for them from anywhere"]
-      },
-   {"tag":"apply for a job",
-         "patterns":["How can I apply for a job?"],
-"responses":["First, you must register. You can use express registration. It allows you to apply for a job only. Second, go to the Human Resources Services Directory. Apply for a job. Fill out the requirements and apply for the service."]
-      },
-   {"tag":"Thank",
-         "patterns":["Thank you"],
-"responses":["Happy to help!", "You are welcome!", "with pleasure"]
-      },
-   {"tag":"exit",
-         "patterns":["Bye", "Stop", "Quit", "I want to quit", "Goodbye", "I want to exit", "I have to go"],
-"responses":["See you later, Thank you for your visit", "Bye sir!", "Have a nice day, come back"]
-      },
-  {"tag":"salutation",
-         "patterns":["Bonjour", "Comment vas tu", "Il y a quelqu`un?", "Salut", "Bonne journée"],
-"responses":["Bonjour merci pour la visite", "C`est bon de te revoir", "Salut, comment puis je vous aider?"],
-         "context_set":""
-      },
-   {"tag":"Heures",
-         "patterns":["Quelles heures etes vous ouvert?", "Quelles sont vos heures?", "Quand  vous etes ouvert?"],
-"responses":["Nous sommes ouverts tous les jours de 9h à 7h", "Nos horaires sont de 9h à 21h tous les jours"]
-      },
-   {"tag":"OuvertAujourdhui",
-         "patterns":["Etes vous ouvert aujourd`hui?", "Quand ouvres tu aujourd`hui?", "Quelles sont vos heures aujourd`hui?"],
-"responses":["Nous sommes ouverts tous les jours de 9h à 17h", "Nos horaires sont de 9h à 17h tous les jours"]
-      },
-   {"tag":"Trafic de camions",
-         "patterns":["Quels sont les horaires de passage des camions de poubelles dans les quartiers ?"],
-"responses":["Relevage des déchets par camion compacteur : tous les jours de la semaine, à partir de dix heures du soir", "Levage des déchets, système porte par porte : tous les jours de la semaine, à partir de sept heures du soir"]
-      },
-   {"tag":"bâtiment en désordre",
-         "patterns":["Comment signaler un immeuble en désordre ?"],
-"responses":["Contactez le commissariat de police municipal et l`intérêt du coordonnateur de l`arrangement dans l`administration municipale"]
-      },
-   {"tag":"illumination publique",
-         "patterns":["Comment puis-je signaler des problèmes d`illumination publique?"],
-"responses":["Le problème peut être consigné dans un cahier préparé à cet effet situé à l`accueil de l`administration centrale ou à l`entrepôt communal (atelier d`éveil du public).)."]
-      },
-   {"tag":"relever les déchets ",
-         "patterns":["Puis-je demander à la municipalité de relever les déchets spéciaux"],
-"responses":["Oui, cela peut se faire en contactant la Direction de l`Hygiène et de l`Environnement pour déterminer la quantité et la qualité des déchets et le coût de leur ramassage."]
-      },
-   {"tag":"Séances du Conseil",
-         "patterns":["Quels sont les horaires des séances du Conseil Municipal ? "],
-"responses":["Le Conseil Municipal tient quatre sessions par an, pendant les mois : février - mai - juillet - novembre, et les dates sont fixées et notifiées par tous les moyens disponibles."]
-      },
-   {"tag":"menace pour la santé",
-         "patterns":["Comment signaler une menace pour la santé ou le confort des citoyens ?"],
-"responses":["Contactez la police municipale et la police de l`environnement."]
-      },
-   {"tag":"permis de construire",
-         "patterns":["Puis-je obtenir une copie du permis de construire ?"],
-"responses":[" Le citoyen doit déposer à cet effet un dossier composé des pièces suivantes :  une demande de permis de construire , un exemple original d`arpentage , un titre original  une déclaration fiscale , 6 exemples techniques du projet de construction, une attestation de sortie , une copie de la carte nationale d`identité  Et le numéro de 02 circonstances odieuses portant l`adresse du domicile "]
-      },
-   {"tag":"conditions de démarcation de naissance",
-         "patterns":["Qu`est-ce qu`un acte de naissance? "],
-"responses":["La déclaration de naissance est faite par le père, le médecin, la sage-femme ou d`autres personnes qui ont assisté à la naissance», par autorisation délivrée par le président du tribunal de première instance du lieu où le nouveau-né est née », la notification de la naissance a lieu dans les dix (10) jours qui suivent l`accouchement - Si la notification de la naissance n`a pas eu lieu dans le délai légal, l`officier de l`état civil ne peut l`inscrire dans ses livres qu`en cas de nécessité."]
-      },
-   {"tag":"documents d`acte de naissance",
-         "patterns":["Puis-je obtenir une copie du permis de construire ?"],
-"responses":["La carte nationale d`identité du père ou de la mère, le livret de famille ou l`acte de naissance d`un des enfants "]
-      },
-   {"tag":"Conditions de naissance garantie",
-         "patterns":["Quelles sont les conditions pour obtenir un acte de naissance ?"],
-"responses":["Déposer une demande orale auprès de l`officier de l`état civil"]
-      },
-   {"tag":"acte de naissance",
-         "patterns":["Comment extraire l`acte de naissance? "],
-"responses":["délivrer des instructions de naissance : date, numéro du tirage », donner un ancien acte de naissance, « autre acte d`état civil, en précisant s`il s`agit d`un dessin original, d`une déclaration ou d`un jugement"]
-      },
-   {"tag":"Réparation de carte de naissance",
-         "patterns":["comment réparer la carte de naissance"],
-"responses":["Une demande définie par la signature de l`intéressé, dans laquelle son adresse complète est mentionnée, est adressée à l`officier de l`état civil qui dispose du droit de naissance de l`étudiant, du contenu de la naissance de l`intéressé, le contenu de la naissance ou du décès du père de l`élève, le contenu de la naissance d`un frère ou d`une sœur "]
-      },
-   {"tag":"contrat de mariage",
-         "patterns":["Comment conclure un contrat de mariage ?"],
-"responses":["Acte de naissance pour les deux époux, certificat médical de consommation du mariage, copie de la carte d`identité ou du passeport en cours de validité, autorisation du tribunal pour les mineurs."]
-      },
-   {"tag":"garantie de mariage",
-         "patterns":["comment obtenir du contenu de mariage?"],
-"responses":["Donner des instructions de mariage : date, nombre de frais, déterminer si le mariage a été conclu à la municipalité ou chez un notaire public."]
-      },
-   {"tag":"carnet de famille",
-         "patterns":["Comment extraire le livret de famille pour la première fois?"],
-"responses":[" une photographie du chef de famille, une copie de la carte nationale d`identité du mari, un acte de mariage, un acte de naissance pour chacun des époux, contenu pour le reste de la famille : en cas d`extraction livret après une période de mariage, le salarié est connu sur le livret de famille."]
-      },
-   {"tag":"l`équivalent du livre de famille",
-         "patterns":["Comment extraire l`équivalent du livret de famille sous forme de perte ?"],
-"responses":["Premièrement, un certificat de perte, deuxièmement, une photographie du chef de famille, troisièmement, une copie de la carte nationale d`identité du chef de famille, quatrièmement, le contenu du mariage, cinquièmement, le contenu de la naissance pour les deux époux, sixièmement, contenu pour le reste de la famille, septième, l`employé connu sur le livret de famille."]
-      },
-   {"tag":"identification de la signature",
-         "patterns":[" Quels documents sont nécessaires pour identifier la signature ?"],
-"responses":["le document à identifier, le document officiel pour prouver l`identité (carte d`identité, passeport)"]
-      },
-   {"tag":"les copies conformes ",
-         "patterns":["Quels sont les documents requis pour certifier que les copies sont conformes ?"],
-"responses":["original du document, copies à certifier conformes à l`original, mémorisation de la carte d`identité du présentateur du document"]
-      },
-   {"tag":"Un permis pour démolir une propriété",
-         "patterns":["Quels sont les documents requis pour obtenir un permis de démolition d`une propriété?"],
-"responses":["Que le citoyen soit propriétaire d`un bien, que le bien à démolir ne soit pas occupé par l`habitation ou l`exploitation, que le bien soit vétuste par la chute et présente un danger, ou que la reconstruction soit à faire dans le cadre du développement."]
-      },
-   {"tag":"Location d`équipements et de fournitures municipaux",
-         "patterns":["Est-ce que l`équipement et les fournitures municipaux peuvent être loués?"],
-"responses":["Oui, selon disponibilité"]
-      },
-   {"tag":"Conditions de la décision de permis de construire pour un logement individuel ou jumelé",
-         "patterns":[" Quelles sont les conditions de la décision d`autoriser la construction d`une résidence individuelle ou jumelée ?"],
-"responses":["Conditions d`utilisation du service : Premièrement, que le citoyen soit propriétaire du bien sur lequel l`immeuble doit être construit, deuxièmement, que ce terrain provienne d`une division agréée, et que sa nature et l`affectation contenue dans l`exemple de concernant les antiquités, les monuments historiques et les sites naturels et urbains. Quatrièmement, le citoyen doit déposer un dossier complet et obligatoire conformément à la législation en vigueur."]
-      },
-   {"tag":"documents de la décision de permis de construire pour un logement individuel ou jumelé",
-         "patterns":["Quels sont les documents pour une décision de permis de construire pour une résidence individuelle ou jumelée ?"],
-"responses":[" Premièrement, une demande sur papier libre signée par le demandeur de licence ou son représentant. Deuxièmement, un certificat de propriété, un jugement d`éligibilité ou tout autre document concernant la propriété du demandeur du terrain sur lequel la construction doit être construite. Troisièmement, le reçu de la déclaration d`acompte d`impôt sur le revenu des personnes physiques ou de l`impôt sur les sociétés Quatrièmement, le paiement des droits employés sur l`immeuble, objet de l`obligation de permis de construire, Cinquièmement, un projet de construction en trois (3) exemplaires, conforme au règlement d`urbanisme de la zone dans laquelle la construction sera implantée."]
-      },
-      {
-         "tag":" le lieu où est déposé le permis de construire, une habitation individuelle ou jumelée ",
-         "patterns":["Quel est le lieu de dépôt du permis de construire pour un logement individuel ou jumelé ?"],
-"responses":["l`autorité communale ou le service communal"]
-      },
-   {"tag":"Conditions de prolongation du permis de construire",
-         "patterns":[" Quelles sont les conditions pour prolonger un permis de construire ?"],
-"responses":["Conditions d`utilisation du service : Premièrement, l`étudiant doit avoir obtenu un permis de construire objet de la demande de prolongation, Deuxièmement, ne pas apporter de modifications au bâtiment objet du permis, sinon un nouveau permis de construire doit être obtenu. Troisièmement, le la demande de prorogation doit parvenir à la commune un mois avant la date d`expiration. Le permis de construire objet de la demande d`extension"]
-      },
-   {"tag":"Documents d`extension de permis de construire",
-         "patterns":["Quels sont les documents pour obtenir une prolongation de permis de construire ?"],
-"responses":["demander des documents au nom du maire sur un papier ordinaire signé par la personne concernée"]
-      },
-   {"tag":"conditions d`obtention d`un certificat de conformité",
-         "patterns":["Quelles sont les conditions d`obtention d`un certificat de conformité ?"],
-"responses":["Conditions d`utilisation du service : Cette attestation ne concerne que les commerces exploitant l`activité de vente de boissons de première qualité ; un café, un salon de thé, une boisson"]
-      },
-      {
-         "tag":" lieu de dépôt d`un certificat de conformité ",
-         "patterns":["Quel est le lieu de dépôt?"],
-"responses":["le lieu où le dossier est déposé est le bureau central de contrôle"]
-      },
-   {"tag":"Conditions du permis de fête familiale",
-         "patterns":["Quelles sont les conditions d`obtention d`un permis pour organiser une fête de famille ?"],
-"responses":["Premièrement, organiser une fête en utilisant des instruments de musique ou d`autres choses. Deuxièmement, soumettre la demande de licence trois jours avant la cérémonie."]
-      },
-   {"tag":"documents de licence de fête de famille",
-         "patterns":["Quels sont les documents pour obtenir un permis pour organiser une fête de famille?"],
-"responses":["Une exigence sur papier libre mentionnant la date et l`adresse complète du lieu où se déroulera la cérémonie"]
-      },
-   {"tag":"Licence d`occupation temporaire du domaine public",
-         "patterns":["Quels sont les documents pour obtenir une autorisation d`occupation temporaire du domaine public?"],
-"responses":["Premièrement, une demande sur papier libre qui comprend les données nécessaires, l`adresse complète du magasin, l`objet de l`occupation, son emplacement et sa durée, et la justification de sa nécessité. Cinquièmement, des licences légales ( pour les commerces aménagés en cafés ou restaurants) "]
-      },
-   {"tag":"conditions de licence pour porter des enseignes publicitaires (piliers, tentures, écriture)",
-         "patterns":["Quelles sont les conditions d`obtention d`une licence de concentration de marques publicitaires?"],
-"responses":["D`abord, il faut une licence pour tout équipement, dessin ou écrit, qu`il s`agisse d`une publicité accrochée sur la voie publique, d`une enseigne lumineuse ou non lumineuse, ou d`un écrit sur la devanture d`un affichage commercial ou non -magasin commercial, que son objet soit commercial ou non, et quelle que soit la manière dont il est réalisé.Deuxièmement, il est interdit de focaliser un matériel publicitaire si son contenu comporte : un marquage de zone avec une flèche directionnelle, une distance kilométrique, ou une imitation d`un panneau de signalisation ou d`un signal."]
-      },
-   {"tag":"Documents pour une licence de focalisation des marques publicitaires (piliers, tentures, écriture)",
-         "patterns":["Quels sont les documents pour obtenir une licence de focalisation de marques publicitaires?"],
-"responses":["Les documents sont: d`abord, une demande au nom du maire, signée par l`étudiant, comprenant les données nécessaires; le lieu, la superficie, la période d`occupation, l`adresse et une déclaration de besoin requis. Le texte et l`espace à occuper par l`interface d`écriture"]
-      },
-   {"tag":"Conditions du certificat de bornage d`une propriété dans le calendrier de collecte municipale",
-         "patterns":["Quelles sont les conditions d`une attestation de bornage d`une propriété dans le calendrier de collecte municipal?"],
-"responses":["Premièrement, que la personne concernée est propriétaire du bien ou qu`elle dispose d`une procuration l`autorisant à disposer du bien."]
-      },
-   {"tag":"documentation du certificat de résidence principale du défunt",
-         "patterns":["Quels sont les documents pour obtenir le certificat de la résidence principale du défunt?"],
-"responses":["premièrement, une exigence qui stipule expressément l`adresse complète du bien en question, deuxièmement, l`attestation de décès du défunt, troisièmement, indiquant que le bien faisant l`objet de la demande n`est pas grevé d`une dette pour le au profit de la collectivité locale concernée, intitulé paiement sur le bien immobilier, quatrièmement, certificat de propriété du bien, cinquièmement, le paiement de l`exigibilité connue."]
-      },
-   {"tag":"autorisation d`enterrement",
-         "patterns":["Documents requis pour obtenir un permis d`inhumer?"],
-"responses":["Premièrement, un certificat médical attestant que le décès est survenu dans des circonstances naturelles, deuxièmement, une autorisation du procureur de la République si le décès est survenu dans des circonstances naturelles ou mystérieuses, et troisièmement, un procès-verbal des services de sécurité en cas de décès non naturel."]
-      },
-   {"tag":"conditions du certificat de résidence principale du défunt",
-         "patterns":["Quelles sont les conditions d`obtention d`une attestation de résidence principale du défunt ?"],
-"responses":["Premièrement, que le bien faisant l`objet de la demande est la résidence principale du défunt. Deuxièmement, que la ou les personnes concernées par l`affaire soient l`un des héritiers du propriétaire. Troisièmement, l`exemption est accordé à partir des frais d`enregistrement employés sur les domaines dans une zone de 1 000 mètres carrés, y compris les accessoires intégrés et non construits. De plus, cela est soumis aux informations d`enregistrement utilisées sur le domaine"]
-      },
-   {"tag":"permis de transport de cadavres",
-         "patterns":["Documents requis pour obtenir une licence de transport de cadavres?"],
-"responses":["Premièrement, le contenu de l`indemnité de décès, deuxièmement, un certificat médical attestant que les causes du décès n`ont pas été causées par une maladie infectieuse."]
-      },
-   {"tag":"Licence de raccordement au réseau public (eau et électricité)",
-         "patterns":["Comment obtenir une autorisation de raccordement aux réseaux publics (eau et électricité).?"],
-"responses":["Pour obtenir une autorisation de raccordement aux réseaux publics, une demande doit être présentée sur papier libre signée par le demandeur, avec l`adresse et les références au permis de construire ainsi qu`un certificat de propriété et enfin un certificat d`innocence dans le recueil des redevances municipales."]
-      },
-   {"tag":"Demande d`exonération de taxe locative",
-         "patterns":["Comment demander l`exonération de la taxe sur les loyers?"],
-"responses":["Premièrement, soumettez une demande sur papier libre signée par l`étudiant, et elle indique spécifiquement l`adresse complète de la propriété et des informations sur l`étudiant, deuxièmement, une copie du certificat de propriété, troisièmement, une copie du reçu d`aide sociale, et quatrièmement, une copie du reçu de paiement."]
-      },
-   {"tag":"modifier le nom du propriétaire",
-         "patterns":["Comment puis-je changer le nom du propriétaire?"],
-"responses":["Une demande au nom du maire qui prévoit spécifiquement l`adresse complète de la propriété en question - un document légal indiquant la propriété de la propriété (une copie d`un contrat de vente ou d`achat ou d`un certificat de propriété)"]
-      },
-   {"tag":"tâches de mon conseiller",
-         "patterns":["Quelles sont les fonctions de mon conseiller?"],
-"responses":["Premièrement il préside une des commissions (une seule) Deuxièmement il est membre ou rapporteur de plusieurs commissions communales Troisièmement est membre du conseil d`un des services communaux Quatrièmement représente la commune devant les tribunaux ou conclut contrats si les intérêts du maire sont en conflit avec les intérêts de la commune Cinquièmement représente la commune Sixièmement, le conseil d`administration des entreprises publiques dans lesquelles la commune contribue a la possibilité d`être élu temporairement à la tête de la commune lorsque cela n`est pas possible remplacer le président par l`un des adjoints, ou définitivement en cas d`abandon du président ou d`empêchement empêchant le président d`exercer définitivement son activité."]
-      },
-   {"tag":"faire une demande",
-         "patterns":["Comment puis-je postuler pour une candidature?"],
-"responses":["choisissez le service que vous souhaitez dans le répertoire des services, puis cliquez sur pour postuler au service. Toutes les conditions doivent être remplies pour continuer l`application"]
-      },
-   {"tag":"le but de l`inscription électronique dans la commune",
-         "patterns":["A quoi sert l`inscription électronique dans la commune?"],
-"responses":["Après l`inscription, l`utilisateur peut accéder à tous les services électroniques fournis par la municipalité et les demander de n`importe où"]
-      },
-   {"tag":"postuler pour un emploi",
-         "patterns":["Comment puis-je postuler pour un emploi?"],
-"responses":["D`abord, vous devez vous inscrire. Vous pouvez utiliser l`enregistrement express. Il vous permet de postuler à un emploi uniquement. Deuxièmement, allez au Répertoire des services des ressources humaines. Postulez pour un emploi. Remplissez les conditions requises et postulez pour le service."]
-      },
-   {"tag":"Merci",
-         "patterns":["Merci", "Merci beaucoup"],
-"responses":["Heureux de pouvoir vous aider!", "A toute heure!", "Avec plaisir"]
-      },
-   {"tag":"Exit",
-         "patterns":["Au revoir", "A plus tard", "bye"],
-"responses":["A plus tard, Merci de votre visite", "Bonne journée", "Au revoir! reviens."]
-      },
-   {"tag":"التحية",
-         "patterns":["صباح الخير", "اهلا", "مرحبا", "مساء الخير"],
-"responses":["مرحبا شكرا على الزيارة", " كيف يمكنني مساعدتك؟"]
-      },
-   {"tag":"اوقات العمل",
-         "patterns":["ما هي ساعات العمل؟ ", " متى تفتحون؟"],
-"responses":["نحن مفتوحون يوميًا من الساعة 9 صباحًا حتى الساعة 5 مساءً.", "ساعات العمل لدينا من 9 صباحًا حتى 5 مساءً يوميًا."]
-      },
-   {"tag":"مرور شاحنات",
-         "patterns":["ماهي أوقات مرور شاحنات رفع الفضلات بالاحياء ؟"],
-"responses":["رفع الفضلات بالشاحنة الضاغطة : كامل أيام الأسبوع بداية من الساعة العاشرة ليلا ", "رفع الفضلات نظام باب باب : كامل أيام الأسبوع بداية من الساعة السابعة مساء"]
-      },
-   {"tag":"بناء فوضوي",
-         "patterns":["كيف أبلغ عن بناء فوضوي ؟"],
-"responses":["الاتصال بمركز الشرطة البلدية ومصلحة منسق التراتيب بالإدارة البلدية"]
-      },
-   {"tag":"التنوير العمومي",
-         "patterns":["كيف أبلغ عن اشكال في التنوير العمومي ؟"],
-"responses":["يمكن تدوين الإشكال بدفتر معد للغرض موجود بمكتب الاستقبال بالإدارة المركزية أو بالمستودع البلدي (ورشة التنوير العمومي)."]
-      },
-   {"tag":"رفع فضلات ",
-         "patterns":["هل يمكن أن أطلب من البلدية رفع فضلات خاصة ؟"],
-"responses":["نعم يمكن ذلك بالاتصال بإدارة النظافة والمحيط لتحديد كمية الفضلات و نوعيتها و كلفة رفعها."]
-      },
-   {"tag":"جلسات المجلس",
-         "patterns":["ماهي مواعيد جلسات المجلس البلدي ؟"],
-"responses":["يعقد المجلس البلدي أربعة دورات سنويا وذلك خلال الأشهر : فيفري – ماي – جويلية – نوفمبر ويتم تحديد تواريخها والإعلام بها بكل الوسائل المتاحة."]
-      },
-   {"tag":"خطر يهدد صحة",
-         "patterns":["كيف ابلغ عن خطر يهدد صحة او راحة المواطنين ؟"],
-"responses":["الاتصال بالشرطة البلدية و الشرطة البيئية."]
-      },
-   {"tag":"نسخة من رخصة البناء",
-         "patterns":["هل من الممكن ان أتحصل على نسخة من رخصة البناء ؟"],
-"responses":["يتعين على المواطن تقديم ملف في الغرض يتكون الوثائق التالية : اولا مطلب في رخصة بناء ثانيا مثال مسحي أصلي رابعا حجة ملكية أصلية خامسا تصريح على الضريبة سادسا أمثلة هندسية لمشروع البناء سابعا شهادة إبراء ثامنا نسخة من بطاقة التعريف الوطنية و اخيرا 02 ظروف متنبرة تحمل عنوان السكنى"]
-      },
-   {"tag":"شروط ترسيم ولادة",
-         "patterns":["ماهي   ترسيم ولادة ؟ "],
-"responses":["يقع الإعلام بالولادة من طرف الأب أو الطبيب أو القابلة أو غيرهم من الأشخاص الذين شهدوا الوضع", "إذن صادر عن رئيس المحكمة الابتدائية بالجهة التي ولد بها المولود", "يقع الإعلام بالولادة خلال العشرة (10) أيام التي تلي الوضع - إذا لم يقع الإعلام بالولادة في الأجل القانوني فإنه لايمكن لضابط الحالة المدنية تضمينها بدفاتره إلا بمقتضي"]
-      },
-   {"tag":" وثائق  ترسيم ولادة",
-         "patterns":["هل من الممكن ان أتحصل على نسخة من رخصة البناء ؟"],
-"responses":["بطاقة التعريف الوطنية للأب أو للأم", " الدفتر العائلي أو مضمون ولادة أحد الأبناء "]
-      },
-   {"tag":"شروط مضمون ولادة",
-         "patterns":[" ماهي شروط الحصول على مضمون ولادة "],
-"responses":["تقديم طلب شفوي لدى ضابط الحالة المدني"]
-      },
-   {"tag":"وثائق مضمون ولادة ",
-         "patterns":["كيفية استخراج مضمون ولادة "],
-"responses":["الإدلاء بالإرشادات الخاصة بالولادة : التاريخ، عدد الرسم", "الإدلاء بمضمون ولادة قديم", " وثيقة حالة مدنية أخرى مع تحديد ما إن كانت رسما أصليا أو تصريحا أو حكما"]
-      },
-   {"tag":"إصلاح رسم ولادة",
-         "patterns":["كيفية اصلاح رسم ولادة"],
-"responses":["مطلب معرف بإمضاء المعني بالأمر يذكر فيه عنوانه بالكامل موجه إلى السيد ضابط الحالة المدنية المحفوظ لديه رسم ولادة الطالب ,مضمون ولادة المعني بالأمر,مضمون ولادة أو وفاة لوالد الطالب,مضمون ولادة أحد الأشقاء"]
-      },
-   {"tag":"إبرام عقد زواج",
-         "patterns":["كيفية إبرام عقد زواج"],
-"responses":["مضمون ولادة لكل من الزوجين,شهادة طبية لإتمام الزواج,نسخة من بطاقة التعريف أو جواز سفر ساري المفعول,إذن من المحكمة لمن هم دون السن القانوني"]
-      },
-   {"tag":"مضمون زواج",
-         "patterns":["كيفية الحصول على مضمون زواج"],
-"responses":["الإدلاء بالإرشادات الخاصة بالزواج: التاريخ، عدد الرسم,تحديد ما إذا أبرم الزواج بالبلدية أو لدى عدل إشهاد"]
-      },
-   {"tag":"الدفتر العائلي",
-         "patterns":["كيفية استخراج الدفتر العائلي لأول مرة"],
-"responses":["صورة شمسية لرئيس العائلة,نسخة من بطاقة التعريف الوطنية للزوج,مضمون زواج,مضمون ولادة لكل من الزوجين,مضامين لبقية أفراد العائلة : في حالة استخراج الدفتر بعد مدة من الزواج,المعلوم الموظف على الدفتر العائلي"]
-      },
-   {"tag":" نظير الدفتر العائلي",
-         "patterns":["كيفية استخراج نظير الدفتر العائلي في صورة ضياع؟"],
-"responses":["اولا شهادة ضياع ثانيا صورة شمسية لرئيس العائلة ثالثا نسخة من بطاقة التعريف الوطنية لرئيس العائلة رابعا مضمون زواج خامسا مضمون ولادة للزوجين سادسا مضامين لبقية العائلة سابعا المعلوم الموظف على الدفتر العائلي"]
-      },
-   {"tag":"التعريف بالإمضاء",
-         "patterns":["ماهي الوثائق المطلوبة للتعريف بالامضاء"],
-"responses":["الوثيقة المراد التعريف بها,الوثيقة الرسمية لإثبات الهوية (بطاقة التعريف، جواز سفر)"]
-      },
-   {"tag":"مطابقة النسخ للأصل ",
-         "patterns":["ماهي الوثائق المطلوبة للاشهاد بمطابقة النسخ للاصل"],
-"responses":["الوثيقة الأصلية,النسخ المراد الإشهاد بمطابقتها للأصل,الإستظهار ببطاقة تعريف مقدم الوثيقة"]
-      },
-   {"tag":"رخصة في هدم عقار",
-         "patterns":["ماهي الوثائق المطلوبة للحصول على رخصة في هدم عقار"],
-"responses":["أن يكون المواطن مالكا لعقار,أن يكون العقار المزمع هدمه غير مشغول بالسكنى أو بالاستغلال,أن يكون العقار متداعيا للسقوط ويشكل خطرا أو لأن تتم إعادة البناء في إطار التطوير"]
-      },
-   {"tag":"اكتراء المعدات و التجهيزات البلدية",
-         "patterns":["هل يمكن اكتراء المعدات و التجهيزات البلدية ؟"],
-"responses":["نعم وحسب توفرها"]
-      },
-   {"tag":"شروط قرار الترخيص في البناء مسكن فردي منعزل أو متوأم",
-         "patterns":["ماهي شروط قرار الترخيص في البناء مسكن فردي منعزل أو متوأم؟"],
-"responses":["شروط الانتفاع بالخدمة: اولا أن يكون المواطن مالكا للعقار المزمع إقامة البناء عليه ثانيا أن تكون هذه القطعة متأتية من تقسيم مصادق عليه وأن لا تتناقض صبغتها والتخصيص الوارد بمثال التهيئة للمنطقة ثالثا احترام التراتيب المعمول بها في خصوص حماية الأراضي الفلاحية وفي خصوص الآثار والمعالم التاريخية والمواقع الطبيعية والعمرانية رابعا أن يتقدمّ المواطن بملف تام الموجب طبقا للتشريع الجاري به العمل "]
-      },
-   {"tag":"وثائق قرار الترخيص في البناء مسكن فردي منعزل أو متوأم",
-         "patterns":["ماهي وثائق قرار الترخيص في البناء مسكن فردي منعزل أو متوأم؟"],
-"responses":["اولا مطلب على ورق عادي ممضى من قبل طالب الرخصة أو من ينوبه ثانيا شهادة ملكية أو حكم استحقاقي أو وثيقة أخرى في تملك الطالب لقطعة الأرض المزمع إقامة البناء عليها ثالثا وصل إيداع التصريح بالضريبة على دخل الأشخاص الطبيعيين أو الضريبة على الشركات رابعا وصل خلاص المعاليم الموظفة على العقار موضوع مطلب رخصة البناء خامسامشروع بناء في ثلاث (3) نظائر مطابق للتراتيب العمرانية للمنطقة التي سيقع بها البناء"]
-      },
-   {"tag":"مكان ايداع الترخيص في البناء مسكن فردي منعزل أو متوأم",
-         "patterns":[" ماهو مكان ايداع الترخيص في البناء مسكن فردي منعزل أو متوأم؟"],
-"responses":["المصلحة بالبلدية أو بالدائرة البلدية"]
-      },
-   {"tag":"شروط تمديد رخصة البناء",
-         "patterns":["ماهي شروط تمديد رخصة البناء؟"],
-"responses":["شروط الانتفاع بالخدمة اولا أن يكون الطالب متحصلا على رخصة بناء موضوع طلب التمديد ثانيا عدم إحداث أية تغييرات في البناء موضوع الترخيص، وإلا فإنه يتعين الحصول على رخصة بناء جديدة ثالثا طلب التمديد يجب أن يصل إلى البلدية قبل شهرمن تاريخ انتهاء رخصة البناء موضوع طلب التمديد"]
-      },
-   {"tag":"وثائق تمديد رخصة البناء",
-         "patterns":["ماهي وثائق الحصول على تمديد رخصة البناء؟"],
-"responses":["الوثائق طلب باسم رئيس البلدية على ورقة عادية موقعة من المعني بالأمر"]
-      },
-   {"tag":"شروط الحصول على شهادة تطابق",
-         "patterns":["ماهي شروط الحصول على شهادة تطابق؟"],
-"responses":["شروط الانتفاع بالخدمة:هذه الشهادة تخص فقط المحلات المستغلة لنشاط بيع المشروبات من الصنف الأول ; مقهى، قاعة شاي، مشربة "]
-      },
-   {"tag":"مكان ايداع شهادة تطابق",
-         "patterns":["ماهو  مكان إيداع؟"],
-"responses":["مكان إيداع الملف مكتب الضبط المركزي"]
-      },
-   {"tag":"وثائق شهادة تطابق",
-         "patterns":["ماهي وثائق الحصول على شهادة تطابق؟ "],
-"responses":["الوثائق المطلوبة اولا مطلب باسم السيد رئيس البلدية ثانيا نسخة من بطاقة التعريف الوطنية ثالثا عقد كراء المحل ( والمحل المضاف عند الاقتضاء) رابعا مثال هندسي للمحل في صورة وجود صعوبات في تحديد المساحة ( أشغال بناء جارية، نية إجراء توسعة بسبب عد كفاية المساحة الأصلية للمحل)"]
-      },
-   {"tag":"شروط رخصة إقامة حفل عائلي",
-         "patterns":["ماهي شروط الحصول على رخصة إقامة حفل عائلي؟"],
-"responses":["اولا إقامة حفل باستغلال آلات موسيقية أو غيرها ثانيا تقديم مطلب الرخصة قبل موعد إقامة الحفل بثلاث أيام"]
-      },
-   {"tag":"وثائق رخصة إقامة حفل عائلي",
-         "patterns":["ماهي وثائق الحصول على رخصة إقامة حفل عائلي؟"],
-"responses":["مطلب على ورق عادي يتم التنصيص به على التاريخ والعنوان الكامل للمحل الذي سيتم إقامة الحفل به"]
-      },
-   {"tag":"رخصة الإشغال الوقتي للملك العمومي",
-         "patterns":["ماهي الوثائق للحصول على رخصة الإشغال الوقتي للملك العمومي؟"],
-"responses":["اولا مطلب على ورق عادي يتضمن المعطيات اللازمة ; العنوان الكامل للمحل وموضوع الإشغال وموقعه ومدته، وتبرير الحاجة إليه ثانيا رسم يدوي يبين الرصيف، المساحة المطلوبة مع تحديد المقاسات ثالثا نسخة من بطاقة التعريف الوطنية للطالب رابعا رخصة البناء بالنسبة لأشغال البناء خامسا التراخيص القانونية (بالنسبة للمحلات المعدة كمقاهي أو مطاعم) "]
-      },
-   {"tag":" شروط رخصة تركيز علامات إشهارية ( ركائز، معلقات، كتابة)",
-         "patterns":["ماهي شروط الحصول على رخصة تركيز علامات إشهارية؟"],
-"responses":["اولا تستوجب الرخصة لكل المعدات أو الرسوم أو الكتابة سواء تعلق الأمر بمعلقة اشهارية على الطريق العام، أوعلامة مضيئة أو غير مضيئة أو كتابة على واجهة محل تجاري أو غير تجاري ومهما كان موضوعها تجاريا أو لا، وبصرف النظر عن طريقة انجازها أو القائم بانجازها ثانيا يمنع تركيز معدات اشهارية إذا احتوى مضمونها على: حديد منطقة مع سهم توجيهي أو مسافة كيلومترية او تقليد علامة مرورية أو إشارة "]
-      },
-   {"tag":"وثائق رخصة تركيز علامات إشهارية ( ركائز، معلقات، كتابة)",
-         "patterns":["ماهي وثائق الحصول على رخصة تركيز علامات إشهارية؟"],
-"responses":["الوثائق هي: اولا مطلب باسم السيد رئيس البلدية ممضى من الطالب يتضمن المعطيات اللازمة ;الموقع المطلوب، المساحة، مدة الإشغال، العنوان، وبيان الحاجة ثانيا الأمثلة أو الرسوم على أن تكون واضحة من حيث المحتوى والشكل والمقاييس بالنسبة للعلامة أو النص والمساحة المزمع إشغالها بالواجهة بالنسبة للكتابة"]
-      },
-   {"tag":"شروط شهادة ترسيم عقار بجدول التحصيل البلدي",
-         "patterns":[" ماهي شروط شهادة ترسيم عقار بجدول التحصيل البلدي؟"],
-"responses":["اولا أن يكون المعني بالأمر مالكا للعقار أو أن يكون له توكيل يخول له التصرف في العقار ثانيا خلاص المعلوم بعنوان الأداء على العقارات"]
-      },
-   {"tag":"وثائق شهادة ترسيم عقار بجدول التحصيل البلدي",
-         "patterns":["ماهي وثائق شهادة ترسيم عقار بجدول التحصيل البلدي؟"],
-"responses":["اولا مطلب على ورق مع التنصيص على العنوان الكامل للعقار ثانيا ما يفيد أن العقار موضوع الطلب غير مثقل بدين لفائدة الجماعة المحلية المعنية بعنوان أداء على العقارات"]
-      },
-   {"tag":"وثائق شهادة المسكن الرئيسي للمتوفى",
-         "patterns":["ماهي وثائق الحصول على شهادة المسكن الرئيسي للمتوفى؟"],
-"responses":["اولا مطلب ينص خاصة على العنوان الكامل للعقار المعني ثانيا حجة الوفاة للمتوفى ثالثا ما يفيد أن العقار موضوع الطلب غير مثقل بدين لفائدة الجماعة المحلية المعنية بعنوان أداء على العقارات رابعا شهادة ملكية العقار خامسا خلاص المعلوم المستوجب"]
-      },
-   {"tag":"إذن بالدفن",
-         "patterns":["الوثائق المطلوبة لاستخراج إذن بالدفن؟"],
-"responses":["اولا شهادة طبية تفيد ان الموت تمت في ظروف طبيعية ثانيا إذن من وكيل الجمهورية ان كانت الموت تمت في ظروف طبيعية او غامضة ثالثا تقرير المصالح الامنية في حالة الموت غير الطبيعية"]
-      },
-   {"tag":"شروط شهادة المسكن الرئيسي للمتوفى",
-         "patterns":[" ماهي شروط الحصول على شهادة المسكن الرئيسي للمتوفى؟"],
-"responses":["اولا أن يكون العقار موضوع الطلب هو المسكن الرئيسي للمتوفى ثانيا أن يكون المعني (أو المعنيين) بالأمر أحد ورثة مالك العقار ثالثا يمنح الإعفاء من معلوم التسجيل الموظف على التركات في حدود مساحة 1000 متر مربع بما في ذلك الملحقات المبنية وغير المبنية ويخضع ما زاد على ذلك لمعلوم التسجيل الموظفّ على الترّكات"]
-      },
-   {"tag":"رخصة نقل جثة",
-         "patterns":["الوثائق المطلوبة لاستخراج رخصة نقل جثة؟"],
-"responses":["اولا مضمون من رسم وفاة ثانيا شهادة طبية تفيد ان اسباب الوفاة ليست ناتجة عن مرض معد"]
-      },
-   {"tag":"رخصة ربط بالشبكات العمومیة(الماء والكھرباء)",
-         "patterns":["كيف يمكن الحصول على رخصة ربط بالشبكات العمومیة (الماء والكھرباء)"],
-"responses":["للحصول على رخصة ربط بالشبكات العمومیة يجب الاستظهار بمطلب على ورق عادي ممضى من قبل الطالب فيه العنوان و مراجع رخصة البناء ايضا شهادة ملكية و اخيرا شهادة ابراء في خلاص معاليم البلدية"]
-      },
-   {"tag":"طلب الإعفاء من ضریبة الإیجار",
-         "patterns":["كيف نقدم طلب الإعفاء من ضریبة الإیجار؟"],
-"responses":["تقديم اولا مطلب على ورق عادي ممضى من الطالب وينص خاصة على العنوان الكامل للعقار و معلومات عن الطالب ثانيا نسخة من شهادة الملكية ثالثا نسخة من وصل المساعدة الاجتماعية رابعا نسخة من وصل خلاص الاداء"]
-      },
-   {"tag":"تغيير اسم المالك",
-         "patterns":["كيف يمكن تغيير اسم المالك؟"],
-"responses":["مطلب باسم السيد رئيس بلدية ينص خاصة على العنوان الكامل للعقار المعني - وثيقة قانونية تفيد ملكية العقار (نسخة من عقد بيع أو شراء أو شهادة ملكية)"]
-      },
-   {"tag":"مهام مستشار بلدي",
-         "patterns":["ما هي مهام مستشار بلدي؟"],
-"responses":["اولا يترأس احدي اللجان (واحدة فقط ) ثانيا يكون عضوا أو مقررا في عدة لجان بلدية ثالثا عضو في مجلس احدي الدوائر البلدية رابعا يمثل البلدية لدي المحاكم او يبرم العقود اذا كانت مصالح رئيس البلدية تتعارض مع مصالح البلدية خامسا يمثل البلدية لدى مجلس ادارة المنشآت العمومية التي تساهم البلدية قي راس مالها.سادسا إمكانية إنتخابه مؤقتا على راس البلدية عند تعذرتعويض الرئيس بأحد المساعدين او بصفة دائمة في حالة تخلي الرئيس او حصول مانع يحول دون ممارسة الرئيس نهائيا لنشاطه."]
-      },
-   {"tag":"التقديم علي طلب",
-         "patterns":["كيف استطيع التقديم علي طلب؟"],
-"responses":["اختر الخدمة التي تريدها من دليل الخدمات ومن ثم اضغط التقديم علي الخدمة لابد من استيفاء جميع المتطلبات لمتابعة التقديم"]
-      },
-   {"tag":"الغرض من التسجيل الإلكنروني بالبلدية",
-         "patterns":["ما الغرض من  التسجيل الإلكنروني بالبلدية؟"],
-"responses":["بعد التسجيل يمكن للمستخدم الدخول الى جميع الخدمات  الالكترونية التي تقدمها البلدية والتقديم عليها من أي مكان"]
-      },
-   {"tag":"التقديم على وظيفة",
-         "patterns":["كيف يمكنني التقديم علي وظيفة؟"],
-"responses":["اولا يجب التسجيل .. يمكنك استخدام التسجيل السريع يسمح لك بالتقديم علي وظيفة فقط  ثانيا اذهب الي دليل الخدمات الموارد البشرية طلب وظيفةتعبئة المتطلبات والتقديم علي الخدمة"]
-      },
-   {"tag":"إلى اللقاء",
-         "patterns":["وداعا", "أراك لاحقا", "وداعا"],
-"responses":["أراك لاحقا , شكرا لزيارتك", "أتمنى لك يومًا سعيدا", "وداعًا! تعال مرة اخرى."]
-      },
-   {"tag":"شكرا لك",
-         "patterns":["شكرا لك شكرا ", "جزيلا لك"],
-"responses":["يسعدني أن أكون قادرًا على مساعدتك!", "في أي وقت!", "من دواعي سروري"]
-      }
-   ]
+{
+      "intents": [
+            {
+                  "tag": "greeting",
+                  "patterns": [
+                        "Hey",
+                        "Hello",
+                        "What`s up?",
+                        "How is it going?",
+                        "Hi",
+                        "Good day",
+                        "Is anyone there?",
+                        "Good evening",
+                        "You are well ?",
+                        "help me"
+                  ],
+                  "responses": [
+                        "Hello sir!",
+                        "Hello, what can I do for you"
+                  ]
+            },
+            {
+                  "tag": "exit",
+                  "patterns": [
+                        "Bye",
+                        "Stop",
+                        "Quit",
+                        "See you next",
+                        "Goodbye",
+                        "I want to exit",
+                        "I have to go",
+                        "See you soon",
+                        "Good night",
+                        "See you later"
+                  ],
+                  "responses": [
+                        "See you later, Thank you for your visit",
+                        "Bye sir!",
+                        "Have a nice day, come back"
+                  ]
+            },
+            {
+                  "tag": "Thank",
+                  "patterns": [
+                        "Thank you",
+                        "Thanks",
+                        "Many thanks.",
+                        "Much appreciated",
+                        "That’s so kind of you",
+                        "thank you very much",
+                        "I`m so grateful",
+                        "I appreciate it.",
+                        "Thanks for your hard work on this.",
+                        "Thank you for your help"
+                  ],
+                  "responses": [
+                        "Happy to help!",
+                        "You are welcome!",
+                        "with pleasure"
+                  ]
+            },
+            {
+                  "tag": "Times",
+                  "patterns": [
+                        "What hours are you open?",
+                        "What are your hours?",
+                        "What time do you open?",
+                        "When are you open?",
+                        "Are you open today?",
+                        "When do you open today?",
+                        "What are your hours today?",
+                        "When will you be open?",
+                        "working hours",
+                        "when are you available?"
+                  ],
+                  "responses": [
+                        "We are open daily from 8 a.m. to 5 p.m except weekends.",
+                        "Our hours are 8 a.m. to 9 p.m. daily except weekends."
+                  ]
+            },
+            {
+                  "tag": "messy building",
+                  "patterns": [
+                        "How to report a messy building",
+                        "How to report an illegal construction?",
+                        "How to disclose a messy building?",
+                        "How to spread a messy building?",
+                        "messy building",
+                        " What should I do when I see an illegal construction?",
+                        "What are the ways to report a messy building?",
+                        "Who do I call when I see a messy building?",
+                        "What should I do when I see illegal construction?",
+                        "Who is responsible for monitoring illegal buildings"
+                  ],
+                  "responses": [
+                        "Contact the municipal police station and the interest of the coordinator of the arrangement in the municipal administration "
+                  ]
+            },
+            {
+                  "tag": "public illumination",
+                  "patterns": [
+                        "How do I report public lighting issues?",
+                        "Who is responsible for public lighting issues",
+                        "How do I report a street lighting issue?",
+                        "How do I indicate problems with street lighting?",
+                        "I have problems with the street lighting",
+                        "the street lighting in my neighborhood is broken",
+                        "the street lighting in my neighborhood is not not stable",
+                        "The light suddenly goes out",
+                        "The electric poles are down",
+                        "The neighborhood where I live has no electricity"
+                  ],
+                  "responses": [
+                        "The problem can be recorded in a notebook prepared for this purpose located at the reception of the central administration or at the municipal warehouse (public awareness workshop)."
+                  ]
+            },
+            {
+                  "tag": "pick up trash",
+                  "patterns": [
+                        "Can I ask the municipality to collect special waste",
+                        "Can I raise private waste",
+                        "Is it possible to collect special waste",
+                        "How can the municipality collect private waste",
+                        "Where do I go when I want to raise private waste?",
+                        "Who do I contact to pick up space waste",
+                        "I want to remove special waste",
+                        "What is the price of private waste collection ",
+                        "What is the cost of private waste collection",
+                        "Who determines the cost of raising private waste"
+                  ],
+                  "responses": [
+                        "this can be done by contacting the Health and Environment Department to determine the quantity and quality of waste and the cost of collecting it."
+                  ]
+            },
+            {
+                  "tag": "Truck traffic",
+                  "patterns": [
+                        "What are the times for the garbage trucks in the neighborhoods?",
+                        "When will the garbage trucks come?",
+                        "How long does the garbage truck spend in the region?",
+                        "When hour the garbage lifting system door to door",
+                        "What is the transit time of the garbage truck",
+                        "When the garbage trucks pass through the neighborhoods",
+                        "How long does it take the truck to pass through the neighborhood",
+                        "what are the days of waste lifting",
+                        "The time of passage of garbage trucks in manzel abdel rahmen",
+                        "When do I take out the trash?"
+                  ],
+                  "responses": [
+                        "Waste lifting by compactor truck: every day of the week, from ten o`clock in the evening",
+                        "Waste lifting, door-to-door system: every day of the week, from seven evening hours"
+                  ]
+            },
+            {
+                  "tag": "building permit",
+                  "patterns": [
+                        "Can I get a copy of the building permit?",
+                        "Can I get a copy of the permission to build?",
+                        "Can I get a copy of the permission to build?",
+                        "Can- I acquire a duplicate forced permission to build?",
+                        "Can I obtain a copy forced permission to build?",
+                        "Can I acquire a duplicate forced permission to build?",
+                        "What are the papers required to obtain a building permit? construction",
+                        "what do I have to do to obtain a building permit",
+                        "what are the procedures for obtaining a building permit",
+                        "please give me the necessary documents for the building permit file"
+                  ],
+                  "responses": [
+                        "The citizen must file for this purpose a file consisting of the following documents: an application for a building permit, an original example of surveying, an original title, a tax declaration, 6 technical examples of the construction project, an exit certificate, a copy of the national identity card And the number of 02 odious circumstances bearing the home address "
+                  ]
+            },
+            {
+                  "tag": "health threat",
+                  "patterns": [
+                        "How do I report a threat to the health or comfort of citizens?",
+                        "Who to contact to notify of a health threat",
+                        "What should I do when I notice a health threat",
+                        "I noticed a behavior that threatens the health of the citizen",
+                        "I want to report a behavior that threatens my health",
+                        "What are the ways to report a danger to human health?",
+                        "Where to report a danger to human health?",
+                        "I want to report a dirty restaurant",
+                        "there are unpleasant smells from my neighborhood because of garbage",
+                        "The garbage in my neighborhood is everywhere"
+                  ],
+                  "responses": [
+                        "Contact the municipal police and the environmental police."
+                  ]
+            },
+            {
+                  "tag": "Rental of municipal equipment and supplies",
+                  "patterns": [
+                        "Can municipal equipment and supplies be rented?",
+                        "Can I rent municipal equipment",
+                        "When can I rent municipal equipment",
+                        "Can I rent municipal equipment this week",
+                        "Does the municipality rent equipment for citizens",
+                        "Does the municipality allow equipment to be rented?",
+                        "Is the equipment rental process applicable to the municipality?",
+                        "Is the municipal equipment rental process at all times",
+                        "Is the municipal equipment there when you need it?",
+                        "Can I rent more than one municipal equipment ?"
+                  ],
+                  "responses": [
+                        "subject to availability"
+                  ]
+            },
+            {
+                  "tag": "marriage contract",
+                  "patterns": [
+                        "How do I conclude a marriage contract?",
+                        "What documents are needed to complete the marriage contract?",
+                        "Marriage contract documents",
+                        "What do I bring when I want to get married in the commune?",
+                        "What do I need to conclude a marriage contract?",
+                        "the marriage contract procedures in the commune",
+                        "what is the process for making a marriage contract to the municipality",
+                        "marriage contract",
+                        "marriage to the municipality",
+                        "marriage contract papers"
+                  ],
+                  "responses": [
+                        "Birth certificate for both spouses, medical certificate of consummation of the marriage, copy of valid identity card or passport, court authorization for minors."
+                  ]
+            },
+            {
+                  "tag": "identify the signature",
+                  "patterns": [
+                        " What documents are needed to identify the signature?",
+                        "identify signature",
+                        "procedures for identifying signature",
+                        "how to identify signature",
+                        "papers needed to identify signature",
+                        " the signature identification process",
+                        "the documents to carry to make a signature identification",
+                        "I want to make a signature identification",
+                        "Do I have to carry the passport to identify the signature",
+                        "I have lost my identity card, can I then carry my passport for signature identification"
+                  ],
+                  "responses": [
+                        " the necessary documents: the document to be identified, the official document to prove the identity (identity card or passport)"
+                  ]
+            },
+            {
+                  "tag": "the exact copies",
+                  "patterns": [
+                        "What are the documents required to certify that the copies are identical to the original?",
+                        "What are the documents required to certify that the copies are true?",
+                        "the documents necessary to make a true copy ",
+                        "What are the papers to bring to make a certified copy",
+                        "Documents to carry for the certified copy",
+                        "Can I make a certified copy without carrying my identity card",
+                        "What do I need to it to bring to have a certified copy",
+                        "What are the documents to carry to make a certified copy ",
+                        "Can I make a certified copy with a copy of my identity card",
+                        "I want to make a copy compliant"
+                  ],
+                  "responses": [
+                        " my required documents are: original of the document, copies to be certified true to the original, memorization of the identity card of the presenter of the document"
+                  ]
+            },
+            {
+                  "tag": "public enlightenment",
+                  "patterns": [
+                        "How do I report problems with public enlightenment?"
+                  ],
+                  "responses": [
+                        "The problem can be written in a notebook prepared for the purpose that is located at the reception desk in the central administration or in the municipal warehouse (public enlightenment workshop)."
+                  ]
+            },
+            {
+                  "tag": "raised droppings",
+                  "patterns": [
+                        "Can I ask the municipality to collect special waste?"
+                  ],
+                  "responses": [
+                        "Yes, this can be done by contacting the Department of Cleanliness and Environment to determine the quantity and quality of waste and the cost of removing it."
+                  ]
+            },
+            {
+                  "tag": "council sessions",
+                  "patterns": [
+                        "What are the dates for the Municipal Council sessions?"
+                  ],
+                  "responses": [
+                        "The Municipal Council holds four sessions annually, during the months: February - May - July - November, the dates of which are determined and notified by all available means."
+                  ]
+            },
+            {
+                  "tag": "a copy of the building permit",
+                  "patterns": [
+                        "Can I get a copy of the building permit?"
+                  ],
+                  "responses": [
+                        "The citizen must submit a file for this purpose consisting of the following documents: First, a demand for a building permit  an original survey example , an original title deed , a tax declaration , 6 engineering examples of the construction project , a release certificate , a copy of the national identification card  And the number of 02 obnoxious circumstances bearing the address of residence."
+                  ]
+            },
+            {
+                  "tag": "conditions for demarcation of birth",
+                  "patterns": [
+                        "What is a birth certificate?"
+                  ],
+                  "responses": [
+                        "The notification of the birth is made by the father, the doctor, the midwife, or other persons who witnessed the birth,” with permission issued by the President of the Court of First Instance in the place where the newborn was born,” the notification of the birth takes place within the ten (10) days that Postpartum - If the notification of the birth did not take place within the legal deadline, the civil status officer cannot include it in his books except as required."
+                  ]
+            },
+            {
+                  "tag": "birth certificate documents",
+                  "patterns": [
+                        "Can I get a copy of the building permit?"
+                  ],
+                  "responses": [
+                        "National identification card of the father or mother",
+                        "the family book or the birth certificate of one of the children]"
+                  ]
+            },
+            {
+                  "tag": "conditions for content of birth",
+                  "patterns": [
+                        "What are the conditions for obtaining a birth certificate?"
+                  ],
+                  "responses": [
+                        "submission of an oral request to the civil status officer"
+                  ]
+            },
+            {
+                  "tag": "delivery content documents",
+                  "patterns": [
+                        "How to extract the content of the birth?"
+                  ],
+                  "responses": [
+                        "delivering birth instructions: date, number of the drawing”, giving an old birth certificate, other civil status document, specifying whether it is an original drawing, declaration or judgment"
+                  ]
+            },
+            {
+                  "tag": "fix birth chart",
+                  "patterns": [
+                        "how to fix a birth chart?"
+                  ],
+                  "responses": [
+                        "A request defined by the signature of the person concerned, in which his full address is mentioned, addressed to the civil status officer who has the student’s birth fee, the content of the birth of the person concerned, the content of the birth or death of the student’s father, the content of the birth of a sibling"
+                  ]
+            },
+            {
+                  "tag": "conclusion of a marriage contract",
+                  "patterns": [
+                        "How to conclude a marriage contract?"
+                  ],
+                  "responses": [
+                        "Birth certificate for both spouses, medical certificate of consummation of marriage, copy of identification card or valid passport, permission from the court for those underage,"
+                  ]
+            },
+            {
+                  "tag": "family notebook",
+                  "patterns": [
+                        "How to extract the family book for the first time?"
+                  ],
+                  "responses": [
+                        "a photograph of the head of the family, a copy of the husband`s national identity card, a marriage certificate, a birth certificate for each of the spouses, contents for the rest of the family: in the case of extracting the book after a period of marriage, the employee is known on the family book."
+                  ]
+            },
+            {
+                  "tag": "the equivalent of the family ledger",
+                  "patterns": [
+                        "How to extract the equivalent of the family book in the form of loss?"
+                  ],
+                  "responses": [
+                        "First, a certificate of loss, second, a photograph of the head of the family, third, a copy of the national identity card for the head of the family, fourth, marriage content, fifth, birth content for both spouses, sixth, contents for the rest of the family, seventh, the known employee on the family booklet."
+                  ]
+            },
+            {
+                  "tag": "A license to demolish a property",
+                  "patterns": [
+                        "What are the documents required to obtain a permit to demolish a property?"
+                  ],
+                  "responses": [
+                        "that the citizen is the owner of a property, that the property to be demolished is not occupied by housing or exploitation, that the property is dilapidated by the fall and poses a danger, or that reconstruction will take place within the framework of development"
+                  ]
+            },
+            {
+                  "tag": "Conditions of the building permit decision for a single or twin dwelling",
+                  "patterns": [
+                        "What are the conditions for the decision to permit the construction of a single or twin residence?"
+                  ],
+                  "responses": [
+                        "Conditions for using the service: First, that the citizen be the owner of the property on which the building is to be built, second, that this plot comes from an approved division, and that its nature and the allocation contained in the example of preparing the area must be respected. Concerning antiquities, historical monuments, and natural and urban sites. Fourth, the citizen must submit a complete and obligatory file in accordance with the legislation in force."
+                  ]
+            },
+            {
+                  "tag": "documents of the building permit decision for a single or twin dwelling",
+                  "patterns": [
+                        "What are the documents for a building permit decision for a single or twin residence?"
+                  ],
+                  "responses": [
+                        "First, a demand on plain paper signed by the license applicant or his representative. Secondly, an ownership certificate, eligibility judgment, or other document regarding the applicant’s ownership of the plot of land on which construction is to be built. Third, the receipt of the declaration of tax deposit on the income of natural persons or the corporate tax. Fourth, the payment of the duties employed on the property, the subject of the building permit requirement, Fifth, a building project in three (3) counterparts, conforming to the urban regulations of the area in which the construction will be located."
+                  ]
+            },
+            {
+                  "tag": "the place where the building permit is deposited, a single or twin dwelling",
+                  "patterns": [
+                        "What is the place for depositing the building permit for a single or twin dwelling?"
+                  ],
+                  "responses": [
+                        "the municipality authority or the municipal department"
+                  ]
+            },
+            {
+                  "tag": "Conditions for extending the building permit",
+                  "patterns": [
+                        "What are the conditions for extending a building permit?"
+                  ],
+                  "responses": [
+                        "Conditions for using the service: First, the student must have obtained a building permit subject of the extension request, Second, not to make any changes in the building subject of the permit, otherwise a new building permit must be obtained. Third, the extension request must reach the municipality one month before the expiry date.” The building permit subject of the extension request"
+                  ]
+            },
+            {
+                  "tag": "Building Permit Extension Documents",
+                  "patterns": [
+                        "What are the documents for obtaining a building permit extension?"
+                  ],
+                  "responses": [
+                        "request documents in the name of the mayor on a regular paper signed by the concerned person"
+                  ]
+            },
+            {
+                  "tag": "conditions for obtaining a certificate of conformity",
+                  "patterns": [
+                        "What are the conditions for obtaining a certificate of conformity?"
+                  ],
+                  "responses": [
+                        "Conditions of using the service: This certificate pertains only to the shops exploiting the activity of selling first-class beverages; a café, a tea room, a drink"
+                  ]
+            },
+            {
+                  "tag": "place of deposit of a certificate of conformity",
+                  "patterns": [
+                        "What is the place of deposit?"
+                  ],
+                  "responses": [
+                        "the place where the file is deposited is the central control office"
+                  ]
+            },
+            {
+                  "tag": "documentation of conformity certificate",
+                  "patterns": [
+                        "What are the documents for obtaining a certificate of conformity?"
+                  ],
+                  "responses": [
+                        "Required documents First, a demand in the name of the mayor, secondly, a copy of the national identification card, third, the lease contract for the shop (and the shop added when necessary) Fourth, an engineering example for the shop in the event of difficulties in determining the space (construction works are underway, the intention to expand due to the inadequacy of the original space of the shop. )"
+                  ]
+            },
+            {
+                  "tag": "Family Party Permit Conditions",
+                  "patterns": [
+                        "What are the conditions for obtaining a permit to hold a family party?"
+                  ],
+                  "responses": [
+                        "First, holding a party using musical instruments or other things. Second, submitting the license request three days before the ceremony."
+                  ]
+            },
+            {
+                  "tag": "family party license documents",
+                  "patterns": [
+                        "What are the documents for obtaining a permit to hold a family party?"
+                  ],
+                  "response": [
+                        "A requirement on plain paper that states the date and full address of the venue in which the ceremony will be held"
+                  ]
+            },
+            {
+                  "tag": "Public Domain Temporary Occupation License",
+                  "patterns": [
+                        "What are the documents for obtaining a temporary occupancy license of the public domain?"
+                  ],
+                  "responses": [
+                        "First, a demand on plain paper that includes the necessary data; the full address of the shop, the subject of the occupancy, its location and duration, and justification for the need for it. Fifthly, legal licenses (for shops set up as cafes or restaurants) "
+                  ]
+            },
+            {
+                  "tag": "conditions of license to focus advertising signs (pillars, hangings, writing)",
+                  "patterns": [
+                        "What are the conditions for obtaining a license to focus advertising marks?"
+                  ],
+                  "responses": [
+                        "First, it requires a license for all equipment, drawings, or writing, whether it is an advertising hanging on a public road, an illuminated or non-illuminated sign, or writing on the front of a commercial or non-commercial store, regardless of whether its subject is commercial or not, and regardless of the way it is accomplished. Secondly, it is forbidden to focus advertising equipment if its content includes: an area marking with a directional arrow, a kilometer distance, or an imitation of a traffic sign or signal."
+                  ]
+            },
+            {
+                  "tag": "Documents for a license to focus advertising marks (pillars, hangings, writing)",
+                  "patterns": [
+                        "What are the documents for obtaining a license to focus advertising marks?"
+                  ],
+                  "responses": [
+                        "The documents are: First, a request in the name of the mayor, signed by the student, including the necessary data; the required location, area, occupancy period, address, and a statement of need. The text and the space to be occupied by the interface for writing"
+                  ]
+            },
+            {
+                  "tag": "Conditions of the certificate of demarcation of a property in the municipal collection schedule",
+                  "patterns": [
+                        "What are the conditions for a certificate of demarcation of a property in the municipal collection schedule?"
+                  ],
+                  "responses": [
+                        "First, that the person concerned is the owner of the property or that he has a power of attorney authorizing him to dispose of the property."
+                  ]
+            },
+            {
+                  "tag": "permission to burial",
+                  "patterns": [
+                        "Documents required to obtain a burial permit?"
+                  ],
+                  "responses": [
+                        "First, a medical certificate stating that the death took place in natural circumstances, secondly, permission from the public prosecutor if the death occurred in natural or mysterious circumstances, and third, a report by the security services in the event of an unnatural death."
+                  ]
+            },
+            {
+                  "tag": "documentation of the deceased`s main residence certificate",
+                  "patterns": [
+                        "What are the documents for obtaining the certificate of the main residence of the deceased?"
+                  ],
+                  "responses": [
+                        "First, a requirement that specifically stipulates the full address of the property in question, second, the affidavit of death for the deceased, third, indicating that the property subject of the request is not burdened with a debt for the benefit of the local community concerned, titled payment on the real estate, fourth, certificate of ownership of the property, fifth, the payment of the due known."
+                  ]
+            },
+            {
+                  "tag": "conditions for the certificate of the deceased`s main residence",
+                  "patterns": [
+                        "What are the conditions for obtaining a certificate of the main residence of the deceased?"
+                  ],
+                  "responses": [
+                        "First, that the property subject of the application is the main residence of the deceased. Second, that the person(s) concerned with the matter be one of the heirs of the property owner. Third, the exemption is granted from the registration fee employed on the estates within an area of ​​1,000 square meters, including built-in and non-built accessories. What is more than that is subject to the registration information employed on the estate"
+                  ]
+            },
+            {
+                  "tag": "corpse transport license",
+                  "patterns": [
+                        "Documents required to obtain a corpse transport license?"
+                  ],
+                  "responses": [
+                        "First, the content of the death fee, secondly, a medical certificate stating that the causes of death were not caused by an infectious disease."
+                  ]
+            },
+            {
+                  "tag": "Public network connection license (water and electricity)",
+                  "patterns": [
+                        "How to obtain a license to connect to the public networks (water and electricity)?"
+                  ],
+                  "responses": [
+                        "To obtain a license to connect to the public networks, a request must be presented on plain paper signed by the applicant, with the address and references to the building permit as well as a certificate of ownership and finally a certificate of innocence in the collection of municipal fees."
+                  ]
+            },
+            {
+                  "tag": "Request for exemption from rent tax",
+                  "patterns": [
+                        "How do we apply for exemption from rent tax?"
+                  ],
+                  "responses": [
+                        "First, submit a request on plain paper signed by the student, and it specifically states the full address of the property and information about the student, second, a copy of the ownership certificate, third, a copy of the social assistance receipt, and fourth, a copy of the payment receipt."
+                  ]
+            },
+            {
+                  "tag": "change owner name",
+                  "patterns": [
+                        "How can I change the owner`s name?"
+                  ],
+                  "responses": [
+                        "A request in the name of the mayor that specifically provides for the full address of the property in question - a legal document stating ownership of the property (a copy of a sale or purchase contract or ownership certificate)"
+                  ]
+            },
+            {
+                  "tag": "tasks of my advisor",
+                  "patterns": [
+                        "What are the duties of my advisor?"
+                  ],
+                  "responses": [
+                        "First he chairs one of the committees (only one) Secondly he is a member or reporter of several municipal committees Third is a member of the council of one of the municipal departments Fourth represents the municipality before the courts or concludes contracts if the interests of the mayor conflict with the interests of the municipality Fifth represents the municipality Sixthly, the board of directors of public enterprises in which the municipality contributes has the possibility of being elected temporarily as the head of the municipality when it is not possible to replace the president with one of the assistants, or permanently in the event of the president’s abandonment or an impediment that prevents the president from finally exercising his activity."
+                  ]
+            },
+            {
+                  "tag": "make a request",
+                  "patterns": [
+                        "How do I apply for an application?"
+                  ],
+                  "responses": [
+                        "choose the service you want from the services directory and then click to apply for the service. All requirements must be met to continue the application"
+                  ]
+            },
+            {
+                  "tag": "the purpose of the electronic registration in the municipality",
+                  "patterns": [
+                        "What is the purpose of electronic registration in the municipality?"
+                  ],
+                  "responses": [
+                        "After registration, the user can access all the electronic services provided by the municipality and apply for them from anywhere"
+                  ]
+            },
+            {
+                  "tag": "apply for a job",
+                  "patterns": [
+                        "How can I apply for a job?"
+                  ],
+                  "responses": [
+                        "First, you must register. You can use express registration. It allows you to apply for a job only. Second, go to the Human Resources Services Directory. Apply for a job. Fill out the requirements and apply for the service."
+                  ]
+            },
+            {
+                  "tag": "salutation",
+                  "patterns": [
+                        "Bonjour",
+                        "Comment vas tu",
+                        "Il y a quelqu`un?",
+                        "Salut",
+                        "Bonne journée",
+                        "Bonsoir",
+                        "Coucou",
+                        "Allô",
+                        "Bonne soirée",
+                        "Vous allez bien ?"
+                  ],
+                  "responses": [
+                        "Bonjour merci pour la visite ",
+                        "C`est bon de te revoir",
+                        "Salut, comment puis_je vous aider ?"
+                  ],
+                  "context_set": ""
+            },
+            {
+                  "tag": "Au revoir",
+                  "patterns": [
+                        "Au revoir",
+                        "A plus tard",
+                        "A demain",
+                        "a la prochaine",
+                        "Bonne journée",
+                        "Bonne soirée",
+                        "À tout à l’heure ",
+                        "a bientot",
+                        "Bonne nuit",
+                        "tchao"
+                  ],
+                  "responses": [
+                        "A plus tard, Merci de votre visite ",
+                        "Bonne journée ",
+                        "Au revoir! reviens "
+                  ]
+            },
+            {
+                  "tag": "Merci",
+                  "patterns": [
+                        "Merci",
+                        "Merci beaucoup",
+                        "c`est gentil",
+                        "merci bien",
+                        "un grand merci",
+                        "mille merci",
+                        "Merci infiniment",
+                        "Merci du fond du coeur",
+                        "Merci de ton aide",
+                        "Je te remercie très sincèrement"
+                  ],
+                  "responses": [
+                        "Heureux de pouvoir vous aider! ",
+                        "A toute heure! ",
+                        "Mon plaisir ",
+                        "Pas de quoi !",
+                        "Je vous en prie.",
+                        "À ton service"
+                  ]
+            },
+            {
+                  "tag": "Heures",
+                  "patterns": [
+                        "Quelles heures etes vous ouvert?",
+                        "A quelle heure ouvrez-vous ?",
+                        "Quand serez-vous ouvert?",
+                        "Quelles sont vos heures?",
+                        "Quand etes vous ouvert?",
+                        "Etes vous ouvert aujourd`hui?",
+                        "Quand ouvres tu aujourd`hui?",
+                        "Quelles sont vos heures aujourd`hui?",
+                        "heures de travail",
+                        "quand vous etes disponible ?"
+                  ],
+                  "responses": [
+                        "  Nous sommes ouverts tous les jours de 8h à 17h  sauf le weekend",
+                        "Nos horaires  sont de 8h à 17h tous les jours sauf le weekenk",
+                        "Nous travaillons de lundi à vendredi de 8h du matin jusqu`a 17h "
+                  ]
+            },
+            {
+                  "tag": "bâtiment en désordre",
+                  "patterns": [
+                        "Comment signaler une construction désordonnée",
+                        "Comment signaler un batiment en désordre ?",
+                        "Comment divulguer un batiment en désordre ?",
+                        "Comment répandre un batiment en désordre ?",
+                        "batiment en désorde",
+                        "Que dois-je faire lorsque je vois une construction illégale ?",
+                        "Quels sont les moyens de signaler un immeuble en désordre ?",
+                        "Qui dois-je appeler quand je vois un bâtiment en désordre ?",
+                        "Que dois-je faire lorsque je vois une construction illégale ?",
+                        "Qui est responsable de la surveillance des bâtiments illégales"
+                  ],
+                  "responses": [
+                        "Contactez le commissariat de police municipal et l`intérêt du coordonnateur de l`arrangement dans l`administration municipale "
+                  ]
+            },
+            {
+                  "tag": "illumination publique",
+                  "patterns": [
+                        "Comment puis-je signaler des problèmes d`illumination publique ?",
+                        "Qui est le responsable pour les problemes d`illumination publique",
+                        "Comment signaler un problème d`éclairage public ?",
+                        "Comment indiquer des problèmes d`éclairage public ?",
+                        "J`ai des problèmes avec l`éclairage public",
+                        "l`éclairage publique dans mon quartier est en panne",
+                        "l`éclairage publique dans mon quartier n`est pas stable",
+                        "La lumière s`éteint soudainement",
+                        "Les poteaux électriques sont en panne",
+                        "Le quartier où j`habite n`a pas d`électricité"
+                  ],
+                  "responses": [
+                        "Le problème peut être consigné dans un cahier préparé à cet effet situé à l`accueil de l`administration centrale ou à l`entrepôt communal (atelier d`éveil du public)."
+                  ]
+            },
+            {
+                  "tag": "relever les déchets ",
+                  "patterns": [
+                        "Puis-je demander à la municipalité de relever les déchets spéciaux",
+                        "Puis-je élever des déchets privés",
+                        "Est-il possible de collecter les déchets spéciaux",
+                        "Comment la commune peut-elle collecter les déchets privés",
+                        "Où dois-je aller quand je veux élever des déchets privés ?",
+                        "Qui contacter pour relever des déchets spaciaux",
+                        "je veux enlever des déchets speciaux",
+                        "quel est le prix de ramassage de déchets privées",
+                        "Quel est le coût de la collecte des déchets privés",
+                        "Qui détermine le coût de l`élevage des déchets privés"
+                  ],
+                  "responses": [
+                        "cela peut se faire en contactant la Direction de l`Hygiène et de l`Environnement pour déterminer la quantité et la qualité des déchets et le coût de leur ramassage."
+                  ]
+            },
+            {
+                  "tag": "Trafic de camions",
+                  "patterns": [
+                        "Quels sont les horaires de passage des camions de poubelles dans les quartiers ?",
+                        "Quand viendront les camions de  poubelles ?",
+                        "Combien de temps passe le camion du poubelle dans la région ?",
+                        "A quelle heure le levage des déchets système porte par porte",
+                        "Quel est le temps de transit du camion des dechets",
+                        "Quand les camions de poubelles traversent les quartiers",
+                        "combien de temps faut-il au camion pour traverser le quartier",
+                        "quelles sont les jour de levage des déchets",
+                        "L`heure de passage des camions de poubelles a manzel abdel rahmen",
+                        "Quand est-ce que je sors la poubelle ?"
+                  ],
+                  "responses": [
+                        "Relevage des déchets par camion compacteur : tous les jours de la semaine, à partir de dix heures du soir",
+                        "Levage des déchets, système porte par porte : tous les jours de la semaine, à partir de sept heures du soir"
+                  ]
+            },
+            {
+                  "tag": "permis de construire",
+                  "patterns": [
+                        "Puis-je obtenir une copie du permis de construire ?",
+                        "Puis-je acquérir une duplicata du permission pour édifier?",
+                        "Puis-je obtenir une copie d autorisation à édifier?",
+                        "Puis-je acquérir une duplicata obligé permission à édifier?",
+                        "Puis-je obtenir une copie forcé permission à édifier?",
+                        "Puis-je acquérir une duplicata contrainte autorisation de édifier?",
+                        "quels sont les papiers nécéssaire pour obtenir un permis de construction",
+                        "qu`est ce que je dois faire pour obtenir un permis de construction",
+                        "quels sont les procédures pour avoir un permis de construction",
+                        "merci de me donner les documents nécéssaire pour le dossier d`autorisation de batir"
+                  ],
+                  "responses": [
+                        " Le citoyen doit déposer à cet effet un dossier composé des pièces suivantes :une demande de permis de construire , un exemple original d`arpentage , un titre original , une déclaration fiscale , 6 exemples techniques du projet de construction , une attestation de sortie , une copie de la carte nationale d`identité  Et le numéro de 02 circonstances odieuses portant l`adresse du domicile "
+                  ]
+            },
+            {
+                  "tag": "menace pour la santé",
+                  "patterns": [
+                        "Comment signaler une menace pour la santé ou le confort des citoyens ?",
+                        "Qui contacter pour avertir à une menace de santé",
+                        "Qu`est ce que je dois faire lorsque je remarque une menace de santé",
+                        "J`ai remarqué un comportement qui menace la santé du citoyen",
+                        "Je veux signaler un comportement qui menace ma santé",
+                        "Quels sont les moyens de signaler un danger pour la santé humaine ?",
+                        "Où signaler un danger pour la santé humaine ?",
+                        "Je veux signaler un restaurant sale",
+                        "il y a des odeurs désagréables de mon quartier à cause des déchets",
+                        "Les déchets dans mon quartier sont partout"
+                  ],
+                  "responses": [
+                        "Contactez la police municipale et la police de l`environnement."
+                  ]
+            },
+            {
+                  "tag": "Location d`équipements et de fournitures municipaux",
+                  "patterns": [
+                        "Est-ce que l`équipement et les fournitures municipaux peuvent être loués?",
+                        "Puis-je louer du matériel municipal",
+                        "Quand puis-je louer des équipements municipal",
+                        "Est ce que je peut louer un équipement municipal cette semaine",
+                        "Est ce que la municipalité loue des materiels pour les citoyens",
+                        "La municipalité autorise-t-elle à louer son matériel ?",
+                        "Le processus de location d`équipement est-il applicable à la municipalité?",
+                        "Le processus de location d`équipements municipaux est-il à tout moment",
+                        "L`équipement municipal est-il là quand vous en avez besoin?",
+                        "Puis-je louer plus d`un équipement municipal?"
+                  ],
+                  "responses": [
+                        "selon disponibilité "
+                  ]
+            },
+            {
+                  "tag": "contrat de mariage",
+                  "patterns": [
+                        "Comment conclure un contrat de mariage ?",
+                        "Quels sont les documents nécessaires pour remplir le contrat de mariage ?",
+                        "Documents de contrat de mariage",
+                        "Qu`est-ce que j`apporte quand je veux me marier dans la commune ?",
+                        "Qu`est-ce que je besoin pour conclure un contrat de mariage ?",
+                        "les procédures de contrat de mariage dans la commune",
+                        "quel est le processus pour faire un contrat du mariage a la commune",
+                        "contrat du mariage",
+                        " mariage a la commune",
+                        " papiers contrat mariage"
+                  ],
+                  "responses": [
+                        "Acte de naissance pour les deux époux, certificat médical de consommation du mariage, copie de la carte d`identité ou du passeport en cours de validité, autorisation du tribunal pour les mineurs."
+                  ]
+            },
+                    {
+                  "tag": "identifier la signature",
+                  "patterns": [
+                        " Quels documents sont nécessaires pour identifier la signature ?",
+                        "identifier signature",
+                        "les procédures d`identification de signature",
+                        "comment identifier la signature",
+                        "les papiers nécessaire pour identifier la signature",
+                        "le processur d`identification de signature",
+                        "les documents a porter pour faire une identification de signature",
+                        "je veux faire une identification de signature",
+                        "Est ce que je dois porter le passport pour identifier la signature",
+                        "J`ai perdu ma carte d`identité , est ce que je peut alors porter mon passport pour l`identification de signature"
+                  ],
+                  "responses": [
+                        " les documuments nécessaire :le document à identifier, le document officiel pour prouver l`identité (carte d`identité ou bien passeport)"
+                  ]
+                                  }, 
+            {
+                  "tag": "les copies conformes ",
+                  "patterns": [
+                        "Quels sont les documents requis pour certifier que les copies sont identiques à l`original ?",
+                        "Quels sont les documents requis pour certifier que les copies sont conformes ?",
+                        "les documents nécéssaire pour faire une copie conforme",
+                        "Quels sont les papiers a porter pour faire une copie conforme",
+                        "les documents a portés pour la copie conforme",
+                        "Est ce que je peux faire une copie conforme sans porter ma carte d`identité",
+                        "Que faut-il porter pour avoir une copie conforme",
+                        "Quels sont les documents a mener pour faire une copie conforme ",
+                        "Est ce que je peux faire une copie conforme avec une copie de ma carte d`identité",
+                        "je veux faire une copie conforme"
+                  ],
+                  "responses": [
+                        " mes documents nécéssaire sont :original du document, copies à certifier conformes à l`original, mémorisation de la carte d`identité du présentateur du document"
+                  ]
+            },
+            {
+                  "tag": "Séances du Conseil",
+                  "patterns": [
+                        "Quels sont les horaires des séances du Conseil Municipal ? "
+                  ],
+                  "responses": [
+                        "Le Conseil Municipal tient quatre sessions par an, pendant les mois : février - mai - juillet - novembre, et les dates sont fixées et notifiées par tous les moyens disponibles."
+                  ]
+            },
+            {
+                  "tag": "conditions de démarcation de naissance",
+                  "patterns": [
+                        "Qu`est-ce qu`un acte de naissance? "
+                  ],
+                  "responses": [
+                        "La déclaration de naissance est faite par le père, le médecin, la sage-femme ou d`autres personnes qui ont assisté à la naissance», par autorisation délivrée par le président du tribunal de première instance du lieu où le nouveau-né est née », la notification de la naissance a lieu dans les dix (10) jours qui suivent l`accouchement - Si la notification de la naissance n`a pas eu lieu dans le délai légal, l`officier de l`état civil ne peut l`inscrire dans ses livres qu`en cas de nécessité."
+                  ]
+            },
+            {
+                  "tag": "documents d`acte de naissance",
+                  "patterns": [
+                        "Puis-je obtenir une copie du permis de construire ?"
+                  ],
+                  "responses": [
+                        "La carte nationale d`identité du père ou de la mère, le livret de famille ou l`acte de naissance d`un des enfants "
+                  ]
+            },
+            {
+                  "tag": "Conditions de naissance garantie",
+                  "patterns": [
+                        "Quelles sont les conditions pour obtenir un acte de naissance ?"
+                  ],
+                  "responses": [
+                        "Déposer une demande orale auprès de l`officier de l`état civil"
+                  ]
+            },
+            {
+                  "tag": "acte de naissance",
+                  "patterns": [
+                        "Comment extraire l`acte de naissance? "
+                  ],
+                  "responses": [
+                        "délivrer des instructions de naissance : date, numéro du tirage », donner un ancien acte de naissance, « autre acte d`état civil, en précisant s`il s`agit d`un dessin original, d`une déclaration ou d`un jugement"
+                  ]
+            },
+            {
+                  "tag": "Réparation de carte de naissance",
+                  "patterns": [
+                        "comment réparer la carte de naissance"
+                  ],
+                  "responses": [
+                        "Une demande définie par la signature de l`intéressé, dans laquelle son adresse complète est mentionnée, est adressée à l`officier de l`état civil qui dispose du droit de naissance de l`étudiant, du contenu de la naissance de l`intéressé, le contenu de la naissance ou du décès du père de l`élève, le contenu de la naissance d`un frère ou d`une sœur "
+                  ]
+            },
+            {
+                  "tag": "garantie de mariage",
+                  "patterns": [
+                        "comment obtenir du contenu de mariage?"
+                  ],
+                  "responses": [
+                        "Donner des instructions de mariage : date, nombre de frais, déterminer si le mariage a été conclu à la municipalité ou chez un notaire public."
+                  ]
+            },
+            {
+                  "tag": "carnet de famille",
+                  "patterns": [
+                        "Comment extraire le livret de famille pour la première fois?"
+                  ],
+                  "responses": [
+                        " une photographie du chef de famille, une copie de la carte nationale d`identité du mari, un acte de mariage, un acte de naissance pour chacun des époux, contenu pour le reste de la famille : en cas d`extraction livret après une période de mariage, le salarié est connu sur le livret de famille."
+                  ]
+            },
+            {
+                  "tag": "l`équivalent du livre de famille",
+                  "patterns": [
+                        "Comment extraire l`équivalent du livret de famille sous forme de perte ?"
+                  ],
+                  "responses": [
+                        "Premièrement, un certificat de perte, deuxièmement, une photographie du chef de famille, troisièmement, une copie de la carte nationale d`identité du chef de famille, quatrièmement, le contenu du mariage, cinquièmement, le contenu de la naissance pour les deux époux, sixièmement, contenu pour le reste de la famille, septième, l`employé connu sur le livret de famille."
+                  ]
+            },
+            {
+                  "tag": "Un permis pour démolir une propriété",
+                  "patterns": [
+                        "Quels sont les documents requis pour obtenir un permis de démolition d`une propriété?"
+                  ],
+                  "responses": [
+                        "Que le citoyen soit propriétaire d`un bien, que le bien à démolir ne soit pas occupé par l`habitation ou l`exploitation, que le bien soit vétuste par la chute et présente un danger, ou que la reconstruction soit à faire dans le cadre du développement."
+                  ]
+            },
+            {
+                  "tag": "Conditions de la décision de permis de construire pour un logement individuel ou jumelé",
+                  "patterns": [
+                        " Quelles sont les conditions de la décision d`autoriser la construction d`une résidence individuelle ou jumelée ?"
+                  ],
+                  "responses": [
+                        "Conditions d`utilisation du service : Premièrement, que le citoyen soit propriétaire du bien sur lequel l`immeuble doit être construit, deuxièmement, que ce terrain provienne d`une division agréée, et que sa nature et l`affectation contenue dans l`exemple de concernant les antiquités, les monuments historiques et les sites naturels et urbains. Quatrièmement, le citoyen doit déposer un dossier complet et obligatoire conformément à la législation en vigueur."
+                  ]
+            },
+            {
+                  "tag": "documents de la décision de permis de construire pour un logement individuel ou jumelé",
+                  "patterns": [
+                        "Quels sont les documents pour une décision de permis de construire pour une résidence individuelle ou jumelée ?"
+                  ],
+                  "responses": [
+                        " Premièrement, une demande sur papier libre signée par le demandeur de licence ou son représentant. Deuxièmement, un certificat de propriété, un jugement d`éligibilité ou tout autre document concernant la propriété du demandeur du terrain sur lequel la construction doit être construite. Troisièmement, le reçu de la déclaration d`acompte d`impôt sur le revenu des personnes physiques ou de l`impôt sur les sociétés Quatrièmement, le paiement des droits employés sur l`immeuble, objet de l`obligation de permis de construire, Cinquièmement, un projet de construction en trois (3) exemplaires, conforme au règlement d`urbanisme de la zone dans laquelle la construction sera implantée."
+                  ]
+            },
+            {
+                  "tag": " le lieu où est déposé le permis de construire, une habitation individuelle ou jumelée ",
+                  "patterns": [
+                        "Quel est le lieu de dépôt du permis de construire pour un logement individuel ou jumelé ?"
+                  ],
+                  "responses": [
+                        "l`autorité communale ou le service communal"
+                  ]
+            },
+            {
+                  "tag": "Conditions de prolongation du permis de construire",
+                  "patterns": [
+                        " Quelles sont les conditions pour prolonger un permis de construire ?"
+                  ],
+                  "responses": [
+                        "Conditions d`utilisation du service : Premièrement, l`étudiant doit avoir obtenu un permis de construire objet de la demande de prolongation, Deuxièmement, ne pas apporter de modifications au bâtiment objet du permis, sinon un nouveau permis de construire doit être obtenu. Troisièmement, le la demande de prorogation doit parvenir à la commune un mois avant la date d`expiration. Le permis de construire objet de la demande d`extension"
+                  ]
+            },
+            {
+                  "tag": "Documents d`extension de permis de construire",
+                  "patterns": [
+                        "Quels sont les documents pour obtenir une prolongation de permis de construire ?"
+                  ],
+                  "responses": [
+                        "demander des documents au nom du maire sur un papier ordinaire signé par la personne concernée"
+                  ]
+            },
+            {
+                  "tag": "conditions d`obtention d`un certificat de conformité",
+                  "patterns": [
+                        "Quelles sont les conditions d`obtention d`un certificat de conformité ?"
+                  ],
+                  "responses": [
+                        "Conditions d`utilisation du service : Cette attestation ne concerne que les commerces exploitant l`activité de vente de boissons de première qualité ; un café, un salon de thé, une boisson"
+                  ]
+            },
+            {
+                  "tag": " lieu de dépôt d`un certificat de conformité ",
+                  "patterns": [
+                        "Quel est le lieu de dépôt?"
+                  ],
+                  "responses": [
+                        "le lieu où le dossier est déposé est le bureau central de contrôle"
+                  ]
+            },
+            {
+                  "tag": "Conditions du permis de fête familiale",
+                  "patterns": [
+                        "Quelles sont les conditions d`obtention d`un permis pour organiser une fête de famille ?"
+                  ],
+                  "responses": [
+                        "Premièrement, organiser une fête en utilisant des instruments de musique ou d`autres choses. Deuxièmement, soumettre la demande de licence trois jours avant la cérémonie."
+                  ]
+            },
+            {
+                  "tag": "documents de licence de fête de famille",
+                  "patterns": [
+                        "Quels sont les documents pour obtenir un permis pour organiser une fête de famille?"
+                  ],
+                  "responses": [
+                        "Une exigence sur papier libre mentionnant la date et l`adresse complète du lieu où se déroulera la cérémonie"
+                  ]
+            },
+            {
+                  "tag": "Licence d`occupation temporaire du domaine public",
+                  "patterns": [
+                        "Quels sont les documents pour obtenir une autorisation d`occupation temporaire du domaine public?"
+                  ],
+                  "responses": [
+                        "Premièrement, une demande sur papier libre qui comprend les données nécessaires, l`adresse complète du magasin, l`objet de l`occupation, son emplacement et sa durée, et la justification de sa nécessité. Cinquièmement, des licences légales ( pour les commerces aménagés en cafés ou restaurants) "
+                  ]
+            },
+            {
+                  "tag": "conditions de licence pour porter des enseignes publicitaires (piliers, tentures, écriture)",
+                  "patterns": [
+                        "Quelles sont les conditions d`obtention d`une licence de concentration de marques publicitaires?"
+                  ],
+                  "responses": [
+                        "D`abord, il faut une licence pour tout équipement, dessin ou écrit, qu`il s`agisse d`une publicité accrochée sur la voie publique, d`une enseigne lumineuse ou non lumineuse, ou d`un écrit sur la devanture d`un affichage commercial ou non -magasin commercial, que son objet soit commercial ou non, et quelle que soit la manière dont il est réalisé.Deuxièmement, il est interdit de focaliser un matériel publicitaire si son contenu comporte : un marquage de zone avec une flèche directionnelle, une distance kilométrique, ou une imitation d`un panneau de signalisation ou d`un signal."
+                  ]
+            },
+            {
+                  "tag": "Documents pour une licence de focalisation des marques publicitaires (piliers, tentures, écriture)",
+                  "patterns": [
+                        "Quels sont les documents pour obtenir une licence de focalisation de marques publicitaires?"
+                  ],
+                  "responses": [
+                        "Les documents sont: d`abord, une demande au nom du maire, signée par l`étudiant, comprenant les données nécessaires; le lieu, la superficie, la période d`occupation, l`adresse et une déclaration de besoin requis. Le texte et l`espace à occuper par l`interface d`écriture"
+                  ]
+            },
+            {
+                  "tag": "Conditions du certificat de bornage d`une propriété dans le calendrier de collecte municipale",
+                  "patterns": [
+                        "Quelles sont les conditions d`une attestation de bornage d`une propriété dans le calendrier de collecte municipal?"
+                  ],
+                  "responses": [
+                        "Premièrement, que la personne concernée est propriétaire du bien ou qu`elle dispose d`une procuration l`autorisant à disposer du bien."
+                  ]
+            },
+            {
+                  "tag": "documentation du certificat de résidence principale du défunt",
+                  "patterns": [
+                        "Quels sont les documents pour obtenir le certificat de la résidence principale du défunt?"
+                  ],
+                  "responses": [
+                        "premièrement, une exigence qui stipule expressément l`adresse complète du bien en question, deuxièmement, l`attestation de décès du défunt, troisièmement, indiquant que le bien faisant l`objet de la demande n`est pas grevé d`une dette pour le au profit de la collectivité locale concernée, intitulé paiement sur le bien immobilier, quatrièmement, certificat de propriété du bien, cinquièmement, le paiement de l`exigibilité connue."
+                  ]
+            },
+            {
+                  "tag": "autorisation d`enterrement",
+                  "patterns": [
+                        "Documents requis pour obtenir un permis d`inhumer?"
+                  ],
+                  "responses": [
+                        "Premièrement, un certificat médical attestant que le décès est survenu dans des circonstances naturelles, deuxièmement, une autorisation du procureur de la République si le décès est survenu dans des circonstances naturelles ou mystérieuses, et troisièmement, un procès-verbal des services de sécurité en cas de décès non naturel."
+                  ]
+            },
+            {
+                  "tag": "conditions du certificat de résidence principale du défunt",
+                  "patterns": [
+                        "Quelles sont les conditions d`obtention d`une attestation de résidence principale du défunt ?"
+                  ],
+                  "responses": [
+                        "Premièrement, que le bien faisant l`objet de la demande est la résidence principale du défunt. Deuxièmement, que la ou les personnes concernées par l`affaire soient l`un des héritiers du propriétaire. Troisièmement, l`exemption est accordé à partir des frais d`enregistrement employés sur les domaines dans une zone de 1 000 mètres carrés, y compris les accessoires intégrés et non construits. De plus, cela est soumis aux informations d`enregistrement utilisées sur le domaine"
+                  ]
+            },
+            {
+                  "tag": "permis de transport de cadavres",
+                  "patterns": [
+                        "Documents requis pour obtenir une licence de transport de cadavres?"
+                  ],
+                  "responses": [
+                        "Premièrement, le contenu de l`indemnité de décès, deuxièmement, un certificat médical attestant que les causes du décès n`ont pas été causées par une maladie infectieuse."
+                  ]
+            },
+            {
+                  "tag": "Licence de raccordement au réseau public (eau et électricité)",
+                  "patterns": [
+                        "Comment obtenir une autorisation de raccordement aux réseaux publics (eau et électricité).?"
+                  ],
+                  "responses": [
+                        "Pour obtenir une autorisation de raccordement aux réseaux publics, une demande doit être présentée sur papier libre signée par le demandeur, avec l`adresse et les références au permis de construire ainsi qu`un certificat de propriété et enfin un certificat d`innocence dans le recueil des redevances municipales."
+                  ]
+            },
+            {
+                  "tag": "Demande d`exonération de taxe locative",
+                  "patterns": [
+                        "Comment demander l`exonération de la taxe sur les loyers?"
+                  ],
+                  "responses": [
+                        "Premièrement, soumettez une demande sur papier libre signée par l`étudiant, et elle indique spécifiquement l`adresse complète de la propriété et des informations sur l`étudiant, deuxièmement, une copie du certificat de propriété, troisièmement, une copie du reçu d`aide sociale, et quatrièmement, une copie du reçu de paiement."
+                  ]
+            },
+            {
+                  "tag": "modifier le nom du propriétaire",
+                  "patterns": [
+                        "Comment puis-je changer le nom du propriétaire?"
+                  ],
+                  "responses": [
+                        "Une demande au nom du maire qui prévoit spécifiquement l`adresse complète de la propriété en question - un document légal indiquant la propriété de la propriété (une copie d`un contrat de vente ou d`achat ou d`un certificat de propriété)"
+                  ]
+            },
+            {
+                  "tag": "tâches de mon conseiller",
+                  "patterns": [
+                        "Quelles sont les fonctions de mon conseiller?"
+                  ],
+                  "responses": [
+                        "Premièrement il préside une des commissions (une seule) Deuxièmement il est membre ou rapporteur de plusieurs commissions communales Troisièmement est membre du conseil d`un des services communaux Quatrièmement représente la commune devant les tribunaux ou conclut contrats si les intérêts du maire sont en conflit avec les intérêts de la commune Cinquièmement représente la commune Sixièmement, le conseil d`administration des entreprises publiques dans lesquelles la commune contribue a la possibilité d`être élu temporairement à la tête de la commune lorsque cela n`est pas possible remplacer le président par l`un des adjoints, ou définitivement en cas d`abandon du président ou d`empêchement empêchant le président d`exercer définitivement son activité."
+                  ]
+            },
+            {
+                  "tag": "faire une demande",
+                  "patterns": [
+                        "Comment puis-je postuler pour une candidature?"
+                  ],
+                  "responses": [
+                        "choisissez le service que vous souhaitez dans le répertoire des services, puis cliquez sur pour postuler au service. Toutes les conditions doivent être remplies pour continuer l`application"
+                  ]
+            },
+            {
+                  "tag": "le but de l`inscription électronique dans la commune",
+                  "patterns": [
+                        "A quoi sert l`inscription électronique dans la commune?"
+                  ],
+                  "responses": [
+                        "Après l`inscription, l`utilisateur peut accéder à tous les services électroniques fournis par la municipalité et les demander de n`importe où"
+                  ]
+            },
+            {
+                  "tag": "postuler pour un emploi",
+                  "patterns": [
+                        "Comment puis-je postuler pour un emploi?"
+                  ],
+                  "responses": [
+                        "D`abord, vous devez vous inscrire. Vous pouvez utiliser l`enregistrement express. Il vous permet de postuler à un emploi uniquement. Deuxièmement, allez au Répertoire des services des ressources humaines. Postulez pour un emploi. Remplissez les conditions requises et postulez pour le service."
+                  ]
+            },
+            {
+                  "tag": "تحية",
+                  "patterns": [
+                        "كيف حالك",
+                        "هل من أحد هناك؟",
+                        "مرحبا",
+                        "أتمنى لك يوما سعيدا",
+                        "مساء الخير",
+                        "اهلا",
+                        "صباح الخير",
+                        "اريد مساعدة",
+                        "السلام عليكم",
+                        "تحياتي"
+                  ],
+                  "responses": [
+                        "مرحبا شكرا على الزيارة ",
+                        "   مرحبا سعيد لرؤيتك مرة أخرى ",
+                        " مرحبا  ",
+                        " مرحبا كيف يمكنني مساعدتك ؟ "
+                  ]
+            },
+            {
+                  "tag": "إلى اللقاء",
+                  "patterns": [
+                        "وداعا",
+                        "أراك لاحقا",
+                        "أراك غدًا",
+                        "يوم سعيد",
+                        "تصبح على الخير",
+                        "أراك قريبًا",
+                        "الى اللقاء",
+                        "الوداع",
+                        "فرصة سعيدة",
+                        "سررت بالتعامل معك"
+                  ],
+                  "responses": [
+                        " أراك لاحقا  شكرا لزيارتك ",
+                        " أتمنى لك يومًا سعيدا ",
+                        " وداعًا"
+                  ]
+            },
+            {
+                  "tag": "شكرا لك",
+                  "patterns": [
+                        "شكرا لك  ",
+                        " شكرا جزيلا لك",
+                        "إنه لطيف",
+                        "ألف شكرًا",
+                        "شكرا من صميم قلبي",
+                        "شكرا لك على مساعدتك",
+                        "انا ممتن لك",
+                        "شكرا على الخدمة السريعة",
+                        "فرحت لمسساعدتك لي",
+                        "احسسنت"
+                  ],
+                  "responses": [
+                        "يسعدني أن أكون قادرًا على مساعدتك! ",
+                        " في أي وقت! ",
+                        " من دواعي سروري"
+                  ]
+            },
+            {
+                  "tag": "اوقات العمل",
+                  "patterns": [
+                        "ما هي ساعات العمل؟ ",
+                        " متى تفتحون؟",
+                        "ما هي ساعاتكم؟",
+                        "هل أنتم مفتوحون اليوم؟",
+                        "ما هي ساعات عملكم اليوم؟",
+                        "ساعات العمل",
+                        "متى تكون متاحًا؟",
+                        "اريد القدوم الى البلدية",
+                        "هل تعملون يوم السبت",
+                        "متى تنهون عملكم"
+                  ],
+                  "responses": [
+                        " نحن مفتوحون يوميًا من الساعة 8 صباحًا حتى الساعة 5 مساءً ما عدى السبت و الاحد",
+                        "ساعات العمل لدينا من 8 صباحًا حتى 5 مساءً يوميًا ما عدى السبت و الاحد"
+                  ]
+            },
+            {
+                  "tag": "بناء فوضوي",
+                  "patterns": [
+                        "كيفية الإبلاغ عن إنشاء فوضوي",
+                        "كيف تبلغ عن مبنى فوضوي؟",
+                        "كيف تكشف عن مبنى فوضوي؟",
+                        "كيف تسلط مبنى فوضوي؟",
+                        "بناء فوضوي",
+                        "ماذا علي أن أفعل عندما أرى البناء غير القانوني؟",
+                        "ما هي طرق الإبلاغ عن مبنى فوضوي؟ ",
+                        " بمن أتصل عندما أرى مبنى فوضويًا؟ ",
+                        " ماذا أفعل عندما أرى إنشاءات غير قانونية؟ ",
+                        " من المسؤول عن مراقبة المباني غير القانونية"
+                  ],
+                  "responses": [
+                        "الاتصال بمركز شرطة البلدية واهتمام منسق الترتيب في ادارة البلدية "
+                  ]
+            },
+            {
+                  "tag": "الإضاءة العامة",
+                  "patterns": [
+                        "كيف يمكنني الإبلاغ عن مشاكل الإضاءة العامة؟",
+                        "من المسؤول عن مشاكل الإضاءة العامة",
+                        "كيف يمكنني الإبلاغ عن مشكلة إضاءة عامة؟",
+                        "كيف تشير إلى مشاكل الإضاءة العامة؟",
+                        "لدي مشاكل مع الإضاءة العامة",
+                        "الإضاءة العامة في الحي الذي أسكن فيه معطلة",
+                        "الإضاءة العامة في الحي الذي أسكن فيه غير مستقرة",
+                        "ينطفئ الضوء فجأة",
+                        "أعمدة الكهرباء معطلة",
+                        "الحي الذي أسكن فيه بلا كهرباء."
+                  ],
+                  "responses": [
+                        "يمكن تسجيل المشكلة في دفتر ملاحظات معد لهذا الغرض يقع في مكتب استقبال الإدارة المركزية أو في المستودع الجماعي (ورشة لإيقاظ الجمهور)."
+                  ]
+            },
+            {
+                  "tag": " رفع النفايات",
+                  "patterns": [
+                        "هل يمكنني أن أطلب من البلدية جمع النفايات الخاصة",
+                        "هل يمكنني رفع النفايات الخاصة",
+                        "هل من الممكن جمع النفايات الخاصة",
+                        "كيف يمكن للبلدية جمع النفايات الخاصة",
+                        "أين أذهب عندما أرغب في إزالة النفايات الخاصة؟",
+                        "بمن يجب الاتصال لتحديد نفايات الفضاء",
+                        "أريد إزالة النفايات الخاصة",
+                        "ما هو سعر جمع النفايات الخاصة",
+                        "ما هي تكلفة جمع النفايات الخاصة",
+                        "من الذي يحدد تكلفة رفع النفايات الخاصة"
+                  ],
+                  "responses": [
+                        "يمكن القيام بذلك عن طريق الاتصال بقسم الصحة والبيئة لتحديد كمية ونوعية النفايات وتكلفة جمعها."
+                  ]
+            },
+            {
+                  "tag": "مرور الشاحنات",
+                  "patterns": [
+                        "ما هي ساعات مرور شاحنات القمامة في الاحياء؟",
+                        "متى ستأتي شاحنات القمامة؟",
+                        "كم من الوقت تقضي شاحنة القمامة في المنطقة؟",
+                        "ما هو وقت رفع النفايات من نظام الباب إلى الباب",
+                        "ما هو وقت عبور شاحنة القمامة",
+                        "متى تعبر شاحنات القمامة الأحياء",
+                        "كم من الوقت تستغرق الشاحنة عبور الحي",
+                        "ما هي أيام رفع النفايات",
+                        "زمن مرور شاحنات القمامة في منزل عبد الرحمن",
+                        "متى أقوم بإخراج القمامة؟"
+                  ],
+                  "responses": [
+                        "رفع النفايات بشاحنة الضاغطة: كل يوم من أيام الأسبوع من الساعة العاشرة مساءا",
+                        "إزالة النفايات ، نظام التوصيل من الباب إلى الباب: كل يوم من أيام الأسبوع من الساعة السابعة مساءً"
+                  ]
+            },
+            {
+                  "tag": "رخصة بناء",
+                  "patterns": [
+                        "هل يمكنني الحصول على نسخة من رخصة البناء",
+                        "هل يمكنني الحصول على إذن مكرر للبناء",
+                        "هل يمكنني الحصول على نسخة من ترخيص البناء",
+                        "هل يمكنني الحصول على إذن مكرر إلزامي للبناء؟",
+                        "هل يمكنني الحصول على إذن نسخ إجباري للتعديل؟",
+                        "هل يمكنني الحصول على قيد رخصة بناء مكرر؟",
+                        "ما هي المستندات المطلوبة للحصول على رخصة البناء",
+                        "ماذا علي أن أفعل للحصول على رخصة بناء",
+                        "ما هي إجراءات الحصول على رخصة البناء",
+                        "شكرا لإعطائي المستندات اللازمة لملف رخصة البناء"
+                  ],
+                  "responses": [
+                        "يجب على المواطن تقديم ملف لهذا الغرض يتكون من المستندات التالية: طلب رخصة بناء ، نموذج أصلي للمسح ، سند ملكية أصلي ، إقرار ضريبي ، 6 أمثلة فنية لمشروع البناء ، شهادة خروج ، نسخة من بطاقة الهوية الوطنية وعدد 02 ظروف  تحمل عنوان المنزل"
+                  ]
+            },
+            {
+                  "tag": "تهديد صحي",
+                  "patterns": [
+                        "كيف تبلغ عن تهديد لصحة أو راحة المواطنين؟",
+                        "بمن تتصل للتحذير من تهديد صحي",
+                        "ماذا أفعل عندما ألاحظ وجود تهديد صحي",
+                        "لقد لاحظت سلوكا يهدد صحة المواطن",
+                        "أريد الإبلاغ عن سلوك يهدد صحتي",
+                        "ما هي طرق الإبلاغ عن خطر على صحة الإنسان",
+                        "أين تبلغ عن خطر على صحة الإنسان",
+                        "أريد الإبلاغ عن مطعم غير نظيف",
+                        "هناك روائح كريهة من منطقتي بسبب القمامة",
+                        "القمامة في الحي في كل مكان"
+                  ],
+                  "responses": [
+                        "اتصل بشرطة البلدية وشرطة البيئة."
+                  ]
+            },
+            {
+                  "tag": "تأجير المعدات واللوازم البلدية",
+                  "patterns": [
+                        "هل يمكن تأجير المعدات واللوازم البلدية؟",
+                        "هل يمكنني استئجار المعدات البلدية",
+                        "متى يمكنني استئجار المعدات البلدية",
+                        "هل يمكنني استئجار المعدات البلدية هذا الأسبوع",
+                        "هل تستأجر البلدية معدات للمواطنين",
+                        "هل تسمح البلدية باستئجار المعدات؟ ",
+                        " هل تنطبق عملية تأجير المعدات على البلدية؟ ",
+                        " هل عملية تأجير المعدات البلدية في أي وقت ",
+                        " هل المعدات البلدية موجودة عند الحاجة إليها؟ ",
+                        " هل يمكنني استئجار أكثر من جهاز بلدي؟ "
+                  ],
+                  "responses": [
+                        "حسب توفرها"
+                  ]
+            },
+            {
+                  "tag": "عقد زواج",
+                  "patterns": [
+                        "كيف أبرم عقد الزواج؟",
+                        "ما هي المستندات المطلوبة لإتمام عقد الزواج؟",
+                        "وثائق عقد الزواج",
+                        "ماذا أحضر عندما أريد الزواج في البلدية؟",
+                        "ماذا أحضر  عند الحاجة لإبرام عقد الزواج؟ ",
+                        " إجراءات عقد الزواج في البلدية ",
+                        " ما هي إجراءات عقد الزواج في البلدية ",
+                        " عقد الزواج ",
+                        " الزواج في البلدية ",
+                        " أوراق عقد الزواج "
+                  ],
+                  "responses": [
+                        "شهادة الميلاد لكلا الزوجين ، والشهادة الطبية لإتمام الزواج ، ونسخة من بطاقة الهوية أو جواز السفر ساري المفعول ، وتفويض المحكمة للقصر."
+                  ]
+            },
+            {
+                  "tag": "التعريف بالإمضاء",
+                  "patterns": [
+                        "ما هي المستندات المطلوبة للتعريف بالامضاء  ",
+                        " التعريف بالامضاء ",
+                        " إجراءات تحديد التوقيع ",
+                        " كيفية التعريف بالامضاء ",
+                        " الأوراق اللازمة للتعريف بالامضاء  ",
+                        " عملية التعريف بالامضاء ",
+                        " المستندات التي يجب أن أحملها لعمل التعريف بالامضاء  ",
+                        " أريد عمل التعريف بالامضاء  ",
+                        " هل يجب أن أحمل جواز السفر للتعريف بالامضاء ",
+                        " لقد فقدت بطاقة هويتي ، هل يمكنني بعد ذلك حمل جواز سفري للتعريف بالامضاء   "
+                  ],
+                  "responses": [
+                        "المستندات اللازمة: الوثيقة المراد تحديدها ، الوثيقة الرسمية لإثبات الهوية (بطاقة الهوية أو جواز السفر) "
+                  ]
+            },
+            {
+                  "tag": "مطابقة النسخ للأصل ",
+                  "patterns": [
+                        "ما هي المستندات المطلوبة لإثبات أن النسخ مطابقة للأصل؟ ",
+                        " ما هي المستندات المطلوبة لإثبات صحة النسخ؟ ",
+                        " المستندات المطلوبة لعمل نسخة طبق الأصل ",
+                        " ما هي الأوراق لتحمل لعمل نسخة مصدقة ",
+                        " المستندات التي يجب حملها للحصول على نسخة مصدقة ",
+                        " هل يمكنني عمل نسخة مصدقة دون حمل بطاقة الهوية الخاصة بي ",
+                        " ما الذي يجب أن أحمله للحصول على نسخة مطابقة ",
+                        " ما هي المستندات المطلوب إحضارها لعمل نسخة طبق الأصل ",
+                        " هل يمكنني عمل نسخة طبق الأصل مع نسخة من بطاقة هويتي ",
+                        " أريد عمل نسخة طبق الأصل"
+                  ],
+                  "responses": [
+                        "الوثيقة الأصلية,النسخ المراد الإشهاد بمطابقتها للأصل,الإستظهار ببطاقة تعريف مقدم الوثيقة"
+                  ]
+            },
+            {
+                  "tag": "جلسات المجلس",
+                  "patterns": [
+                        "ماهي مواعيد جلسات المجلس البلدي ؟"
+                  ],
+                  "responses": [
+                        "يعقد المجلس البلدي أربعة دورات سنويا وذلك خلال الأشهر : فيفري – ماي – جويلية – نوفمبر ويتم تحديد تواريخها والإعلام بها بكل الوسائل المتاحة."
+                  ]
+            },
+            {
+                  "tag": "شروط ترسيم ولادة",
+                  "patterns": [
+                        "ماهي   ترسيم ولادة ؟ "
+                  ],
+                  "responses": [
+                        "يقع الإعلام بالولادة من طرف الأب أو الطبيب أو القابلة أو غيرهم من الأشخاص الذين شهدوا الوضع",
+                        "إذن صادر عن رئيس المحكمة الابتدائية بالجهة التي ولد بها المولود",
+                        "يقع الإعلام بالولادة خلال العشرة (10) أيام التي تلي الوضع - إذا لم يقع الإعلام بالولادة في الأجل القانوني فإنه لايمكن لضابط الحالة المدنية تضمينها بدفاتره إلا بمقتضي"
+                  ]
+            },
+            {
+                  "tag": " وثائق  ترسيم ولادة",
+                  "patterns": [
+                        "هل من الممكن ان أتحصل على نسخة من رخصة البناء ؟"
+                  ],
+                  "responses": [
+                        "بطاقة التعريف الوطنية للأب أو للأم",
+                        " الدفتر العائلي أو مضمون ولادة أحد الأبناء "
+                  ]
+            },
+            {
+                  "tag": "شروط مضمون ولادة",
+                  "patterns": [
+                        " ماهي شروط الحصول على مضمون ولادة "
+                  ],
+                  "responses": [
+                        "تقديم طلب شفوي لدى ضابط الحالة المدني"
+                  ]
+            },
+            {
+                  "tag": "وثائق مضمون ولادة ",
+                  "patterns": [
+                        "كيفية استخراج مضمون ولادة "
+                  ],
+                  "responses": [
+                        "الإدلاء بالإرشادات الخاصة بالولادة : التاريخ، عدد الرسم",
+                        "الإدلاء بمضمون ولادة قديم",
+                        " وثيقة حالة مدنية أخرى مع تحديد ما إن كانت رسما أصليا أو تصريحا أو حكما"
+                  ]
+            },
+            {
+                  "tag": "إصلاح رسم ولادة",
+                  "patterns": [
+                        "كيفية اصلاح رسم ولادة"
+                  ],
+                  "responses": [
+                        "مطلب معرف بإمضاء المعني بالأمر يذكر فيه عنوانه بالكامل موجه إلى السيد ضابط الحالة المدنية المحفوظ لديه رسم ولادة الطالب ,مضمون ولادة المعني بالأمر,مضمون ولادة أو وفاة لوالد الطالب,مضمون ولادة أحد الأشقاء"
+                  ]
+            },
+            {
+                  "tag": "مضمون زواج",
+                  "patterns": [
+                        "كيفية الحصول على مضمون زواج"
+                  ],
+                  "responses": [
+                        "الإدلاء بالإرشادات الخاصة بالزواج: التاريخ، عدد الرسم,تحديد ما إذا أبرم الزواج بالبلدية أو لدى عدل إشهاد"
+                  ]
+            },
+            {
+                  "tag": "الدفتر العائلي",
+                  "patterns": [
+                        "كيفية استخراج الدفتر العائلي لأول مرة"
+                  ],
+                  "responses": [
+                        "صورة شمسية لرئيس العائلة,نسخة من بطاقة التعريف الوطنية للزوج,مضمون زواج,مضمون ولادة لكل من الزوجين,مضامين لبقية أفراد العائلة : في حالة استخراج الدفتر بعد مدة من الزواج,المعلوم الموظف على الدفتر العائلي"
+                  ]
+            },
+            {
+                  "tag": " نظير الدفتر العائلي",
+                  "patterns": [
+                        "كيفية استخراج نظير الدفتر العائلي في صورة ضياع؟"
+                  ],
+                  "responses": [
+                        "اولا شهادة ضياع ثانيا صورة شمسية لرئيس العائلة ثالثا نسخة من بطاقة التعريف الوطنية لرئيس العائلة رابعا مضمون زواج خامسا مضمون ولادة للزوجين سادسا مضامين لبقية العائلة سابعا المعلوم الموظف على الدفتر العائلي"
+                  ]
+            },
+            {
+                  "tag": "رخصة في هدم عقار",
+                  "patterns": [
+                        "ماهي الوثائق المطلوبة للحصول على رخصة في هدم عقار"
+                  ],
+                  "responses": [
+                        "أن يكون المواطن مالكا لعقار,أن يكون العقار المزمع هدمه غير مشغول بالسكنى أو بالاستغلال,أن يكون العقار متداعيا للسقوط ويشكل خطرا أو لأن تتم إعادة البناء في إطار التطوير"
+                  ]
+            },
+            {
+                  "tag": "شروط قرار الترخيص في البناء مسكن فردي منعزل أو متوأم",
+                  "patterns": [
+                        "ماهي شروط قرار الترخيص في البناء مسكن فردي منعزل أو متوأم؟"
+                  ],
+                  "responses": [
+                        "شروط الانتفاع بالخدمة: اولا أن يكون المواطن مالكا للعقار المزمع إقامة البناء عليه ثانيا أن تكون هذه القطعة متأتية من تقسيم مصادق عليه وأن لا تتناقض صبغتها والتخصيص الوارد بمثال التهيئة للمنطقة ثالثا احترام التراتيب المعمول بها في خصوص حماية الأراضي الفلاحية وفي خصوص الآثار والمعالم التاريخية والمواقع الطبيعية والعمرانية رابعا أن يتقدمّ المواطن بملف تام الموجب طبقا للتشريع الجاري به العمل "
+                  ]
+            },
+            {
+                  "tag": "وثائق قرار الترخيص في البناء مسكن فردي منعزل أو متوأم",
+                  "patterns": [
+                        "ماهي وثائق قرار الترخيص في البناء مسكن فردي منعزل أو متوأم؟"
+                  ],
+                  "responses": [
+                        "اولا مطلب على ورق عادي ممضى من قبل طالب الرخصة أو من ينوبه ثانيا شهادة ملكية أو حكم استحقاقي أو وثيقة أخرى في تملك الطالب لقطعة الأرض المزمع إقامة البناء عليها ثالثا وصل إيداع التصريح بالضريبة على دخل الأشخاص الطبيعيين أو الضريبة على الشركات رابعا وصل خلاص المعاليم الموظفة على العقار موضوع مطلب رخصة البناء خامسامشروع بناء في ثلاث (3) نظائر مطابق للتراتيب العمرانية للمنطقة التي سيقع بها البناء"
+                  ]
+            },
+            {
+                  "tag": "مكان ايداع الترخيص في البناء مسكن فردي منعزل أو متوأم",
+                  "patterns": [
+                        " ماهو مكان ايداع الترخيص في البناء مسكن فردي منعزل أو متوأم؟"
+                  ],
+                  "responses": [
+                        "المصلحة بالبلدية أو بالدائرة البلدية"
+                  ]
+            },
+            {
+                  "tag": "شروط تمديد رخصة البناء",
+                  "patterns": [
+                        "ماهي شروط تمديد رخصة البناء؟"
+                  ],
+                  "responses": [
+                        "شروط الانتفاع بالخدمة اولا أن يكون الطالب متحصلا على رخصة بناء موضوع طلب التمديد ثانيا عدم إحداث أية تغييرات في البناء موضوع الترخيص، وإلا فإنه يتعين الحصول على رخصة بناء جديدة ثالثا طلب التمديد يجب أن يصل إلى البلدية قبل شهرمن تاريخ انتهاء رخصة البناء موضوع طلب التمديد"
+                  ]
+            },
+            {
+                  "tag": "وثائق تمديد رخصة البناء",
+                  "patterns": [
+                        "ماهي وثائق الحصول على تمديد رخصة البناء؟"
+                  ],
+                  "responses": [
+                        "الوثائق طلب باسم رئيس البلدية على ورقة عادية موقعة من المعني بالأمر"
+                  ]
+            },
+            {
+                  "tag": "شروط الحصول على شهادة تطابق",
+                  "patterns": [
+                        "ماهي شروط الحصول على شهادة تطابق؟"
+                  ],
+                  "responses": [
+                        "شروط الانتفاع بالخدمة:هذه الشهادة تخص فقط المحلات المستغلة لنشاط بيع المشروبات من الصنف الأول ; مقهى، قاعة شاي، مشربة "
+                  ]
+            },
+            {
+                  "tag": "مكان ايداع شهادة تطابق",
+                  "patterns": [
+                        "ماهو  مكان إيداع؟"
+                  ],
+                  "responses": [
+                        "مكان إيداع الملف مكتب الضبط المركزي"
+                  ]
+            },
+            {
+                  "tag": "وثائق شهادة تطابق",
+                  "patterns": [
+                        "ماهي وثائق الحصول على شهادة تطابق؟ "
+                  ],
+                  "responses": [
+                        "الوثائق المطلوبة اولا مطلب باسم السيد رئيس البلدية ثانيا نسخة من بطاقة التعريف الوطنية ثالثا عقد كراء المحل ( والمحل المضاف عند الاقتضاء) رابعا مثال هندسي للمحل في صورة وجود صعوبات في تحديد المساحة ( أشغال بناء جارية، نية إجراء توسعة بسبب عد كفاية المساحة الأصلية للمحل)"
+                  ]
+            },
+            {
+                  "tag": "شروط رخصة إقامة حفل عائلي",
+                  "patterns": [
+                        "ماهي شروط الحصول على رخصة إقامة حفل عائلي؟"
+                  ],
+                  "responses": [
+                        "اولا إقامة حفل باستغلال آلات موسيقية أو غيرها ثانيا تقديم مطلب الرخصة قبل موعد إقامة الحفل بثلاث أيام"
+                  ]
+            },
+            {
+                  "tag": "وثائق رخصة إقامة حفل عائلي",
+                  "patterns": [
+                        "ماهي وثائق الحصول على رخصة إقامة حفل عائلي؟"
+                  ],
+                  "responses": [
+                        "مطلب على ورق عادي يتم التنصيص به على التاريخ والعنوان الكامل للمحل الذي سيتم إقامة الحفل به"
+                  ]
+            },
+            {
+                  "tag": "رخصة الإشغال الوقتي للملك العمومي",
+                  "patterns": [
+                        "ماهي الوثائق للحصول على رخصة الإشغال الوقتي للملك العمومي؟"
+                  ],
+                  "responses": [
+                        "اولا مطلب على ورق عادي يتضمن المعطيات اللازمة ; العنوان الكامل للمحل وموضوع الإشغال وموقعه ومدته، وتبرير الحاجة إليه ثانيا رسم يدوي يبين الرصيف، المساحة المطلوبة مع تحديد المقاسات ثالثا نسخة من بطاقة التعريف الوطنية للطالب رابعا رخصة البناء بالنسبة لأشغال البناء خامسا التراخيص القانونية (بالنسبة للمحلات المعدة كمقاهي أو مطاعم) "
+                  ]
+            },
+            {
+                  "tag": " شروط رخصة تركيز علامات إشهارية ( ركائز، معلقات، كتابة)",
+                  "patterns": [
+                        "ماهي شروط الحصول على رخصة تركيز علامات إشهارية؟"
+                  ],
+                  "responses": [
+                        "اولا تستوجب الرخصة لكل المعدات أو الرسوم أو الكتابة سواء تعلق الأمر بمعلقة اشهارية على الطريق العام، أوعلامة مضيئة أو غير مضيئة أو كتابة على واجهة محل تجاري أو غير تجاري ومهما كان موضوعها تجاريا أو لا، وبصرف النظر عن طريقة انجازها أو القائم بانجازها ثانيا يمنع تركيز معدات اشهارية إذا احتوى مضمونها على: حديد منطقة مع سهم توجيهي أو مسافة كيلومترية او تقليد علامة مرورية أو إشارة "
+                  ]
+            },
+            {
+                  "tag": "وثائق رخصة تركيز علامات إشهارية ( ركائز، معلقات، كتابة)",
+                  "patterns": [
+                        "ماهي وثائق الحصول على رخصة تركيز علامات إشهارية؟"
+                  ],
+                  "responses": [
+                        "الوثائق هي: اولا مطلب باسم السيد رئيس البلدية ممضى من الطالب يتضمن المعطيات اللازمة ;الموقع المطلوب، المساحة، مدة الإشغال، العنوان، وبيان الحاجة ثانيا الأمثلة أو الرسوم على أن تكون واضحة من حيث المحتوى والشكل والمقاييس بالنسبة للعلامة أو النص والمساحة المزمع إشغالها بالواجهة بالنسبة للكتابة"
+                  ]
+            },
+            {
+                  "tag": "شروط شهادة ترسيم عقار بجدول التحصيل البلدي",
+                  "patterns": [
+                        " ماهي شروط شهادة ترسيم عقار بجدول التحصيل البلدي؟"
+                  ],
+                  "responses": [
+                        "اولا أن يكون المعني بالأمر مالكا للعقار أو أن يكون له توكيل يخول له التصرف في العقار ثانيا خلاص المعلوم بعنوان الأداء على العقارات"
+                  ]
+            },
+            {
+                  "tag": "وثائق شهادة ترسيم عقار بجدول التحصيل البلدي",
+                  "patterns": [
+                        "ماهي وثائق شهادة ترسيم عقار بجدول التحصيل البلدي؟"
+                  ],
+                  "responses": [
+                        "اولا مطلب على ورق مع التنصيص على العنوان الكامل للعقار ثانيا ما يفيد أن العقار موضوع الطلب غير مثقل بدين لفائدة الجماعة المحلية المعنية بعنوان أداء على العقارات"
+                  ]
+            },
+            {
+                  "tag": "وثائق شهادة المسكن الرئيسي للمتوفى",
+                  "patterns": [
+                        "ماهي وثائق الحصول على شهادة المسكن الرئيسي للمتوفى؟"
+                  ],
+                  "responses": [
+                        "اولا مطلب ينص خاصة على العنوان الكامل للعقار المعني ثانيا حجة الوفاة للمتوفى ثالثا ما يفيد أن العقار موضوع الطلب غير مثقل بدين لفائدة الجماعة المحلية المعنية بعنوان أداء على العقارات رابعا شهادة ملكية العقار خامسا خلاص المعلوم المستوجب"
+                  ]
+            },
+            {
+                  "tag": "إذن بالدفن",
+                  "patterns": [
+                        "الوثائق المطلوبة لاستخراج إذن بالدفن؟"
+                  ],
+                  "responses": [
+                        "اولا شهادة طبية تفيد ان الموت تمت في ظروف طبيعية ثانيا إذن من وكيل الجمهورية ان كانت الموت تمت في ظروف طبيعية او غامضة ثالثا تقرير المصالح الامنية في حالة الموت غير الطبيعية"
+                  ]
+            },
+            {
+                  "tag": "شروط شهادة المسكن الرئيسي للمتوفى",
+                  "patterns": [
+                        " ماهي شروط الحصول على شهادة المسكن الرئيسي للمتوفى؟"
+                  ],
+                  "responses": [
+                        "اولا أن يكون العقار موضوع الطلب هو المسكن الرئيسي للمتوفى ثانيا أن يكون المعني (أو المعنيين) بالأمر أحد ورثة مالك العقار ثالثا يمنح الإعفاء من معلوم التسجيل الموظف على التركات في حدود مساحة 1000 متر مربع بما في ذلك الملحقات المبنية وغير المبنية ويخضع ما زاد على ذلك لمعلوم التسجيل الموظفّ على الترّكات"
+                  ]
+            },
+            {
+                  "tag": "رخصة نقل جثة",
+                  "patterns": [
+                        "الوثائق المطلوبة لاستخراج رخصة نقل جثة؟"
+                  ],
+                  "responses": [
+                        "اولا مضمون من رسم وفاة ثانيا شهادة طبية تفيد ان اسباب الوفاة ليست ناتجة عن مرض معد"
+                  ]
+            },
+            {
+                  "tag": "رخصة ربط بالشبكات العمومیة(الماء والكھرباء)",
+                  "patterns": [
+                        "كيف يمكن الحصول على رخصة ربط بالشبكات العمومیة (الماء والكھرباء)"
+                  ],
+                  "responses": [
+                        "للحصول على رخصة ربط بالشبكات العمومیة يجب الاستظهار بمطلب على ورق عادي ممضى من قبل الطالب فيه العنوان و مراجع رخصة البناء ايضا شهادة ملكية و اخيرا شهادة ابراء في خلاص معاليم البلدية"
+                  ]
+            },
+            {
+                  "tag": "طلب الإعفاء من ضریبة الإیجار",
+                  "patterns": [
+                        "كيف نقدم طلب الإعفاء من ضریبة الإیجار؟"
+                  ],
+                  "responses": [
+                        "تقديم اولا مطلب على ورق عادي ممضى من الطالب وينص خاصة على العنوان الكامل للعقار و معلومات عن الطالب ثانيا نسخة من شهادة الملكية ثالثا نسخة من وصل المساعدة الاجتماعية رابعا نسخة من وصل خلاص الاداء"
+                  ]
+            },
+            {
+                  "tag": "تغيير اسم المالك",
+                  "patterns": [
+                        "كيف يمكن تغيير اسم المالك؟"
+                  ],
+                  "responses": [
+                        "مطلب باسم السيد رئيس بلدية ينص خاصة على العنوان الكامل للعقار المعني - وثيقة قانونية تفيد ملكية العقار (نسخة من عقد بيع أو شراء أو شهادة ملكية)"
+                  ]
+            },
+            {
+                  "tag": "مهام مستشار بلدي",
+                  "patterns": [
+                        "ما هي مهام مستشار بلدي؟"
+                  ],
+                  "responses": [
+                        "اولا يترأس احدي اللجان (واحدة فقط ) ثانيا يكون عضوا أو مقررا في عدة لجان بلدية ثالثا عضو في مجلس احدي الدوائر البلدية رابعا يمثل البلدية لدي المحاكم او يبرم العقود اذا كانت مصالح رئيس البلدية تتعارض مع مصالح البلدية خامسا يمثل البلدية لدى مجلس ادارة المنشآت العمومية التي تساهم البلدية قي راس مالها.سادسا إمكانية إنتخابه مؤقتا على راس البلدية عند تعذرتعويض الرئيس بأحد المساعدين او بصفة دائمة في حالة تخلي الرئيس او حصول مانع يحول دون ممارسة الرئيس نهائيا لنشاطه."
+                  ]
+            },
+            {
+                  "tag": "التقديم علي طلب",
+                  "patterns": [
+                        "كيف استطيع التقديم علي طلب؟"
+                  ],
+                  "responses": [
+                        "اختر الخدمة التي تريدها من دليل الخدمات ومن ثم اضغط التقديم علي الخدمة لابد من استيفاء جميع المتطلبات لمتابعة التقديم"
+                  ]
+            },
+            {
+                  "tag": "الغرض من التسجيل الإلكنروني بالبلدية",
+                  "patterns": [
+                        "ما الغرض من  التسجيل الإلكنروني بالبلدية؟"
+                  ],
+                  "responses": [
+                        "بعد التسجيل يمكن للمستخدم الدخول الى جميع الخدمات  الالكترونية التي تقدمها البلدية والتقديم عليها من أي مكان"
+                  ]
+            },
+            {
+                  "tag": "التقديم على وظيفة",
+                  "patterns": [
+                        "كيف يمكنني التقديم علي وظيفة؟"
+                  ],
+                  "responses": [
+                        "اولا يجب التسجيل .. يمكنك استخدام التسجيل السريع يسمح لك بالتقديم علي وظيفة فقط  ثانيا اذهب الي دليل الخدمات الموارد البشرية طلب وظيفةتعبئة المتطلبات والتقديم علي الخدمة"
+                  ]
+            },
+            {
+                  "tag": "على السلامة",
+                  "patterns": [
+                        "صباح الخير",
+                        "اهلا",
+                        "مرحبا",
+                        "على السلامة",
+                        "فما شكون لهنا",
+                        "سلام",
+                        "صباح النور",
+                        "نحب شكون يعاوني",
+                        "صباح الفل",
+                        "صباح الياسمين"
+                  ],
+                  "responses": [
+                        "مرحبا شكرا على الزيارة ",
+                        "   مرحبا سعيد لرؤيتك مرة أخرى ",
+                        " مرحبا  ",
+                        " مرحبا كيف يمكنني مساعدتك ؟ "
+                  ]
+            },
+            {
+                  "tag": "بسلامه",
+                  "patterns": [
+                        "بسلامه",
+                        "باي باي",
+                        "على خير",
+                        "نهارك مبروك",
+                        "تصبح على خير",
+                        "نهارك سعيد",
+                        "  ان شاء الله نهارك مبروك",
+                        "ان شاء الله نهارك سعيد",
+                        "ان شاء الله نهارك زين",
+                        "نهارك زين"
+                  ],
+                  "responses": [
+                        " أراك لاحقا  شكرا لزيارتك ",
+                        " أتمنى لك يومًا سعيدا ",
+                        " وداعًا"
+                  ]
+            },
+            {
+                  "tag": "يعطيك الصحة",
+                  "patterns": [
+                        "يعطيك الصحة  ",
+                        " ربي يباركلك",
+                        "ربي يفضلك",
+                        "ربي يخليك",
+                        "يفضلك",
+                        "يعطيك الصحة الي عاونتني",
+                        "فرحان بمساعدتك",
+                        "خدمتكم باهية ",
+                        "الله يخليك",
+                        "يخليك"
+                  ],
+                  "responses": [
+                        "يسعدني أن أكون قادرًا على مساعدتك! ",
+                        " في أي وقت! ",
+                        " من دواعي سروري"
+                  ]
+            },
+            {
+                  "tag": "وقتايش تحلو",
+                  "patterns": [
+                        "وقتايش تحلو؟ ",
+                        " شنوا اوقات خدمتكم؟",
+                        "شنا هي اوقاتكم؟",
+                        "محلولين اليوم؟",
+                        "وقتاش تخدموا اليوم؟",
+                        "اوقات الخدمه",
+                        "الوقت لي تحلوا فيه؟",
+                        "نحب نجي للبلديه",
+                        "تخدم نهار السبت",
+                        "وقتاش تسكروا"
+                  ],
+                  "responses": [
+                        " نحن مفتوحون يوميًا من الساعة 8 صباحًا حتى الساعة 5 مساءً ما عدى السبت و الاحد",
+                        "ساعات العمل لدينا من 8 صباحًا حتى 5 مساءً يوميًا ما عدى السبت و الاحد"
+                  ]
+            },
+            {
+                  "tag": "بناء فوضوي",
+                  "patterns": [
+                        "كيفاش نبلغ على بناء فوضوي",
+                        "كيفاش نبلغ على بانيه غير قانونيه؟",
+                        "كيفاش نعلم على بناء فوضوي؟",
+                        "نحب نعلم على بناء فوضوي؟",
+                        "بناء فوضوي",
+                        "شنو لازم نعمل كي نرى بناء فوضوي؟",
+                        "شنيا هي الطرق باش نبلغ على بناء فوضوي؟ ",
+                        " شكون نطلب كي نرى بناء فوضوي؟ ",
+                        " شنو نعمل كي نرى بانيه غير قانونيه؟ ",
+                        " شكون اللي يراقب البني الغير القانوني"
+                  ],
+                  "responses": [
+                        "الاتصال بمركز شرطة البلدية واهتمام منسق الترتيب في ادارة البلدية "
+                  ]
+            },
+            {
+                  "tag": "التنوير العمومي",
+                  "patterns": [
+                        "كيفاش نبلغ على مشكله في التنوير العمومي؟",
+                        "شكون المسؤوله على مشاكل التنوير العمومي",
+                        "كيفاش نقدم شكايه على تنوير العمومي؟",
+                        "كيفاش نوري المشاكل الاضاءه العامه؟",
+                        "عندي مشاكل مع الاضاءه العامه",
+                        "الضوء في حومتنا مايخدمش",
+                        "تنوير العمومي في حومتنا مش مستقر",
+                        "الضوء يقص فجاه",
+                        "الاعمده تاع الضوء مكسره",
+                        "حومتنا ما فيهاش ضوء"
+                  ],
+                  "responses": [
+                        "يمكن تسجيل المشكلة في دفتر ملاحظات معد لهذا الغرض يقع في مكتب استقبال الإدارة المركزية أو في المستودع الجماعي (ورشة لإيقاظ الجمهور)."
+                  ]
+            },
+            {
+                  "tag": " رفع الفضلات الخاصة",
+                  "patterns": [
+                        "نجم نطلب من بلديه باش تهز الزبله الخاصه متاعي",
+                        "نجم نهز الزبله الخاصه متاعي",
+                        " يجم يهزوا لي الزبله الخاصه متاعي ",
+                        "كيفاش تجم البلديه تهز لي الزبله الخاصه متاعي",
+                        "وين نمشي باش تتهز الزبله الخاصه؟",
+                        "شكون نطلب باش نحدد قداش كميه الزبله الخاصه",
+                        "نحب يهزوا لي الزبله الخاصه",
+                        "قداش ندفع باش تتهزلي الزبله الخاصه",
+                        "قداش كلفه هزين الزبله الخاصه",
+                        "شكون اللي حدد كلفه الزبله الخاصه"
+                  ],
+                  "responses": [
+                        "يمكن القيام بذلك عن طريق الاتصال بقسم الصحة والبيئة لتحديد كمية ونوعية النفايات وتكلفة جمعها."
+                  ]
+            },
+            {
+                  "tag": "  مرور شاحنات البلدية",
+                  "patterns": [
+                        "وقتاش تتعدى كرهبه البلديه في الحومه؟",
+                        "وقتاش تجيء كرهبه البلديه؟",
+                        "قداش تقعد كرهبه البلديه في الحومه؟",
+                        "شنو هو الوقت اللي تهز فيه الزبله من قدام الباب",
+                        "شنو الوقت اللي تجي فيه كرهبه البلديه",
+                        "شنو هو الوقت اللي تتعدى فيه كرهبه البلديه",
+                        "في قداش وقت تتعدى كرهبه البلديه",
+                        "شنا هي الايام التي تتهز فيهم الزبله",
+                        "وقتاش تتعدى كرهبه البلديه في منزل عبد الرحمن",
+                        "وقتاش نخرج الزبله"
+                  ],
+                  "responses": [
+                        "رفع النفايات بشاحنة الضاغطة: كل يوم من أيام الأسبوع من الساعة العاشرة مساءا",
+                        "إزالة النفايات ، نظام التوصيل من الباب إلى الباب: كل يوم من أيام الأسبوع من الساعة السابعة مساءً"
+                  ]
+            },
+            {
+                  "tag": "رخصة بناء",
+                  "patterns": [
+                        "نجم نتحصل على نسخه من رخصه البناء",
+                        "نجم نتحصل على رخصه بناء",
+                        "نجم ناخو رخصه بناء",
+                        "نجم نيخو نسخه اخرى على رخصه البناء متاعي؟",
+                        "شنو لازم نعمل باش نخو رخصه البناء؟",
+                        "شني هي الاوراق باش ناخذ رخصه بناء؟",
+                        " شنو هو نجيب باش نعمل رخصه بناء",
+                        "شنو نعمل باش ناخذ رخصه بناء",
+                        "اشنا هي الاجراءات باش نخو رخص البناء",
+                        " شنو ما الاوراق اللي نستحقهم لملف رخصه بناء"
+                  ],
+                  "responses": [
+                        "يجب على المواطن تقديم ملف لهذا الغرض يتكون من المستندات التالية: طلب رخصة بناء ، نموذج أصلي للمسح ، سند ملكية أصلي ، إقرار ضريبي ، 6 أمثلة فنية لمشروع البناء ، شهادة خروج ، نسخة من بطاقة الهوية الوطنية وعدد 02 ظروف  تحمل عنوان المنزل"
+                  ]
+            },
+            {
+                  "tag": "تهديد صحي",
+                  "patterns": [
+                        "كيفاش نبلغ على حاجه تهدد صحه المواطنين",
+                        "شكون نكلم باش نعلم على التهديد صحه",
+                        "شنو نعمل كيف نرى حاجه تهدد الصحه",
+                        "لاحظت تصرف يهدد صحه المواطنين",
+                        "نحب نبلغ على حاجه تهدد صحتي",
+                        " شنو هي الطرق اللي مبلغ بها على اخطار لصحه الانسان",
+                        "وينن بلغ على اخطر يهدد صحه الانسان",
+                        "نحب نشكي بمطعم مايهوش نظيف",
+                        "فما رويح خايبه في حومتي بسبب الزبله",
+                        "الزبله في كل بقعه في حومتي"
+                  ],
+                  "responses": [
+                        "اتصل بشرطة البلدية وشرطة البيئة."
+                  ]
+            },
+            {
+                  "tag": "كراء المعدات واللوازم البلدية",
+                  "patterns": [
+                        "نجم نكري معدات من البلديه؟",
+                        "نجم نستاجر معدات البلدية",
+                        "وقتاش نجم نكري حاجات من البلديه",
+                        "نجم نكري معدات الجمعه هذه",
+                        "ياخي البلديه تكري معدات للمواطنين",
+                        "وقتاش نجم نكري الصاله متاع البلديه؟ ",
+                        " تكري بلديه منزل عبد الرحمن معدات للمواطنين؟ ",
+                        " نجم في اي وقت نكري معدات ",
+                        " لمعدات متاع البلديه موجوده كيف نستحقها؟ ",
+                        " نجم نكري اكثر من حاجه من عند البلديه "
+                  ],
+                  "responses": [
+                        "حسب توفرها"
+                  ]
+            },
+            {
+                  "tag": "عقد زواج",
+                  "patterns": [
+                        "كيفاش نكتب الزديق؟",
+                        "شني هي الاوراق اللازمه باش نكتب زديق؟",
+                        " اوراق كاتبين زديق",
+                        "شنو هو نجيب كي نحب نعرس في البلديه؟",
+                        "شنو نجيب كي نحب نكتب الزديق في البلديه؟ ",
+                        " اجراءات العرس في البلديه ",
+                        " اجراءات كاتبين زديق في البلديه ",
+                        " العرس في البلديه ",
+                        " اجراءات كاتبين زديق في البلديه",
+                        " أوراق العرس "
+                  ],
+                  "responses": [
+                        "شهادة الميلاد لكلا الزوجين ، والشهادة الطبية لإتمام الزواج ، ونسخة من بطاقة الهوية أو جواز السفر ساري المفعول ، وتفويض المحكمة للقصر."
+                  ]
+            },
+            {
+                  "tag": "التعريف بالإمضاء",
+                  "patterns": [
+                        "شنو هي الاوراق التعريف بالامضاء  ",
+                        " التعريف بالامضاء ",
+                        " إجراءات  التعريف بالامضاء ",
+                        " كيفاش نعرف بالامضاء ",
+                        " الأوراق اللازمة للتعريف بالامضاء  ",
+                        " عملية التعريف بالامضاء ",
+                        " شني هي الاوراق اللي لازم نجيبها باش نعمل تعريف  بالامضاء  ",
+                        " نحب نعمل التعريف بالامضاء  ",
+                        " لازم نجيب باسبوري باش نعمل التعريف بالامضاء ",
+                        " بطاقه التعريف متاعي ضاعت نجم باسبور باش نعمل للتعريف بالامضاء   "
+                  ],
+                  "responses": [
+                        "المستندات اللازمة: الوثيقة المراد تحديدها ، الوثيقة الرسمية لإثبات الهوية (بطاقة الهوية أو جواز السفر) "
+                  ]
+            },
+            {
+                  "tag": "وثيقة مطابقة للأصل ",
+                  "patterns": [
+                        "شنو هي الاوراق المطلوبه باش نعمل  مطابقه للاصل؟ ",
+                        " شنو نجيب باش نعمل مطابقه للاصل؟ ",
+                        " اوراق نسخه مطابقه للاصل ",
+                        " شنو هي الاوراق باش نعمل نسخه مصدقة ",
+                        " الاوراق اللي لازم نجيبها باش نتحصل على نسخة مصدقة ",
+                        " نجم نعمل نسخه مطابقه للاصل من غير بطاقه تعريف ",
+                        " شنو انجيب باش نتحصل على نسخه مطابقة ",
+                        " نخة مطابقة للاصل ",
+                        " لازم نجيب بطاقه تعريف باش نعمل نسخه مطابقه للاصل ",
+                        " نحب نعمل نسخه مطابقه للاصل"
+                  ],
+                  "responses": [
+                        "الوثيقة الأصلية,النسخ المراد الإشهاد بمطابقتها للأصل,الإستظهار ببطاقة تعريف مقدم الوثيقة"
+                  ]
+            }
+
+      ]
 }

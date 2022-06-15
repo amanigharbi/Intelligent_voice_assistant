@@ -1,15 +1,13 @@
-
 import random
 import json
 import pickle
+import matplotlib.pyplot as plt
 import numpy as np
-
 import nltk
 from nltk.stem import WordNetLemmatizer
-
+from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
-#from tensorflow.keras.optimizers import SGD
 from tensorflow.keras.models import load_model
 nltk.download('punkt', quiet=True)
 nltk.download('wordnet', quiet=True)
@@ -44,45 +42,55 @@ class TrainingModel():
                 documents.append((word, intent['tag']))
                 if intent['tag'] not in self.classes:
                     self.classes.append(intent['tag'])
-
         self.words = [self.lemmatizer.lemmatize(w.lower()) for w in self.words if w not in ignore_letters]
         self.words = sorted(list(set(self.words)))
-
         self.classes = sorted(list(set(self.classes)))
-
-
 
         training = []
         output_empty = [0] * len(self.classes)
-
         for doc in documents:
             bag = []
             word_patterns = doc[0]
             word_patterns = [self.lemmatizer.lemmatize(word.lower()) for word in word_patterns]
             for word in self.words:
                 bag.append(1) if word in word_patterns else bag.append(0)
-
             output_row = list(output_empty)
             output_row[self.classes.index(doc[1])] = 1
             training.append([bag, output_row])
 
         random.shuffle(training)
         training = np.array(training)
-
         train_x = list(training[:, 0])
         train_y = list(training[:, 1])
+        X_train, X_test, y_train, y_test = train_test_split(train_x, train_y, test_size=0.3, random_state=0)
 
         self.model = Sequential()
-        self.model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+        self.model.add(Dense(128, input_shape=(len(X_train[0]),), activation='relu'))
         self.model.add(Dropout(0.5))
         self.model.add(Dense(64, activation='relu'))
         self.model.add(Dropout(0.5))
-        self.model.add(Dense(len(train_y[0]), activation='softmax'))
-
-        #sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+        self.model.add(Dense(len(y_train[0]), activation='softmax'))
         self.model.compile(loss='categorical_crossentropy', optimizer="adam", metrics=['accuracy'])
+        self.hist = self.model.fit(np.array(X_train), np.array(y_train), epochs=200, batch_size=5, verbose=1)
+        print("==============================================================================================")
+        self.hist1 = self.model.fit(np.array(X_test), np.array(y_test), epochs=200, batch_size=5, verbose=1)
+        
+        plt.plot(self.hist.history['accuracy'])
+        plt.plot(self.hist1.history['accuracy'])
+        plt.title('model accuracy')
+        plt.ylabel('accuracy')
+        plt.xlabel('epoch')
+        plt.legend(['train', 'test'], loc='upper left')
+        plt.show()
+        # summarize history for loss
+        plt.plot(self.hist.history['loss'])
+        plt.plot(self.hist1.history['loss'])
+        plt.title('model loss')
+        plt.ylabel('loss')
+        plt.xlabel('epoch')
+        plt.legend(['train', 'test'], loc='upper left')
+        plt.show()
 
-        self.hist = self.model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
 
     #after training a model we must save it
     def save_model(self, model_name=None):
@@ -152,8 +160,8 @@ class TrainingModel():
             self.intent_methods[ints[0]['intent']]()
         else:
             return self.get_response(ints, self.intents)
-assistant = TrainingModel('intents.json')
-assistant.train_model()
-print("train")
-assistant.save_model("VoiceBot")
-print("end")
+#assistant = TrainingModel('intents.json')
+#assistant.train_model()
+#print("train")
+#assistant.save_model("VoiceBot")
+#print("end")
